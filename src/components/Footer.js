@@ -1,9 +1,11 @@
 import React from 'react';
+import styles from './Footer.module.scss';
+import clsx from 'clsx';
 
 const Footer = () => {
     return(
-        <div>
-            this is footer
+        <div className={clsx(styles.footer)}>
+            this is footer!!
         </div>
     )
 };

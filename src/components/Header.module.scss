@@ -2,23 +2,57 @@
 
 .header {
     height: 118px;
+    max-width: 1152px;
+    margin: 0;
+    padding-top: 32px;
     font-family: $base-font-text;
     color: $base-font-color;
     font-weight: 600;
     font-style: normal;
     line-height: normal;
+    align-items: space-between;
 }
 
 .logo {
-    background-color: red;
-    margin: 32px 0px 19px 144px;
+    margin-left: 0;
 }
 
 ul {
     list-style-type: none;
-    margin: 48px 0;
-
+    margin-left: 163px;
+    margin-right: 163px;
+    max-height: 39px;
+    margin-top: 16px;
+    justify-content: space-between;
+    padding-top: 15px;
     li {
-        margin: 0 67px;
+        padding: 8px;
     }
+}
+
+.loginLink {
+    color: #31a05e;
+    margin-top: 0;
+    padding: 8px;
+    margin-top: 16px;
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    margin: 8px auto 0 auto;
+    background-color: $color-light;    
+}
+
+li:hover p {
+    background-color: $main-green;
+}
+
+li:hover div {
+    color: $header-font-color;
+}
+
+a {
+    text-decoration: none;
+    color: $base-font-color;
 }

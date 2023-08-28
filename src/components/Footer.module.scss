@@ -1,0 +1,11 @@
+@import '../styles/settings.scss';
+
+.footer {
+    height: 118px;
+    font-family: $base-font-text;
+    color: $base-font-color;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    background-color: red;
+}

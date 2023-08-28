@@ -1,23 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import Container from 'react-bootstrap/Container';
-import MainLayout from './components/MainLayout.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js'
+import Home from './components/Home.js';
+import Container from './components/Layout/Container.js';
 
 function App() {
   
   return (
-    <MainLayout>
-      <Container>
-        <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Hello Natanaelum !!
-            </p>
-          </div>
-        </div>
-      </Container>
-    </MainLayout>
+    <Container>
+      <Header/>
+      <Home/>
+      <Footer/>
+    </Container>
   );
 }
 

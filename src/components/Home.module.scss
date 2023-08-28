@@ -1,0 +1,12 @@
+@import '../styles/settings.scss';
+
+.home {
+    max-height: 100%;
+    font-family: $base-font-text;
+    color: $base-font-color;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    background-color: blue;
+    margin: 15px;
+}
