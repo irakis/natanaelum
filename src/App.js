@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import Container from 'react-bootstrap/Container';
 import MainLayout from './components/MainLayout.js';
-import './App.css';
 
 function App() {
   

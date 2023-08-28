@@ -1,0 +1,19 @@
+@import './settings.scss';
+//@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: $header-font-size;
+    color: $header-font-color;
+    font-weight: $header-font-weight;
+}
+
+p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    font-weight: $base-font-weight;
+}

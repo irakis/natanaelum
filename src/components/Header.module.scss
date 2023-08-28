@@ -1,0 +1,24 @@
+@import '../styles/settings.scss';
+
+.header {
+    height: 118px;
+    font-family: $base-font-text;
+    color: $base-font-color;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+}
+
+.logo {
+    background-color: red;
+    margin: 32px 0px 19px 144px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 48px 0;
+
+    li {
+        margin: 0 67px;
+    }
+}
