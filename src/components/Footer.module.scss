@@ -1,11 +1,39 @@
 @import '../styles/settings.scss';
 
 .footer {
-    height: 118px;
+    height: 200px;
     font-family: $base-font-text;
     color: $base-font-color;
     font-weight: 600;
     font-style: normal;
     line-height: normal;
-    background-color: red;
+    align-content: center;
+    justify-content: center;
+}
+
+img {
+    width: 34px;
+    height: 34px;
+    margin-top: 12px;
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+p {
+    font-size: 12px;
+}
+
+.footerHeader {
+    color: $header-font-color;
+}
+
+.copySign {
+    font-family: $base-font-text;
+    color: $base-font-color;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    align-content: center;
+    justify-content: center;
 }

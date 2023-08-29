@@ -4,11 +4,11 @@ import clsx from 'clsx';
 
 const Header = () => {
     return (
-        <div className={clsx('row', styles.header)}>
+        <div className={clsx('row', 'w-100',styles.header)}>
             <div className={clsx('col-1', styles.logo)}>
                 <img src={`${process.env.PUBLIC_URL}/images/logo_3.png`} alt='logo natanaelum'/>
             </div>
-            <div className='col-10'>
+            <div className='col-9'>
                 <ul className='d-flex align-items-center'>
                     <li>
                         <a href="/">
@@ -66,7 +66,7 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
-            <div className={clsx(styles.loginLink, 'text-center', 'col-1')}>
+            <div className={clsx(styles.loginLink, 'text-center', 'col-2')}>
                 <a className={styles.loginLink} href="/">Zaloguj się</a>
             </div>
         </div>
