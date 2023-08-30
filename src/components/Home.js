@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Home.module.scss';
 import clsx from 'clsx';
+import LogoStamp from './Common/LogoStamp';
 
 const Home = () => {
     return (
         <div className={styles.myContainer}>
             <div className={clsx('row', styles.home)}>
-                <div className={clsx('col-6 pt-5 mt-5')}>
+                <div className={clsx('col-6 p-0 m-0')}>
                     <div className='row d-block h-100'>
                         <div className='col mt-4 mb-4'>
                             Aktualności
@@ -16,20 +17,15 @@ const Home = () => {
                             <h2>Wsparcie</h2>
                             <h2>Przełom</h2>
                         </div>
-                        <div className='col-8 mt-5 p-9'>
+                        <div className='col-8 mt-4 p-9'>
                             <p>Odwiedź naszą Poradnię Psychologiczną i odkryj siłę swojego umysłu, 
                                 lecząc rany emocjonalne i osągając pełnię życia.
                             </p>
                         </div>
-                        <div className='col mt-5 mb-5'>
+                        <div className='col mt-5 mb-5 pb-5'>
                             <button type='button'>Czytaj więcej</button>
                         </div>
-                        <div className='col-12 d-flex justify-content-between pt-5'>
-                            <img src={`${process.env.PUBLIC_URL}/images/home/LPPS.png`} alt="LPPS_logo"/>
-                            <img src={`${process.env.PUBLIC_URL}/images/home/KPCU.png`} alt="KPCU_logo"/>
-                            <img src={`${process.env.PUBLIC_URL}/images/home/KUL.png`} alt="KUL_logo"/>
-                            
-                        </div>
+                        <LogoStamp/>
                     </div>
                 </div>
                 <div className={clsx(styles.butterflyParent,'col-6 p-0 m-0 position-relative')}>

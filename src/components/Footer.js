@@ -8,7 +8,7 @@ const Footer = () => {
             <div className={clsx(styles.footer, 'row')}>
                 <div className='col-2 '>
                     <div className='row'>
-                        <div className='col-3'>
+                        <div className='col-3 p-1'>
                             <img src={`${process.env.PUBLIC_URL}/images/call.svg`} alt='call'/>
                         </div>
                         <div className='col-9 p-2'>
@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
                 <div className='col-2 '>
                     <div className='row'>
-                        <div className='col-3'>
+                        <div className='col-3 p-1'>
                             <img src={`${process.env.PUBLIC_URL}/images/call.svg`} alt='call'/>
                         </div>
                         <div className='col-9 p-2'>
@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
                 <div className='col-2 '>
                     <div className='row'>
-                        <div className='col-3'>
+                        <div className='col-3 p-1'>
                             <img src={`${process.env.PUBLIC_URL}/images/alternate_email.svg`} alt='call'/>
                         </div>
                         <div className='col-9 p-2'>

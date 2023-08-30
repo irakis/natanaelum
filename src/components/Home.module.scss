@@ -2,21 +2,28 @@
 
 .home {
     max-width: 1440px;
-    height: calc(769px*0.9);
+    height: 769px;
     font-family: $base-font-text;
     color: $base-font-color;
     font-weight: $header-font-weight;
     font-style: normal;
-    line-height: normal;
+    
     color: $main-green;
-    margin: 15px;
+    margin: 15px 0 15px 15px;
 
     h2 {
         color: $header-font-color;
+        line-height: $header-line-height;
+        font-weight: $header-font-weight;
+        font-size: $header-font-size;
+        font-style: $header-font-style;
     }
 
     p {
         color: $base-font-color;
+        line-height: $base-font-line-height;
+        font-weight: $base-font-weight;
+        font-size: $base-font-size;
     }
 }
 
@@ -31,7 +38,7 @@ button {
 }
 
 .butterfly {
-    object-position: -445px -140px;
+    object-position: -445px -85px;
 }
 
 .butterflyParent {
@@ -40,7 +47,8 @@ button {
 
 .myContainer {
     padding: 0px;
-    border-color: aqua;
+    width: 1440px;
+    margin: 0px;
 }
 
 
