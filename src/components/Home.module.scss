@@ -1,12 +1,46 @@
 @import '../styles/settings.scss';
 
 .home {
-    max-height: 100%;
+    max-width: 1440px;
+    height: calc(769px*0.9);
     font-family: $base-font-text;
     color: $base-font-color;
-    font-weight: 600;
+    font-weight: $header-font-weight;
     font-style: normal;
     line-height: normal;
-    background-color: blue;
+    color: $main-green;
     margin: 15px;
+
+    h2 {
+        color: $header-font-color;
+    }
+
+    p {
+        color: $base-font-color;
+    }
 }
+
+button {
+    width: 128px;
+    height: 40px;
+    background-color: $main-green;
+    color: $color-light;
+    border-radius: 100px;
+    border-style: none;
+    font-size: 14px;
+}
+
+.butterfly {
+    object-position: -445px -140px;
+}
+
+.butterflyParent {
+    overflow: hidden;
+}
+
+.myContainer {
+    padding: 0px;
+    border-color: aqua;
+}
+
+

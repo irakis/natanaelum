@@ -2,7 +2,7 @@ import React from 'react';
 
 const Container = ({children}) => {
     return(
-        <div className='container d-flex flex-column h-100'>
+        <div className='container d-flex flex-column'>
             {children}
         </div>
     )

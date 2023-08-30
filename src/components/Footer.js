@@ -17,7 +17,7 @@ const Footer = () => {
                                     BIURO
                                 </div>               
                                 <div className='col-12'>
-                                    <p>+48 (12) 3333333333</p>
+                                    <p>+48(12) 333 333 333</p>
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ const Footer = () => {
                                     PORADNIA
                                 </div>               
                                 <div className='col-12'>
-                                    <p>+48 (12) 44433337773</p>
+                                    <p>+48(12) 444 333 377</p>
                                 </div>
                             </div>
                         </div>

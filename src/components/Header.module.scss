@@ -2,7 +2,6 @@
 
 .header {
     height: 118px;
-    //max-width: 1152px;
     margin: 0;
     padding-top: 32px;
     font-family: $base-font-text;
@@ -11,6 +10,7 @@
     font-style: normal;
     line-height: normal;
     align-items: space-between;
+    background-color: $color-light;
 }
 
 .logo {
