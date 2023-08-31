@@ -22,11 +22,12 @@
         color: $base-font-color;
         line-height: $base-font-line-height;
         font-weight: $base-font-weight;
-        font-size: $base-font-size;
-
-        
-        
+        font-size: $base-font-size;  
     }
+}
+
+.description {
+    text-align: right;
 }
 
 p {
@@ -82,6 +83,11 @@ button {
 .butterflyBlue2 {
     object-position: -680px -570px;
 }
+
+.butterflyBlue3 {
+    object-position: 10px 100px;
+}
+
 
 .butterflyParent {
     overflow: hidden;
