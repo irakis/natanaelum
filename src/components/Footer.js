@@ -59,8 +59,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className='row d-flex pb-4'>
-                <div className={clsx('col-12', styles.copySign, 'd-flex')}>
-                    <p className='m-0'>&copy; 2023 NATANAELUM. Wszelkie prawa zastrzeżone.</p>
+                <div className={clsx('col-12 d-flex', styles.copySign)}>
+                    &copy; 2023 NATANAELUM. Wszelkie prawa zastrzeżone.
                 </div>
             </div>
         </>

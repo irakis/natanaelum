@@ -24,17 +24,15 @@ const Header = () => {
                             <div>
                                 IPIP
                             </div>
-                            <p className={clsx(styles.dot, 'rounded-circle')}>
-                            </p>
+                            <p className={clsx(styles.dot, 'rounded-circle')}></p>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="/about">
                             <div>
                                 O nas
                             </div>
-                            <p className={clsx(styles.dot, 'rounded-circle')}>
-                            </p>
+                            <p className={clsx(styles.dot, 'rounded-circle')}></p>
                         </a>
                     </li>
                     <li>
@@ -42,8 +40,7 @@ const Header = () => {
                             <div>
                                 Projekty
                             </div>
-                            <p className={clsx(styles.dot, 'rounded-circle')}>
-                            </p>
+                            <p className={clsx(styles.dot, 'rounded-circle')}></p>
                         </a>
                     </li>
                     <li>
@@ -51,8 +48,7 @@ const Header = () => {
                             <div>
                                 Szkolenia
                             </div>
-                            <p className={clsx(styles.dot, 'rounded-circle')}>
-                            </p>
+                            <p className={clsx(styles.dot, 'rounded-circle')}></p>
                         </a>
                     </li>
                     <li className='m-0'>
@@ -60,8 +56,7 @@ const Header = () => {
                             <div>
                                 Poradnia
                             </div>
-                            <p className={clsx(styles.dot, 'rounded-circle')}>
-                            </p>
+                            <p className={clsx(styles.dot, 'rounded-circle')}></p>
                         </a>
                     </li>
                 </ul>

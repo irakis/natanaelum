@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Home.module.scss';
 import clsx from 'clsx';
-import LogoStamp from './Common/LogoStamp';
+import LogoStamp from './common/LogoStamp';
 
 const Home = () => {
     return (

@@ -1,0 +1,95 @@
+@import '../styles/settings.scss';
+
+.about {
+    max-width: 1440px;
+    height: 700px;
+    font-family: $base-font-text;
+    color: $base-font-color;
+    font-weight: $header-font-weight;
+    font-style: normal;
+    color: $main-green;
+    margin: 15px 0 15px 15px;
+
+    h2 {
+        color: $header-font-color;
+        line-height: $header-line-height;
+        font-weight: $header-font-weight;
+        font-size: $header-font-size;
+        font-style: $header-font-style;
+    }
+
+    p {
+        color: $base-font-color;
+        line-height: $base-font-line-height;
+        font-weight: $base-font-weight;
+        font-size: $base-font-size;
+
+        
+        
+    }
+}
+
+p {
+    color: #A0A3A9;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.middle {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.middleHeight {
+    height: 200px;
+    padding-top: 170px;
+    align-content: center;
+}
+
+button {
+    width: 161px;
+    height: 40px;
+    background-color: $main-green;
+    color: $color-light;
+    border-radius: 100px;
+    border-style: none;
+    font-size: 14px;
+}
+
+.facebook {
+    background-color: #d1ded1 ;
+    color: $main-green;
+    border-color: #717971;
+}
+
+.rowButterfly {
+    //height: 600px;
+    background-color: none;
+}
+
+.butterflyBlue {
+    object-position: -20px -145px;
+}
+
+.butterflyBlue2 {
+    object-position: -680px -570px;
+}
+
+.butterflyParent {
+    overflow: hidden;
+    margin-left: -190px;
+}
+
+.myContainer {
+    padding: 0px;
+    width: 1440px;
+    margin: 0px;
+}

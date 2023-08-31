@@ -1,0 +1,22 @@
+@import '../../styles/settings.scss';
+
+.green {
+    width: 161px;
+    height: 40px;
+    background-color: $main-green;
+    color: $color-light;
+    border-radius: 100px;
+    border-style: none;
+    font-size: 14px;
+}
+
+.gray {
+    width: 161px;
+    height: 40px;
+    border-radius: 100px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #d1ded1 ;
+    color: $main-green;
+    border-color: #717971;
+}
