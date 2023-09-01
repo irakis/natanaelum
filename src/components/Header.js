@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 const Header = () => {
     return (
-        <div className={clsx('row','sticky-top',styles.header)}>
+        <div className={clsx('row mb-5','sticky-top',styles.header)}>
             <div className={clsx('col-1', styles.logo)}>
                 <img src={`${process.env.PUBLIC_URL}/images/logo_3.png`} alt='logo natanaelum'/>
             </div>
@@ -36,7 +36,7 @@ const Header = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="/ourprojects">
                             <div>
                                 Projekty
                             </div>
