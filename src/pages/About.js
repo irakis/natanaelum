@@ -31,7 +31,9 @@ const About = () => {
                                 <Link to='/'>
                                     <Button color='gray' text='Strona Facebook'/>
                                 </Link>
-                                <Button color='green' text='Nasz zespół'/>
+                                <Link to='/ourteam'>
+                                    <Button color='green' text='Nasz zespół'/>
+                                </Link>
                             </div>
                         </div>
                     </div>

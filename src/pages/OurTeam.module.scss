@@ -1,0 +1,71 @@
+@import '../styles/settings.scss';
+
+@import '../styles/settings.scss';
+
+.ourTeam {
+    max-width: 1440px;
+    height: 700px;
+    font-family: $base-font-text;
+    color: $base-font-color;
+    font-weight: $header-font-weight;
+    font-style: normal;
+    color: $main-green;
+    margin: 15px 0 15px 15px;
+}
+
+h2 {
+    color: #31A05E;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: 0.1px;
+}
+
+p {
+    color: #000;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 105.263% */
+    letter-spacing: 0.1px;
+}
+
+.butterflyRed {
+    object-position: -45px -450px;
+    width: 1440px;
+    height: 675px;
+    object-fit: cover;
+}
+ ul {
+    margin: 12px;
+    padding: 0px;
+    text-align: right;
+
+    li {
+        color: #000;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0px;
+        padding: 0px;
+        text-align: right;
+    }
+ }
+
+.butterflyParent {
+    overflow: hidden;
+    height: 675px;
+}
+
+.myContainer {
+    padding: 0px;
+    width: 1440px;
+    margin: 0px;
+}
