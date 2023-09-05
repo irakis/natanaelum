@@ -5,55 +5,54 @@
     border-radius: 25px;
     background: rgba(49, 160, 94, 0.14);
     padding: 40px;
-    
-}
 
-h1 {
-    color: #000;
-    font-family: Poppins;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 20px 0 20px 0;
-}
+    h1 {
+        color: #000;
+        font-family: Poppins;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 20px 0 20px 0;
+    }
 
-p {
-    color: #A0A3A9;
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
+    p {
+        color: #A0A3A9;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 
-.imgParent {
-    width: 367px;
-    margin-left: -40px;
-    padding: 0px;
-    object-fit: cover;
-    margin-bottom: 30px;
-}
+    .imgParent {
+        width: 367px;
+        margin-left: -40px;
+        padding: 0px;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
 
-.cardGreen {
-    color: #31A05E;
-    font-family: Poppins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0px;
-}
+    .cardGreen {
+        color: #31A05E;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0px;
+    }
 
-.colorGreen {
-    color: $main-green;
-}
+    .colorGreen {
+        color: $main-green;
+    }
 
-h2 {
-    color: #000;
-    font-family: Poppins;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    h2 {
+        color: #000;
+        font-family: Poppins;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
 }

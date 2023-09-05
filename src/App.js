@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import OurTeam from './pages/OurTeam.js';
 import OurProjects from './pages/OurProjects.js';
 import OurTrainings from './pages/OurTrainings.js';
+import Clinic from './pages/Clinic.js';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Route path='/ourteam' element={<OurTeam/>}/>
         <Route path='/ourprojects' element={<OurProjects/>}/>
         <Route path='/ourtrainings' element={<OurTrainings/>}/>
+        <Route path='/clinic' element={<Clinic/>}/>
         {/*<Route path='*' element={<Error404/>}/>*/}
       </Routes>
       <Footer/>

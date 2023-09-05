@@ -1,0 +1,23 @@
+@import '../styles/settings.scss';
+
+.clinic {
+
+    .middle {
+        color: #000;
+        text-align: center;
+        justify-items: center;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .description {
+        p {
+            font-size: 17px;
+            //justify-content: center;
+            text-align: center;
+        }
+    }
+}

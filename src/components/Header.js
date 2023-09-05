@@ -52,7 +52,7 @@ const Header = () => {
                         </a>
                     </li>
                     <li className='m-0'>
-                        <a href="/">
+                        <a href="/clinic">
                             <div>
                                 Poradnia
                             </div>

@@ -3,10 +3,8 @@ import styles from './Button.module.scss';
 import clsx from "clsx";
 
 const Button = props => {
-    console.log(props, props.color === 'green')
-
     return(
-        <div>
+        <div className="m-0 p-0">
             <button className={clsx((props.color === 'green' ? styles.green : styles.gray),'m-2')} type='button'>{props.text}</button>
         </div>
     )
