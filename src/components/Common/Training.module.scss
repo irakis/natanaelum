@@ -1,0 +1,59 @@
+@import '../../styles/settings.scss';
+
+.training {
+    
+        height: 650px;
+        width: auto;
+        overflow: hidden;
+        border-radius: 25px;
+
+    h2 {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        justify-content: left;
+        max-width: 60%;
+    }
+
+    h1 {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    p {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: end;
+        //justify-content: end;
+        position: absolute;
+        bottom: 32px;
+        left: 22px;
+    }
+
+    img {
+        object-fit: cover;
+        width: auto;
+        height: 800px;
+        position: absolute;
+        z-index: -1;
+    }
+    .title {
+        padding: 26px 19px;
+        align-content: center;
+        h1, h2 {
+            margin: 0px;
+            padding: 26px 19px;
+        }
+    }
+}

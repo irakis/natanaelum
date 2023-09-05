@@ -1,0 +1,44 @@
+@import '../../styles/settings.scss';
+
+.subtitle {
+    p {
+            color: #A0A3A9;
+            font-family: Poppins;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+    .smallGreen {
+        color: #31A05E;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .main {
+
+        h2 {
+            color: #000;
+            font-family: Poppins;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .description {
+        color: #A0A3A9;
+        font-family: Poppins;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom:  85px;
+        padding-right: 50px;
+    }
+}

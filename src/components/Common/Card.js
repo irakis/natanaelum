@@ -13,7 +13,7 @@ const Card = (data) => {
             <p>{data.period}</p>
             <p></p>
             <p className='mb-1'>{data.description}</p>
-            <Link to={`/${data.link}`}>
+            <Link to={data.link}>
                 <p className={clsx(styles.colorGreen)}>Czytaj więcej...</p>
             </Link>
         </div>

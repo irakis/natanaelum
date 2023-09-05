@@ -7,6 +7,7 @@ import Container from './components/layout/Container.js';
 import { Routes, Route } from 'react-router-dom';
 import OurTeam from './pages/OurTeam.js';
 import OurProjects from './pages/OurProjects.js';
+import OurTrainings from './pages/OurTrainings.js';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/ourteam' element={<OurTeam/>}/>
         <Route path='/ourprojects' element={<OurProjects/>}/>
+        <Route path='/ourtrainings' element={<OurTrainings/>}/>
         {/*<Route path='*' element={<Error404/>}/>*/}
       </Routes>
       <Footer/>

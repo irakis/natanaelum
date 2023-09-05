@@ -1,7 +1,7 @@
 @import '../styles/settings.scss';
 
 .header {
-    width: 1440px;
+    max-width: 1440px;
     height: 118px;
     margin: 0;
     padding-top: 32px;
@@ -18,14 +18,12 @@
     margin-left: 0;
 }
 
-ul {
+.header ul {
     list-style-type: none;
-    margin-left: 163px;
-    margin-right: 163px;
     max-height: 39px;
     margin-top: 16px;
     justify-content: space-between;
-    padding-top: 15px;
+    padding: 30px 139px 30px 139px;
     
     li {
         padding: 8px;
@@ -36,7 +34,7 @@ ul {
     color: #31a05e;
     margin-top: 0;
     padding: 8px;
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
 .dot {
