@@ -9,7 +9,7 @@ const OurProjects = () => {
             <div className={clsx('row d-flex', styles.ourProjects)}>
                 <div className={clsx(styles.butterflyParent,'col-6 p-0')}>
                     <div className='col-12 mt-4 mb-4 d-flex justify-content-start'>
-                                <h2 className={styles.smallGreen}> Projekty</h2>
+                        <h2 className={styles.smallGreen}> Projekty</h2>
                     </div>
                     <div className={clsx(styles.main, 'col-12 mb-3 mt-3 d-flex justify-content-start')}>
                         <h2>Nasze Projekty</h2>
@@ -29,7 +29,7 @@ const OurProjects = () => {
                         status='AKTYWNY'
                         period='1 marca - 30 czerwca 2023 r.'
                         description='Celem projektu jest aktywizacja zawodowa oraz zwiększenie poziomu zatrudnienia osób biernych zawodowo lub bezrobotnych, zamieszkujących na terenie województwa lubelskiego, posiadających orzeczenie o niepełnosprawności i/lub doświadczających trudności psychicznych, w różnym stopniu nasilenia.'
-                        link='/'
+                        link='project_active_competent'
                     />
                     <Card
                         img={`${process.env.PUBLIC_URL}/images/cards/plakat_fundusz_celowy_420x297_w-1 1.png`}

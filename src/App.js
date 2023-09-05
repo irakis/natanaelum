@@ -9,6 +9,7 @@ import OurTeam from './pages/OurTeam.js';
 import OurProjects from './pages/OurProjects.js';
 import OurTrainings from './pages/OurTrainings.js';
 import Clinic from './pages/Clinic.js';
+import ProjectActiveCompetent from './pages/ProjectActiveCompetent.js';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path='/ourprojects' element={<OurProjects/>}/>
         <Route path='/ourtrainings' element={<OurTrainings/>}/>
         <Route path='/clinic' element={<Clinic/>}/>
+        <Route path='/ourprojects/project_active_competent' element={<ProjectActiveCompetent/>}/>
         {/*<Route path='*' element={<Error404/>}/>*/}
       </Routes>
       <Footer/>
