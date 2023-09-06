@@ -4,6 +4,7 @@ import Button from "../components/common/Button";
 import clsx from "clsx";
 import styles from './Clinic.module.scss'
 import InfoCard from "../components/common/InfoCard";
+import { Link } from "react-router-dom";
 
 const Clinic = () => {
     return(
@@ -14,10 +15,12 @@ const Clinic = () => {
                 description='W naszej Poradni pracujemy nad zmniejszeniem ryzyka rozwoju uzależnień od substancji psychoaktywnych, redukcją szkód i przywracaniu do zdrowia oraz aktywności społecznej i zawodowej osób używających substancji psychoaktywnych i osób uzależnionych. Udzielamy bezpłatnego wsparcia psychologicznego.'
             />
             <div className="row">
-                <Button
-                    color='green'
-                    text='Zapisz się!'
-                />
+                <Link to='select_clinic'>
+                    <Button
+                        color='green'
+                        text='Zapisz się!'
+                    />
+                </Link>
             </div>
             <div className={clsx('row')}>
                 <div className='col-9 d-flex p-4 mx-auto'>

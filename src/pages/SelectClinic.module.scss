@@ -1,0 +1,55 @@
+@import '../styles/settings.scss';
+
+.selectClinicDot {
+    background-color: #31A05E80;
+    border-radius: 25px;
+    height: 38px;
+    width: 38px;
+    opacity: 50%;
+}
+
+.selectClinicDotSmall {
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    background-color: #D9D9D9;;
+}
+
+.selectClinicRow {
+    border: 2px solid #A0A3A9;
+    border-radius: 4px;
+    padding: 13px 0;
+}
+
+.selectClinic {
+
+    p {
+        color: #A0A3A9;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+    }
+
+    h2 {
+        color: #000;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: bold;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+    }
+
+    h1 {
+        color: #000;
+        font-family: Poppins;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+}

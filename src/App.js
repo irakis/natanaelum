@@ -11,6 +11,7 @@ import OurTrainings from './pages/OurTrainings.js';
 import Clinic from './pages/Clinic.js';
 import ProjectActiveCompetent from './pages/ProjectActiveCompetent.js';
 import AddictionTraining from './pages/AddictionTraining.js';
+import SelectClinic from './pages/SelectClinic.js';
 
 function App() {
   
@@ -26,6 +27,7 @@ function App() {
         <Route path='/clinic' element={<Clinic/>}/>
         <Route path='/ourprojects/project_active_competent' element={<ProjectActiveCompetent/>}/>
         <Route path='/ourtrainings/addiction_training' element={<AddictionTraining/>}/>
+        <Route path='/clinic/select_clinic' element={<SelectClinic/>}/>
         {/*<Route path='*' element={<Error404/>}/>*/}
       </Routes>
       <Footer/>

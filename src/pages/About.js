@@ -28,7 +28,7 @@ const About = () => {
                         </div>
                         <div className='col-12 mt-2 mb-5 pb-5 d-flex justify-content-end'>
                             <div className='d-flex'>
-                                <Link to='/'>
+                                <Link to='https://www.facebook.com/profile.php?id=100057365451899' target='blank'>
                                     <Button color='gray' text='Strona Facebook'/>
                                 </Link>
                                 <Link to='/ourteam'>
