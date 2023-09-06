@@ -48,10 +48,17 @@
         width: 100%;
     }
 
-    ul li {
-        color: $base-font-color;
-        text-align: start;
-        font-size: 17px;
+    ul {
+        padding-left: 25px;
+
+        li {
+            color: $base-font-color;
+            text-align: start;
+            text-indent: -25px;
+            font-size: 17px;
+            list-style-type: circle;
+            list-style-position: inside;
+        }
     }
 
 

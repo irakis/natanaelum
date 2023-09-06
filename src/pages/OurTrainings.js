@@ -21,7 +21,7 @@ const OurTrainings = () => {
                         url={`${process.env.PUBLIC_URL}/images/training/Ręce.png`}
                         alt='Ręce'
                         title='Specjalistyczne Szkolenie w Dziedzinie Uzależnienia'
-                        link='/'
+                        link='addiction_training'
                         status='TRWA'
                     />
                 </div>
