@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Home.module.scss';
 import clsx from 'clsx';
 import LogoStamp from './common/LogoStamp';
+import Button from './common/Button';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -23,7 +25,9 @@ const Home = () => {
                             </p>
                         </div>
                         <div className='col mt-5 mb-5 pb-5'>
-                            <button type='button'>Czytaj więcej</button>
+                            <Link to='/clinic'>
+                                <Button text='Czytaj więcej' color='green'/>
+                            </Link>
                         </div>
                         <LogoStamp/>
                     </div>
