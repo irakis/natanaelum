@@ -26,14 +26,14 @@ const SelectClinic = () => {
                         </div>
                     </div>
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot,"col-1 m-auto")}></div>
+                        <div className={clsx(styles.selectClinicDot,styles.selectClinicDot__inActive,"col-1 m-auto")}></div>
                         <div className={clsx(styles.selectClinic,"col-11")}>
                             <p>Krok 2</p>
                             <h2>Formularz kontaktowy</h2>
                         </div>
                     </div>
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot,"col-1 m-auto")}></div>
+                        <div className={clsx(styles.selectClinicDot, styles.selectClinicDot__inActive,"col-1 m-auto")}></div>
                         <div className={clsx(styles.selectClinic,"col-11")}>
                             <p>Krok 3</p>
                             <h2>Podsumowanie</h2>

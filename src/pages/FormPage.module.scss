@@ -14,7 +14,6 @@
         position: absolute;
         left: 8px;
         top: 5px
-
     }
     &__inActive {
         background-color: #D9D9D9;;
@@ -41,6 +40,15 @@
 }
 
 .selectClinic {
+
+    input {
+        border-color: $main-green;
+        color: $main-green;
+    }
+
+    &__green {
+        color: $main-green;
+    }
 
     p {
         color: #A0A3A9;
@@ -70,7 +78,6 @@
         font-weight: 700;
         line-height: normal;
     }
-
 }
 
 button {
@@ -78,7 +85,7 @@ button {
     background-color: $color-light;
 }
 
-form, .form-text .form-label {
+form {
     color: $main-green;
     border-color: $main-green;
 }

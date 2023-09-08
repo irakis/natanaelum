@@ -12,7 +12,7 @@ import Clinic from './pages/Clinic.js';
 import ProjectActiveCompetent from './pages/ProjectActiveCompetent.js';
 import AddictionTraining from './pages/AddictionTraining.js';
 import SelectClinic from './pages/SelectClinic.js';
-import Form from './pages/Form.js';
+import FormPage from './pages/FormPage.js';
 
 function App() {
   
@@ -29,7 +29,7 @@ function App() {
         <Route path='/ourprojects/project_active_competent' element={<ProjectActiveCompetent/>}/>
         <Route path='/ourtrainings/addiction_training' element={<AddictionTraining/>}/>
         <Route path='/clinic/select_clinic' element={<SelectClinic/>}/>
-        <Route path='/clinic/select_clinic/:id' element={<Form/>}/>
+        <Route path='/clinic/select_clinic/:id' element={<FormPage/>}/>
         {/*<Route path='*' element={<Error404/>}/>*/}
       </Routes>
       <Footer/>

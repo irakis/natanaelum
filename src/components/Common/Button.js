@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const Button = props => {
     return(
-            <button className={clsx((props.color === 'green' ? styles.green : styles.gray),'m-2')} type='button'>{props.text}</button>
+            <button className={clsx((props.color === 'green' ? styles.green : styles.gray),'m-2')} type='submit'>{props.text}</button>
     )
 }
 
