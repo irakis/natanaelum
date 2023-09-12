@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from './FormPage.module.scss';
 import clsx from 'clsx';
 import Button from "../components/common/Button";
+import emailjs from '@emailjs/browser';
 
 import { Form } from 'react-bootstrap';
 import { useState } from "react";
@@ -11,14 +12,23 @@ const FormPage = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const [ formData, setFormData ] = useState({ clinic: id , sureName: '', foreName: '', phone: '', mail: '', date: '', time: ''});
-    console.log('formData: ',formData);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        navigate(`form/${formData}`);
-        
-    };
+
+        const template_id = `${process.env.REACT_APP_TEMPALTE_ID}`;
+        const service_id = `${process.env.REACT_APP_SERVICE_ID}`;
+        const user_id = `${process.env.REACT_APP_USER_ID}`;
+
+        emailjs.send(service_id, template_id , formData, user_id)
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+
+        navigate('/form/summary');
+    }
 
     return(
         <div className="container d-flex flex-column">
@@ -54,22 +64,22 @@ const FormPage = () => {
                     <Form onSubmit={handleSubmit} className="d-flex flex-wrap">
                         <div className="p-1 col-6">
                             <label className="form-label">Imię</label>
-                            <input type="text" className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp"></input>
+                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp"></input>
                             <div id="forenameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Nazwisko</label>
-                            <input type="text" className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp"></input>
+                            <input type="text" name='sureName' className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp"></input>
                             <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Telefon</label>
-                            <input type="number" className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp"></input>
+                            <input type="number"name='phone' className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp"></input>
                             <div id="phoneHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. (+48) 123 456 789</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Email address</label>
-                            <input type="email" className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+                            <input type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp"></input>
                             <div id="emailHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. jan.kowalski@poczta.pl</div>
                         </div>
                         <div className="p-1 col-6">
