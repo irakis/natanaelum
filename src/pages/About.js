@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './About.module.scss';
 import clsx from 'clsx';
-import LogoStamp from '../components/common/LogoStamp.js';
-import Button from '../components/common/Button.js';
+import LogoStamp from '../components/Common/LogoStamp.js';
+import Button from '../components/Common/Button.js';
 import { Link } from 'react-router-dom';
 
 const About = () => {

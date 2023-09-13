@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Button from "../components/common/Button.js";
+import Button from "../components/Common/Button.js";
 import styles from './SelectClinic.module.scss';
 import clsx from 'clsx';
 import { Link } from "react-router-dom";
-import CustomButton from "../components/common/CustomButton";
+import CustomButton from "../components/Common/CustomButton.js";
 
 const SelectClinic = () => {
 

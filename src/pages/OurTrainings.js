@@ -1,6 +1,6 @@
 import styles from './OurTrainings.module.scss';
-import Subtitle from '../components/common/Subtitle.js';
-import Training from '../components/common/Training.js';
+import Subtitle from '../components/Common/Subtitle.js';
+import Training from '../components/Common/Training.js';
 import clsx from 'clsx';
 
 const OurTrainings = () => {

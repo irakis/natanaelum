@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import styles from './FormPage.module.scss';
 import clsx from 'clsx';
-import Button from "../components/common/Button.js";
+import Button from "../components/Common/Button.js";
 import emailjs from '@emailjs/browser';
 
 import { Form } from 'react-bootstrap';

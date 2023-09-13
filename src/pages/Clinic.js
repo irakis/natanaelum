@@ -1,9 +1,9 @@
 import React from "react";
-import Subtitle from "../components/common/Subtitle.js";
-import Button from "../components/common/Button.js";
+import Subtitle from "../components/Common/Subtitle.js";
+import Button from "../components/Common/Button.js";
 import clsx from "clsx";
 import styles from './Clinic.module.scss'
-import InfoCard from "../components/common/InfoCard.js";
+import InfoCard from "../components/Common/InfoCard.js";
 import { Link } from "react-router-dom";
 
 const Clinic = () => {

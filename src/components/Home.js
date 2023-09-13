@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Home.module.scss';
 import clsx from 'clsx';
-import LogoStamp from './common/LogoStamp.js';
-import Button from './common/Button.js';
+import LogoStamp from './Common/LogoStamp.js';
+import Button from './Common/Button.js';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
