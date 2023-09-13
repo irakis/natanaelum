@@ -1,4 +1,4 @@
-import SingleProject from '../components/SingleProject';
+import SingleProject from '../components/SingleProject.js';
 
 const ProjectActiveCompetent = () => {
 

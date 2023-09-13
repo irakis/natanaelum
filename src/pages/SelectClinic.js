@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../components/common/Button";
+import Button from "../components/common/Button.js";
 import styles from './SelectClinic.module.scss';
 import clsx from 'clsx';
 import { Link } from "react-router-dom";
