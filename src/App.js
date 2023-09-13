@@ -3,7 +3,7 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js'
 import Home from './components/Home.js';
 import About from './pages/About.js';
-import Container from './components/layout/Container.js';
+import MainContainer from './components/layout/MainContainer.js';
 import { Routes, Route } from 'react-router-dom';
 import OurTeam from './pages/OurTeam.js';
 import OurProjects from './pages/OurProjects.js';
@@ -18,7 +18,7 @@ import SummarySite from './pages/SummarySite.js';
 function App() {
   
   return (
-    <Container>
+    <MainContainer>
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -35,7 +35,7 @@ function App() {
         {/*<Route path='*' element={<Error404/>}/>*/}
       </Routes>
       <Footer/>
-    </Container>
+    </MainContainer>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Container = ({children}) => {
+const MainContainer = ({children}) => {
     return(
         <div className='container d-flex flex-column'>
             {children}
@@ -8,4 +8,4 @@ const Container = ({children}) => {
     )
 }
 
-export default Container;
+export default MainContainer;
