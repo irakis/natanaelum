@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Home.module.scss';
 import clsx from 'clsx';
-import LogoStamp from './common/LogoStamp';
+import LogoStamp from './common/LogoStamp.js';
 import Button from './common/Button';
 import { Link } from 'react-router-dom';
 

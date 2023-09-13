@@ -1,5 +1,5 @@
 import React from "react";
-import SingleProject from "../components/SingleProject";
+import SingleProject from "../components/SingleProject.js";
 import clsx from "clsx";
 import styles from './AddictionTraining.module.scss';
 

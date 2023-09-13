@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './OurProjects.module.scss';
 import clsx from 'clsx';
-import Card from '../components/common/Card';
+import Card from '../components/common/Card.js';
 
 const OurProjects = () => {
     return (
