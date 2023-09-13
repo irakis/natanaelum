@@ -1,7 +1,6 @@
 @import '../styles/settings.scss';
 
 .about {
-    max-width: 1440px;
     height: 700px;
     font-family: $base-font-text;
     color: $base-font-color;
@@ -9,6 +8,7 @@
     font-style: normal;
     color: $main-green;
     margin: 15px 0 15px 15px;
+    overflow: hidden;
 
     h2 {
         color: $header-font-color;
@@ -72,29 +72,16 @@ button {
 }
 
 .rowButterfly {
-    background-color: none;
-}
-
-.butterflyBlue {
-    object-position: -20px -145px;
-}
-
-.butterflyBlue2 {
-    object-position: -680px -570px;
-}
-
-.butterflyBlue3 {
-    object-position: 10px 100px;
+    background-color: $color-light;
 }
 
 
-.butterflyParent {
-    overflow: hidden;
-    margin-left: -190px;
+.butterflyParent__img{
+    padding-top: 250px;
+    scale: 0.9;
 }
 
 .myContainer {
     padding: 0px;
-    width: 1440px;
     margin: 0px;
 }

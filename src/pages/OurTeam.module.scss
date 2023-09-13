@@ -1,8 +1,6 @@
 @import '../styles/settings.scss';
 
 .ourTeam {
-    max-width: 1440px;
-    height: 700px;
     font-family: $base-font-text;
     color: $base-font-color;
     font-weight: $header-font-weight;
@@ -33,15 +31,13 @@ p {
     letter-spacing: 0.1px;
 }
 
-.butterflyRed {
-    object-position: -45px -450px;
-    width: 1440px;
-    height: 675px;
+.butterflyBlue1 {
     object-fit: cover;
+    padding: 200px 250px 0 0;
+    scale: 0.8;
 }
  ul {
     margin: 12px;
-    padding: 0px;
     text-align: right;
     list-style: none;
 
@@ -58,13 +54,7 @@ p {
     }
  }
 
-.butterflyParent {
-    overflow: hidden;
-    height: 675px;
-}
-
 .myContainer {
     padding: 0px;
-    width: 1440px;
     margin: 0px;
 }

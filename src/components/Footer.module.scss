@@ -10,6 +10,7 @@
     align-content: center;
     justify-content: center;
     background-color: $color-light;
+    overflow: hidden;
 
     img {
         width: 34px;
@@ -40,4 +41,5 @@
     line-height: normal;
     align-content: center;
     justify-content: center;
+    background-color: $color-light;
 }

@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 const Footer = () => {
     return(
-        <>
+        <div className='container-fluid'>
             <div className={clsx(styles.footer, 'row')}>
                 <div className='col-2 '>
                     <div className='row'>
@@ -63,7 +63,7 @@ const Footer = () => {
                     &copy; 2023 NATANAELUM. Wszelkie prawa zastrzeżone.
                 </div>
             </div>
-        </>
+        </div>
     )
 };
 

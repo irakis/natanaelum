@@ -9,10 +9,10 @@ const About = () => {
     return (
         <div className={clsx('row', styles.myContainer)}>
             <div className={clsx('row d-flex', styles.about)}>
-                <div className={clsx(styles.butterflyParent,'col-7 p-0 position-relative')}>
-                    <img className={clsx(styles.butterflyBlue, 'position-absolute')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1.png`} alt='motyl_niebieski_1'/>
+                <div className={clsx(styles.butterflyParent,'col-7 p-0 position-relative z-n1')}>
+                    <img className='position-absolute' src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
                 </div>
-                <div className={clsx('col-5')}>
+                <div className={clsx('col-5 z-n2')}>
                     <div className='row d-block h-100'>
                         <div className='col-12 mt-4 mb-4 d-flex justify-content-end'>
                             Aktualności
@@ -39,7 +39,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className={clsx('row')}>
+            <div className={clsx(styles.rowButterfly,'row')}>
                 <div className='col-9 d-flex p-4'>
                     <p className={clsx(styles.middle)}>Celem głównym Stowarzyszenia NATANAELUM jest prowadzenie działalności prospołecznej ukierunkowanej 
                         na działania pożytku 
@@ -70,7 +70,7 @@ const About = () => {
                     </div>
                     <div>
                         <p>Ochrona zdrowia społecznego</p>
-                        <img className={clsx(styles.butterflyBlue2,'position-absolute')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2.png`} alt='Motyl niebieski 2'/>
+                        <img className='position-absolute' src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2B.png`} alt='Motyl niebieski 2'/>
 
                     </div>
                 </div>
@@ -174,8 +174,8 @@ const About = () => {
                 </div>
             </div>
             <div className={clsx('row mt-5 pt-5', styles.about)}>
-                <div className={clsx(styles.butterflyParent,'col-7 p-0 position-relative')}>
-                    <img className={clsx(styles.butterflyBlue3, 'position-absolute')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1.png`} alt='motyl_niebieski_1'/>
+                <div className='col-7 position-relative'>
+                    <img className={clsx(styles.butterflyParent__img,'position-absolute z-n1')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
                 </div>
                 <div className={clsx('col-5')}>
                     <div className='row d-block h-100'>
