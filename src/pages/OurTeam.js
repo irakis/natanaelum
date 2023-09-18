@@ -5,9 +5,8 @@ import styles from './OurTeam.module.scss'
 const OurTeam = () => {
     return(
         <div className='container'>
-                <div className='row mt-5 pt-5 justify-content-evenly position-relative'>
-                    <img className={clsx(styles.butterflyBlue1, 'position-absolute z-n1')} src={`${process.env.PUBLIC_URL}/images/ourTeam/krzysztof-niewolny-f8JYQPq45uI-unsplash 1B.png`} alt='krzysztof-niewolny-f8JYQPq45uI-unsplash 1'/>
-                    <div className='col-6'>
+                <div className={clsx(styles.ourTeam,'row mt-5 pt-5 justify-content-evenly position-relative')}>
+                    <div className='col-lg-6 col-sm-12'>
                         <div className='row d-block'>
                             <div className='col-12 mt-5 mb-5'>
                                 <h2>PREZES</h2>
@@ -23,7 +22,7 @@ const OurTeam = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-4 d-block pr-5'>
+                    <div className='col-lg-4 col-sm-12 d-block pr-5'>
                         <h2 className='m-5 text-end'>SPECJALIŚCI</h2>
                         <ul>
                             <li>prof. dr hab. Stanisława Steuden</li>
@@ -56,6 +55,9 @@ const OurTeam = () => {
                             <li>mgr Iwona Mialik</li>
                             <li>mgr Mira Olszewska</li>
                         </ul>
+                    </div>
+                    <div className={clsx(styles.butterflyParent,'col-12')}>
+                    <img className={clsx(styles.butterflyBlue1, ' z-n1')} src={`${process.env.PUBLIC_URL}/images/ourTeam/krzysztof-niewolny-f8JYQPq45uI-unsplash 1B.png`} alt='krzysztof-niewolny-f8JYQPq45uI-unsplash 1'/>
                     </div>
                 </div>
         </div>

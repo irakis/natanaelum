@@ -1,15 +1,15 @@
 @import '../styles/settings.scss';
 
 .home {
-    max-width: 1440px;
-    height: 769px;
     font-family: $base-font-text;
     color: $base-font-color;
     font-weight: $header-font-weight;
     font-style: normal;
-    
     color: $main-green;
     margin: 15px 0 15px 15px;
+    @media (max-width: 576px) {
+        display: block;
+    }
 
     h2 {
         color: $header-font-color;
@@ -17,6 +17,9 @@
         font-weight: $header-font-weight;
         font-size: $header-font-size;
         font-style: $header-font-style;
+        @media (max-width: 576px) {
+            font-size: 40px;
+        }
     }
 
     p {
@@ -38,17 +41,27 @@ button {
 }
 
 .butterfly {
-    object-position: -445px -85px;
+    z-index: -1;
+    scale: 1;
+    @media (max-width: 576px) {
+        scale: 1;
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 768px) {
+        scale: 1;
+        width: 100%;
+        height: auto;
+    }
 }
 
 .butterflyParent {
-    overflow: hidden;
-}
-
-.myContainer {
-    padding: 0px;
-    //max-width: 1440px;
-    margin: 0px;
+    object-fit: cover;
+    @media (max-width: 576px) {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
 }
 
 

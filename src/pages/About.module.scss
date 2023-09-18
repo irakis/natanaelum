@@ -1,14 +1,17 @@
 @import '../styles/settings.scss';
 
 .about {
-    height: 700px;
+    min-height: 700px;
     font-family: $base-font-text;
     color: $base-font-color;
     font-weight: $header-font-weight;
     font-style: normal;
     color: $main-green;
     margin: 15px 0 15px 15px;
-    overflow: hidden;
+    @media (max-width: 578px) {
+        height: auto;
+        flex-direction: column-reverse;;
+    }
 
     h2 {
         color: $header-font-color;
@@ -16,6 +19,9 @@
         font-weight: $header-font-weight;
         font-size: $header-font-size;
         font-style: $header-font-style;
+        @media (max-width: 578px) {
+            font-size: 40px;
+        }
     }
 
     p {
@@ -37,6 +43,9 @@ p {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    @media (max-width: 1366px) {
+        overflow: hidden;
+    }
 }
 
 .middle {
@@ -50,8 +59,6 @@ p {
 }
 
 .middleHeight {
-    height: 200px;
-    padding-top: 170px;
     align-content: center;
 }
 
@@ -76,12 +83,39 @@ button {
 }
 
 
-.butterflyParent__img{
-    padding-top: 250px;
-    scale: 0.9;
+.butterflyParent {
+    display: block;
+    @media (max-width: 578px) {
+        width: 60%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        scale: 0.5;
+        position: static;
+    }
+
+    &__img{
+        scale: 0.9;
+        @media (max-width: 1198px) {
+            padding-top: 250px;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            scale: 0.5;
+            padding-top: 630px;
+        }
+        @media (max-width: 576px) {
+            scale:0.5;
+            padding-top: 250px;
+        }
+    }
 }
 
 .myContainer {
-    padding: 0px;
-    margin: 0px;
+    @media (max-width: 578px) {
+        width: 100%;
+        height: auto;
+    }
 }

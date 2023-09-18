@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div className={styles.myContainer}>
+        <div className='container'>
             <div className={clsx('row', styles.home)}>
-                <div className={clsx('col-6 p-0 m-0')}>
-                    <div className='row d-block h-100'>
+                <div className={clsx('col-6 p-0 m-0 col-sm-12 col-md-7')}>
+                    <div className='row d-block '>
                         <div className='col mt-4 mb-4'>
                             Aktualności
                         </div>
@@ -19,9 +19,9 @@ const Home = () => {
                             <h2>Wsparcie</h2>
                             <h2>Przełom</h2>
                         </div>
-                        <div className='col-8 mt-4 p-9'>
+                        <div className='col mt-4 p-9'>
                             <p>Odwiedź naszą Poradnię Psychologiczną i odkryj siłę swojego umysłu, 
-                                lecząc rany emocjonalne i osągając pełnię życia.
+                                lecząc rany emocjonalne i osiągając pełnię życia.
                             </p>
                         </div>
                         <div className='col mt-5 mb-5 pb-5'>
@@ -29,11 +29,13 @@ const Home = () => {
                                 <Button text='Czytaj więcej' color='green'/>
                             </Link>
                         </div>
-                        <LogoStamp/>
+                        <div className='col'>
+                            <LogoStamp/>
+                        </div>
                     </div>
                 </div>
-                <div className={clsx(styles.butterflyParent,'col-6 p-0 m-0 position-relative')}>
-                    <img className={clsx(styles.butterfly, 'position-absolute')} src={`${process.env.PUBLIC_URL}/images/home/Motyl_1.png`} alt='motyl_1'/>
+                <div className={clsx(styles.butterflyParent,'d-block col-6 p-0 m-0 col-sm-12 col-md-5')}>
+                    <img className={clsx(styles.butterfly)} src={`${process.env.PUBLIC_URL}/images/home/Motyl_1B.png`} alt='motyl_1'/>
                 </div>
             </div>
         </div>

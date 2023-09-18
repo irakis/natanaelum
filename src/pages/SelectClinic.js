@@ -16,31 +16,37 @@ const SelectClinic = () => {
     return(
         <div className="container">
             <div className="row">
-                <div className="col-6 d-grid pt-5 pb-5">
+                <div className="col-lg-6 col-md-12 d-grid pt-5 pb-5">
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot, styles.selected,"col-1 m-auto")}>
-                        </div>
-                        <div className={clsx(styles.selectClinic,"col-11")}>
-                            <p>Krok 1</p>
-                            <h2>Wybór poradni</h2>
-                        </div>
-                    </div>
-                    <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot,styles.selectClinicDot__inActive,"col-1 m-auto")}></div>
-                        <div className={clsx(styles.selectClinic,"col-11")}>
-                            <p>Krok 2</p>
-                            <h2>Formularz kontaktowy</h2>
+                        <div className="col-12 d-flex">
+                            <div className={clsx(styles.selectClinicDot, styles.selected,"col-2 m-auto")}>
+                            </div>
+                            <div className={clsx(styles.selectClinic,"col-10")}>
+                                <p>Krok 1</p>
+                                <h2>Wybór poradni</h2>
+                            </div>
                         </div>
                     </div>
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot, styles.selectClinicDot__inActive,"col-1 m-auto")}></div>
-                        <div className={clsx(styles.selectClinic,"col-11")}>
-                            <p>Krok 3</p>
-                            <h2>Podsumowanie</h2>
+                        <div className="col-12 d-flex">
+                            <div className={clsx(styles.selectClinicDot,styles.selectClinicDot__inActive,"col-2 m-auto")}></div>
+                            <div className={clsx(styles.selectClinic,"col-10")}>
+                                <p>Krok 2</p>
+                                <h2>Formularz kontaktowy</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row my-auto">
+                        <div className="col-12 d-flex">
+                            <div className={clsx(styles.selectClinicDot, styles.selectClinicDot__inActive,"col-2 m-auto")}></div>
+                            <div className={clsx(styles.selectClinic,"col-10")}>
+                                <p>Krok 3</p>
+                                <h2>Podsumowanie</h2>
+                            </div>
                         </div>
                     </div>                                       
                 </div>
-                <div className={clsx(styles.selectClinic, "col-6")}>
+                <div className={clsx(styles.selectClinic, "col-lg-6 col-md-12")}>
                     <h1 className="pt-5">Wybór poradni</h1>
                     <p className="pb-5">*Należy potwierdź wybór</p>
 

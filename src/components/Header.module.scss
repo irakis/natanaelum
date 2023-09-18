@@ -1,8 +1,6 @@
 @import '../styles/settings.scss';
 
 .header {
-    max-width: 1440px;
-    height: 118px;
     margin: 0;
     padding-top: 32px;
     font-family: $base-font-text;
@@ -12,6 +10,11 @@
     line-height: normal;
     align-items: space-between;
     background-color: $color-light;
+    @media (max-width: 576px) {
+        height: auto;
+    }
+
+
 }
 
 .logo {
@@ -20,7 +23,7 @@
 
 .header ul {
     list-style-type: none;
-    max-height: 39px;
+    //max-height: 39px;
     margin-top: 16px;
     justify-content: space-between;
     padding: 30px 139px 30px 139px;

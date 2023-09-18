@@ -2,6 +2,7 @@
 
 .footer {
     height: 200px;
+    width: 100%;
     font-family: $base-font-text;
     color: $base-font-color;
     font-weight: 600;
@@ -11,6 +12,11 @@
     justify-content: center;
     background-color: $color-light;
     overflow: hidden;
+    @media (max-width: 576px) {
+        display: block;
+        height: auto;
+    }
+    
 
     img {
         width: 34px;

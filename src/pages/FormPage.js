@@ -33,32 +33,32 @@ const FormPage = () => {
     return(
         <div className="container d-flex flex-column">
             <div className="row" >
-                <div className="col-5 d-grid pt-5 pb-5">
+                <div className="col-lg-5 col-md-12 d-grid pt-5 pb-5">
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot, styles.active,"col-1 m-auto")}>
+                        <div className={clsx(styles.selectClinicDot, styles.active,"col-2 m-auto")}>
                             <img className={clsx(styles.selectClinicDot__img)} src={`${process.env.PUBLIC_URL}/images/form/Done.svg`} alt='done'/>
                         </div>
-                        <div className={clsx(styles.selectClinic,"col-11")}>
+                        <div className={clsx(styles.selectClinic,"col-10")}>
                             <p>Krok 1</p>
                             <h2>Wybór poradni</h2>
                         </div>
                     </div>
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot,"col-1 m-auto")}></div>
-                        <div className={clsx(styles.selectClinic,"col-11")}>
+                        <div className={clsx(styles.selectClinicDot,"col-2 m-auto")}></div>
+                        <div className={clsx(styles.selectClinic,"col-10")}>
                             <p>Krok 2</p>
                             <h2>Formularz kontaktowy</h2>
                         </div>
                     </div>
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot, styles.selectClinicDot__inActive,"col-1 m-auto")}></div>
-                        <div className={clsx(styles.selectClinic,"col-11")}>
+                        <div className={clsx(styles.selectClinicDot, styles.selectClinicDot__inActive,"col-2 m-auto")}></div>
+                        <div className={clsx(styles.selectClinic,"col-10")}>
                             <p>Krok 3</p>
                             <h2>Podsumowanie</h2>
                         </div>
                     </div>                                       
                 </div>
-                <div className={clsx(styles.selectClinic, "col-7")}>
+                <div className={clsx(styles.selectClinic, "col-lg-7 col-md-12")}>
                     <h1 className="pt-5">Formularz kontaktowy</h1>
                     <p className="pb-5">*Każde pole wymagane</p>
                     <Form onSubmit={handleSubmit} className="d-flex flex-wrap">

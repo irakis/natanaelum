@@ -5,9 +5,9 @@ import Card from '../components/Common/Card.js';
 
 const OurProjects = () => {
     return (
-        <div className={clsx('row mt-5 ml-0 mr-0 d-flex justify-content-center', styles.myContainer)}>
+        <div className='container'>
             <div className={clsx('row d-flex', styles.ourProjects)}>
-                <div className={clsx(styles.butterflyParent,'col-6 p-0')}>
+                <div className={clsx(styles.butterflyParent,'col-lg-6 col-md-12 p-0')}>
                     <div className='col-12 mt-4 mb-4 d-flex justify-content-start'>
                         <h2 className={styles.smallGreen}> Projekty</h2>
                     </div>
@@ -76,8 +76,8 @@ const OurProjects = () => {
                         description='W ramach projektu oferujemy kompleksowe programy aktywizacji, usługi reintegracji i rehabilitacji społeczno-zawodowej, które mają na celu wykluczenie społeczne i ubóstwo. Projekt jest dostępny dla osób zamieszkujących teren Województwa Lubelskiego i Lubelskiego Obszaru Funkcjonalnego w wieku 18-64 lat, które są niepracujące i nieaktywne zawodowo.'
                         link='/'
                     />
-                </div>
-            </div>                  
+                </div>      
+            </div>
         </div>
     )
 };

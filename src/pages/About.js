@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
-        <div className={clsx('row', styles.myContainer)}>
-            <div className={clsx('row d-flex', styles.about)}>
-                <div className={clsx(styles.butterflyParent,'col-7 p-0 position-relative z-n1')}>
-                    <img className='position-absolute' src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
+        <div className='container'>
+            <div className={clsx(styles.about,'row')}>
+                <div className={clsx(styles.butterflyParent,'col-lg-7 col-sm-12 p-0 position-relative z-n1')}>
+                    <img className={clsx(styles.butterflyParent, styles.butterflyParent__img,'position-absolute')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
                 </div>
-                <div className={clsx('col-5 z-n2')}>
+                <div className={clsx(styles.myContainer,'col-lg-5 col-sm-12 z-n2')}>
                     <div className='row d-block h-100'>
                         <div className='col-12 mt-4 mb-4 d-flex justify-content-end'>
                             Aktualności
@@ -39,8 +39,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className={clsx(styles.rowButterfly,'row')}>
-                <div className='col-9 d-flex p-4'>
+            <div className={clsx(styles.rowButterfly,'row justify-content-center')}>
+                <div className='col-9 col-md-12 d-flex p-4'>
                     <p className={clsx(styles.middle)}>Celem głównym Stowarzyszenia NATANAELUM jest prowadzenie działalności prospołecznej ukierunkowanej 
                         na działania pożytku 
                         publicznego i społecznie użyteczne, takie jak:
@@ -48,7 +48,7 @@ const About = () => {
                 </div>
             </div>
             <div className={clsx(styles.rowButterfly,'row')}>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 p-5 d-block col-sm-12 col-md-6'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/person_apron.svg`} alt='person_apron'/>
                     </div>
@@ -56,7 +56,7 @@ const About = () => {
                         <p>Wszechstronna pomoc świadczona na rzecz pracowników i wolontariuszy instytucji integracji i pomocy społecznej oraz instytucji działających w obszarze rozwoju zasobów ludzkich</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 p-5 d-block col-sm-12'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/diversity_3.svg`} alt='diversity_3'/>
                     </div>
@@ -64,13 +64,13 @@ const About = () => {
                         <p>Pomoc dla osób i grup zagrożonych wykluczeniem społecznym i zawodowym oraz wykluczonych społecznie poprzez działania readaptacyjne i resocjalizacyjne oraz niwelujące uprzedzenia społeczne w stosunku do osób zagrożonych wykluczeniem</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block position-relative'>
+                <div className='col-lg-4 col-md-6 p-5 d-block position-relative col-sm-12'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/add_moderator.svg`} alt='add_moderator'/>
                     </div>
                     <div>
                         <p>Ochrona zdrowia społecznego</p>
-                        <img className='position-absolute' src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2B.png`} alt='Motyl niebieski 2'/>
+                        <img className={clsx(styles.butterflyParent__img, 'p-0')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2B.png`} alt='Motyl niebieski 2'/>
 
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const About = () => {
                 </div>
             </div>
             <div className={clsx(styles.rowButterfly,'row')}>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/cognition.svg`} alt='cognition'/>
                     </div>
@@ -90,7 +90,7 @@ const About = () => {
                         <p>Osoby z problemami psychicznymi i osobowościowymi</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/accessible.svg`} alt='accessible'/>
                     </div>
@@ -98,7 +98,7 @@ const About = () => {
                         <p>Osoby z niepełnosprawnością</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/all_inclusive.svg`} alt='all_inclusive'/>
                     </div>
@@ -106,7 +106,7 @@ const About = () => {
                         <p>Osoby z uzależnieniami i zagrożone różnymi typami uzależnień (od substancji psychoaktywnych i czynności)</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/sports_kabaddi.svg`} alt='sports_kabaddi'/>
                     </div>
@@ -114,7 +114,7 @@ const About = () => {
                         <p>Osoby wykorzystywane i niezaradne społecznie i zawodowo</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/gavel.svg`} alt='gavel'/>
                     </div>
@@ -122,7 +122,7 @@ const About = () => {
                         <p>Osoby po konflikcie z prawem karnym</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/pill.svg`} alt='pill'/>
                     </div>
@@ -130,7 +130,7 @@ const About = () => {
                         <p>Osoby żyjące z wirusem HIV i chore na AIDS</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/family_restroom.svg`} alt='family_restroom'/>
                     </div>
@@ -138,7 +138,7 @@ const About = () => {
                         <p>Kobiety, mężczyzn i dzieci w sytuacji rozwodowej i po rozwodzie</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/escalator_warning.svg`} alt='escalator_warning'/>
                     </div>
@@ -146,7 +146,7 @@ const About = () => {
                         <p>Osoby samotnie wychowujące dzieci i dzieci z rodzin dysfunkcyjnych oraz ze środowisk społecznie zaniedbanych</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/flightsmode.svg`} alt='flightsmode'/>
                     </div>
@@ -154,7 +154,7 @@ const About = () => {
                         <p>Osoby chore będące uchodźcami politycznymi</p>
                     </div>
                 </div>
-                <div className='col-4 p-5 d-block'>
+                <div className='col-lg-4 col-md-6 col-sm-12 p-5 d-block'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/work_alert.svg`} alt='work_alert'/>
                     </div>
@@ -174,10 +174,10 @@ const About = () => {
                 </div>
             </div>
             <div className={clsx('row mt-5 pt-5', styles.about)}>
-                <div className='col-7 position-relative'>
-                    <img className={clsx(styles.butterflyParent__img,'position-absolute z-n1')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
+                <div className='col-lg-7 col-sm-12 position-relative'>
+                    <img className={clsx(styles.butterflyParent, styles.butterflyParent__img,'position-absolute z-n1')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
                 </div>
-                <div className={clsx('col-5')}>
+                <div className={clsx('col-lg-5 col-sm-12')}>
                     <div className='row d-block h-100'>
                         <div className='col-12 mt-4 mb-4 d-flex justify-content-end'>
                             IPIP

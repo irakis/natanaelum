@@ -16,7 +16,7 @@ const OurTrainings = () => {
                 </div>
             </div>
             <div className={clsx(styles.trainings, 'row d-flex flex-row pt-3 pb-3')}>
-                <div className='col-6 my-auto'>
+                <div className='col-lg-6 col-md-12 my-auto'>
                     <Training
                         url={`${process.env.PUBLIC_URL}/images/training/Ręce.png`}
                         alt='Ręce'
@@ -25,7 +25,7 @@ const OurTrainings = () => {
                         status='TRWA'
                     />
                 </div>
-                <div className='col-6 my-auto'>
+                <div className='col-lg-6 col-md-12 my-auto'>
                     <Training
                         url={`${process.env.PUBLIC_URL}/images/training/charlesdeluvio-wn7dOzUh3Rs-unsplash 1.png`}
                         alt='charlesdeluvio-wn7dOzUh3Rs-unsplash 1'

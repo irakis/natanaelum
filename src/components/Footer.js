@@ -4,9 +4,9 @@ import clsx from 'clsx';
 
 const Footer = () => {
     return(
-        <div className='container-fluid'>
-            <div className={clsx(styles.footer, 'row')}>
-                <div className='col-2 '>
+        <footer>
+            <div className={clsx(styles.footer, 'row row-cols-2 row-cols-sm-12 row-cols-md-6 m-0')}>
+                <div className='col'>
                     <div className='row'>
                         <div className='col-3 p-1'>
                             <img src={`${process.env.PUBLIC_URL}/images/call.svg`} alt='call'/>
@@ -23,7 +23,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='col-2 '>
+                <div className='col'>
                     <div className='row'>
                         <div className='col-3 p-1'>
                             <img src={`${process.env.PUBLIC_URL}/images/call.svg`} alt='call'/>
@@ -40,7 +40,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='col-2 '>
+                <div className='col'>
                     <div className='row'>
                         <div className='col-3 p-1'>
                             <img src={`${process.env.PUBLIC_URL}/images/alternate_email.svg`} alt='call'/>
@@ -63,7 +63,7 @@ const Footer = () => {
                     &copy; 2023 NATANAELUM. Wszelkie prawa zastrzeżone.
                 </div>
             </div>
-        </div>
+        </footer>
     )
 };
 

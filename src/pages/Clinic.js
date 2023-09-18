@@ -48,7 +48,7 @@ const Clinic = () => {
                     img={`${process.env.PUBLIC_URL}/images/clinic/diversity_3.svg`}
                     alt='diversity_3'
                     description='profilaktyki uzależnień(dla rodziców, nauczycieli, szkół, organizacji)'
-                />                
+                />               
             </div>
             <div className={clsx('row')}>
                 <div className='col-12 d-block p-4 mx-auto'>
