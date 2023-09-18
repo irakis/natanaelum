@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import clsx from 'clsx';
 
 const Header = () => {
+
+    const [isListCollapsed, setIsListCollapsed] = useState(false);
+
+    const handleClick = () => setIsListCollapsed(!isListCollapsed);
+
     return (
         <header>
             <div className='container'>
@@ -10,10 +15,16 @@ const Header = () => {
                     <a className={clsx('navbar-brand', styles.logo)} href="/">
                         <img src={`${process.env.PUBLIC_URL}/images/logo_3.png`} alt='logo natanaelum'/>
                     </a>
-                    <div className='col-9' role='navigation'>
+
+                    <button className={`${isListCollapsed === false ? 'collapsed' : ''} navbar-toggler`} type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" 
+                        aria-controls="mobile-menu" aria-expanded={isListCollapsed} aria-label="Toggle navigation" onClick={handleClick}>
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className={`${isListCollapsed === false ? '' : 'show'}  collapse navbar-collapse`} id='mobile-menu'>
                         <ul className='nav-list navbar nav'>
                             <li className='nav-item'>
-                                <a href="/">
+                                <a href="/" >
                                     <div>
                                         Dom
                                     </div>

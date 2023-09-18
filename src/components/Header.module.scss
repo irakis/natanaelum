@@ -13,6 +13,9 @@
     @media (max-width: 576px) {
         height: auto;
     }
+    button {
+        color: $main-green;
+    }
 
 
 }
@@ -23,11 +26,17 @@
 
 .header ul {
     list-style-type: none;
-    //max-height: 39px;
     margin-top: 16px;
     justify-content: space-between;
     padding: 30px 139px 30px 139px;
-    
+    @media (max-width: 768px) {
+        display: block;
+        border-style: solid;
+        border-color: $main-green;
+        border-radius: 25px;
+        margin: 0px;
+        padding-left: 30%;
+    }
     li {
         padding: 8px;
     }
