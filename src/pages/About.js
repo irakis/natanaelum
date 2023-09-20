@@ -71,7 +71,6 @@ const About = () => {
                     <div>
                         <p>Ochrona zdrowia społecznego</p>
                         <img className={clsx(styles.butterflyParent__img, 'p-0')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2B.png`} alt='Motyl niebieski 2'/>
-
                     </div>
                 </div>
             </div>
@@ -185,11 +184,11 @@ const About = () => {
                         <div className='col-12 mb-3 mt-3 d-flex justify-content-end'>
                             <h2>Instytut</h2>
                         </div>
-                        <div className={clsx(styles.description,'col-12 mt-4 d-flex ')}>
+                        <div className={clsx(styles.description, styles.description__ipip, 'col-12 mt-4 d-flex ')}>
                             <p>Psychoprofilaktyki i Psychoterapii IPIP, powołany do życia w ramach działań statutowych Stowarzyszenia NATANAELUM w dniu 1 czerwca 2011 roku, ma za zadanie dostarczanie merytorycznego wsparcia osobom i instytucjom, które działają 
-                                na rzecz grup i jednostek zagrożonych wykluczeniem społecznym. 
-                                <p></p>
-                                W szczególności, Instytut koncentruje się na wspieraniu osób uzależnionych od substancji psychoaktywnych i czynności, poprzez prowadzenie badań naukowych 
+                                na rzecz grup i jednostek zagrożonych wykluczeniem społecznym.</p> 
+                            <p></p>
+                            <p>W szczególności, Instytut koncentruje się na wspieraniu osób uzależnionych od substancji psychoaktywnych i czynności, poprzez prowadzenie badań naukowych 
                                 o charakterze epidemiologicznym, społecznym i klinicznym, opracowywanie wyników badań oraz organizowanie szkoleń, warsztatów i innych form edukacji specjalistycznej z zakresu psychologii, psychoprofilaktyki i psychoterapii.
                             </p>
                         </div>

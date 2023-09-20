@@ -53,11 +53,16 @@
     height: 7px;
     width: 7px;
     margin: 8px auto 0 auto;
-    background-color: $color-light;    
+    background-color: $color-light;
+    transform: translate(-200px);
+    transition:
+        transform 1s,
+        background-color 2s,
 }
 
 li:hover p {
     background-color: $main-green;
+    transform: translate(0);
 }
 
 li:hover div {

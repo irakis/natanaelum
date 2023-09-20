@@ -5,7 +5,6 @@ import clsx from 'clsx';
 const Header = () => {
 
     const [isListCollapsed, setIsListCollapsed] = useState(false);
-
     const handleClick = () => setIsListCollapsed(!isListCollapsed);
 
     return (
@@ -21,8 +20,8 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className={`${isListCollapsed === false ? '' : 'show'}  collapse navbar-collapse`} id='mobile-menu'>
-                        <ul className='nav-list navbar nav'>
+                    <div className={`${isListCollapsed === false ? '' : 'show'} collapse navbar-collapse`} id='mobile-menu'>
+                        <ul className='nav-list navbar nav w-100'>
                             <li className='nav-item'>
                                 <a href="/" >
                                     <div>
