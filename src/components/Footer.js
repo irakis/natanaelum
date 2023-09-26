@@ -8,21 +8,37 @@ import FooterMail from './Common/FooterMail';
 import FooterRegistration from './Common/FooterRegistration';
 import FooterOffice from './Common/FooterOffice';
 
+
 const Footer = () => {
 
     const location = useLocation();
-    console.log('location: ', location, location === '/clinic');
+    let actualLocation = location.pathname;
+    let actualForm = actualLocation.split('/')[1] ;
 
     return(
         <footer>
             <div className={clsx(styles.footer, `${ location.pathname === '/ourteam' ? 'd-none' : ''} row row-cols-2 row-cols-sm-12 row-cols-md-6 m-0`)}>
                 <div className='col'>
-                    <FooterAdress/>
-                    <FooterOffice/>
+                    {(() => {
+                        switch(actualForm){
+                            case 'clinic':
+                                return <FooterAdress/>
+                            default:
+                                return <FooterOffice/>
+                        }
+                    })()}
                 </div>
                 <div className='col'>
-                    <FooterRegistration/>
-                    <FooterClinic/>
+
+                {(() => {
+                    switch(actualForm){
+                        case 'clinic':
+                            return <FooterRegistration/>
+                        default:
+                            return <FooterClinic/>
+                    }
+                })()}
+
                 </div>
                 <div className='col'>
                     <FooterMail/>

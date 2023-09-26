@@ -31,7 +31,7 @@ function App() {
         <Route path='/ourtrainings/addiction_training' element={<AddictionTraining/>}/>
         <Route path='/clinic/select_clinic' element={<SelectClinic/>}/>
         <Route path='/clinic/select_clinic/:id' element={<FormPage/>}/>
-        <Route path='/form/summary' element={<SummarySite/>}/>
+        <Route path='/clinic/summary' element={<SummarySite/>}/>
         {/*<Route path='*' element={<Error404/>}/>*/}
       </Routes>
       <Footer/>

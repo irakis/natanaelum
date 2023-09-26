@@ -27,7 +27,7 @@ const FormPage = () => {
             console.log(error.text);
         });
 
-        navigate('/form/summary');
+        navigate('/clinic/summary');
     }
 
     return(
