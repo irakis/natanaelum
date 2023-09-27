@@ -6,17 +6,17 @@ import styles from './AddictionTraining.module.scss';
 const AddictionTraining = () => {
 
     const string = `
-    <p>Szkolenie rekomendowane przez Dyrektora Krajowego Biura do spraw Przeciwdziałania Narkomanii przygotowujące do egzaminu certyfikowanego przez Ministra Zdrowia. Kierownik szkolenia: Dr hab. Iwona Niewiadomska, prof. KUL
-    <p></p>
-    <p><b>Kto może wziąć udział w szkoleniu?</b><br></p>
+    <p>Szkolenie rekomendowane przez Dyrektora Krajowego Biura do spraw Przeciwdziałania Narkomanii przygotowujące do egzaminu certyfikowanego przez Ministra Zdrowia. Kierownik szkolenia: Dr hab. Iwona Niewiadomska, prof. KUL</p>
+    
+    <p><b>Kto może wziąć udział w szkoleniu?</b></p>
     <p>Szkolenie w dziedzinie uzależnienia w zakresie specjalisty psychoterapii uzależnień
     przeznaczone jest dla osób z wykształceniem wyższym posiadających tytuł zawodowy lekarza lub tytuł zawodowy magistra pielęgniarstwa, lub tytuł magistra uzyskany po studiach w zakresie: praca socjalna, psychologia, pedagogika, pedagogika specjalna, socjologia, resocjalizacja, zdrowie publiczne, nauki o rodzinie, teologia lub filozofia.</p>
-    <p></p>
+
     <p>Szkolenie w dziedzinie uzależnienia w zakresie instruktora terapii uzależnień
     przeznaczone jest dla osób z wykształceniem wyższym nie wymienionym powyżej oraz osób z wykształceniem średnim i średnim branżowym</p>
-    <p></p>
+    
     <p>Uwaga: Stowarzyszenie Natanaelum realizuje jeden program szkolenia w zakresie specjalisty psychoterapii uzależnień i instruktora terapii uzależnień na poziomie wymagań dla specjalisty psychoterapii uzależnień.</p>
-    <p></p>
+    
     <p><b>Jaką wiedzę i jakie umiejętności nabywa uczestnik szkolenia?</b><br></p>
     <p>Specjalistyczne szkolenie w dziedzinie uzależnienia w zakresie Specjalisty Psychoterapii Uzależnień pozwala nabyć kompetencje do pracy terapeutycznej z osobami uzależnionymi i współuzależnionymi od substancji psychoaktywnych w tym od alkoholu, narkotyków czy dopalaczy, a także uzależnionymi behawioralnie (np. od hazardu, mediów). Osoba po ukończonym szkoleniu posiada wiedzę w zakresie najnowszych naukowych podejść do psychoterapii uzależnień. Potrafi samodzielnie zaplanować i przeprowadzić diagnozę kliniczną, zaplanować indywidualną terapię adekwatnie do potrzeb klienta, nawiązać kontakt z klientem, rozwijać przymierze terapeutyczne, motywować klienta do zmian, stosować techniki terapeutyczne oparte na wiedzy naukowej i potwierdzone wysoką skutecznością, potrafi reagować w sytuacjach trudnych w przebiegu terapii, korzystać ze wsparcia superwizora, oceniać ryzyko nawrotu i pracować z klientem w celu jego zminimalizowania, utrwalać wypracowane zmiany o charakterze pozytywnym, oceniać skuteczność działań terapeutycznych, korzystać z wyników ewaluacji w celu podniesienia skuteczności pracy terapeutycznej. Absolwent szkolenia potrafi także pracować z osobami doświadczającymi innych zaburzeń współwystępujących z uzależnieniem, ze współuzależnieniem oraz z rodziną osób uzależnionych (w tym dzieci i młodzież). Uczestnik szkolenia potrafi ocenić własną wiedzę i umiejętności oraz wyznaczyć we współpracy z superwizorem ścieżkę własnego rozwoju zawodowego.</p>
     <p></p>

@@ -64,35 +64,35 @@ const FormPage = () => {
                     <Form onSubmit={handleSubmit} className="d-flex flex-wrap">
                         <div className="p-1 col-6">
                             <label className="form-label">Imię</label>
-                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp"></input>
+                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required></input>
                             <div id="forenameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Nazwisko</label>
-                            <input type="text" name='sureName' className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp"></input>
+                            <input required type="text" name='sureName' className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp"></input>
                             <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Telefon</label>
-                            <input type="number"name='phone' className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp"></input>
+                            <input required type="number"name='phone' className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp"></input>
                             <div id="phoneHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. (+48) 123 456 789</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Email address</label>
-                            <input type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+                            <input required type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp"></input>
                             <div id="emailHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. jan.kowalski@poczta.pl</div>
                         </div>
                         <div className="p-1 col-6">
                             <Form.Group controlId='date'>
                                 <Form.Label>Wybierz datę</Form.Label>
-                                <Form.Control name='date' type='date' placeholder='dd/mm/rrrr' onChange={ e => setFormData({...formData, date: e.target.value})} aria-describedby="dateHelper"></Form.Control>
+                                <Form.Control required name='date' type='date' placeholder='dd/mm/rrrr' onChange={ e => setFormData({...formData, date: e.target.value})} aria-describedby="dateHelper"></Form.Control>
                                 <div id='dateHelper' className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 10.09.2025</div>
                             </Form.Group>
                         </div>
                         <div className="p-1 col-6">
                             <Form.Group controlId='time'>
                                 <Form.Label>Wybierz godzinę</Form.Label>
-                                <Form.Control name='time' type='time' placeholder='hh/mm' onChange={ e => setFormData({...formData, time: e.target.value})} aria-describedby="timeHelper"></Form.Control>
+                                <Form.Control required name='time' type='time' placeholder='hh/mm' onChange={ e => setFormData({...formData, time: e.target.value})} aria-describedby="timeHelper"></Form.Control>
                                 <div id='timeHelper' className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 12:00</div>
                             </Form.Group>
                         </div>

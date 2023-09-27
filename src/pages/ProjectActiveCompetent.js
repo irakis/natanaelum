@@ -55,6 +55,7 @@ const ProjectActiveCompetent = () => {
             title='Aktywni i kompetentni na lubelskim rynku pracy'
             text={string}
             image={`${process.env.PUBLIC_URL}/images/projects/plakat002 2.png`}
+            alt='plakat002 2'
             contact={stringBottom}
             showImage='true'
         />
