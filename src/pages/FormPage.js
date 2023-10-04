@@ -24,7 +24,7 @@ const FormPage = () => {
         console.log('token: ', token);
         captchaRef.current.reset();
         
-        await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
+        await axios.post(`/${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
         .then(res => console.log(res.data))
         .catch((error) => {
             console.log(error.message);
