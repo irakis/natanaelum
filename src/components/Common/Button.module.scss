@@ -1,6 +1,6 @@
 @import '../../styles/settings.scss';
 
-body .green {
+.green {
     width: 161px;
     height: 40px;
     background-color: $main-green;
@@ -10,9 +10,10 @@ body .green {
     font-size: 14px;
     text-align: center;
     padding-top: 10px;
+    font-weight: $header-font-weight;
 }
 
-body .gray {
+.gray {
     width: 161px;
     height: 40px;
     border-radius: 100px;
@@ -23,4 +24,5 @@ body .gray {
     border-color: #717971;
     text-align: center;
     padding-top: 10px;
+    font-weight: $header-font-weight;
 }

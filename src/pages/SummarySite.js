@@ -35,7 +35,7 @@ const SummarySite = () => {
                     </div>                                       
                 </div>
                 <div className={clsx(styles.selectClinic, "col-lg-7 col-md-12 p-5")}>
-                    <h1 className="pt-5">Dziekujemy!</h1>
+                    <h1 className="pt-5">Dziękujemy!</h1>
                 </div>
             </div>
         </div>
