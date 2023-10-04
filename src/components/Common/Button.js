@@ -2,9 +2,10 @@ import React from "react";
 import styles from './Button.module.scss';
 import clsx from "clsx";
 
-const Button = props => {
+const Button = (data) => {
     return(
-            <button className={clsx((props.color === 'green' ? styles.green : styles.gray),'m-2')} type='submit'>{props.text}</button>
+            <div className={clsx((data.color === 'green' ? styles.green : styles.gray),'m-2')} 
+                role="button" type="submit" onClick={data.action}>{data.text}</div>
     )
 }
 

@@ -1,6 +1,6 @@
 @import '../../styles/settings.scss';
 
-.green {
+body .green {
     width: 161px;
     height: 40px;
     background-color: $main-green;
@@ -8,9 +8,11 @@
     border-radius: 100px;
     border-style: none;
     font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
 }
 
-.gray {
+body .gray {
     width: 161px;
     height: 40px;
     border-radius: 100px;
@@ -19,4 +21,6 @@
     background-color: #d1ded1 ;
     color: $main-green;
     border-color: #717971;
+    text-align: center;
+    padding-top: 10px;
 }

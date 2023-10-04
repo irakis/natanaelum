@@ -3,18 +3,34 @@ import styles from './FormPage.module.scss';
 import clsx from 'clsx';
 import Button from "../components/Common/Button.js";
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from 'axios';
 
 import { Form } from 'react-bootstrap';
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const FormPage = () => {
 
     const navigate = useNavigate();
     const { id } = useParams();
     const [ formData, setFormData ] = useState({ clinic: id , sureName: '', foreName: '', phone: '', mail: '', date: '', time: ''});
+    const captchaRef = useRef(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        
+        const token = captchaRef.current.getValue();
+        console.log('token: ', token);
+        captchaRef.current.reset();
+        
+        await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
+        .then(res => console.log(res.data))
+        .catch((error) => {
+            console.log(error.message);
+        })
+        
+
 
         const template_id = `${process.env.REACT_APP_TEMPALTE_ID}`;
         const service_id = `${process.env.REACT_APP_SERVICE_ID}`;
@@ -26,6 +42,7 @@ const FormPage = () => {
         }, (error) => {
             console.log(error.text);
         });
+
 
         navigate('/clinic/summary');
     }
@@ -97,7 +114,12 @@ const FormPage = () => {
                             </Form.Group>
                         </div>
                         <div className="col-12 mt-5 pt-5 d-flex justify-content-end ">
-                            <Button color='green' text='Idź dalej'/>
+                            <ReCAPTCHA
+                                sitekey={process.env.REACT_APP_SITE_KEY_RECAPTCHA}
+                                ref={captchaRef}
+                                badge="bottomleft"
+                            />
+                            <Button color='green' text='Idź dalej' action={handleSubmit}/>
                         </div>
                     </Form>
                 </div>
