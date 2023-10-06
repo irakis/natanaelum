@@ -16,31 +16,45 @@ const FormPage = () => {
     const [ formData, setFormData ] = useState({ clinic: id , sureName: '', foreName: '', phone: '', mail: '', date: '', time: ''});
     const captchaRef = useRef(null);
 
-    (()=>{
-        const forms = document.querySelectorAll('.needs-validation');
-        Array.from(forms).forEach(form => {
-            console.log('array validation fired!!!', form)
-            form.addEventListener('submit', event => {
-                console.log('what is validation:', form.checkValidity())
-                if(!form.checkValidity()) {
-                    
-                    event.preventDefault()
-                    event.stopPropagation()
+ 
+    const checkCustomValue = (input) => {
+        //const submitEnable = document.getElementById("submitButton");
+        console.log('what is input:' , input)
 
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })();
+        if (input !== '') {
+            console.log('Looks good')
+            //submitEnable.classList.toggle('.disabled')
+        } else {
+            //input.setCustomValidity('..is invalid');
+            console.log('Looks BAD')
+        }
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('what type is it:', e.type);
+
+        {/*const forms = document.querySelectorAll('.needs-validation');
+        forms.addEventListener('click', event => {
+                console.log('what is validation:', forms.checkValidity());
+                //console.log('report validity:', reportValidity());
+                for (let )
+                if(!forms.checkValidity()) {
+                    
+                    event.preventDefault();
+                    event.stopPropagation();
+                    
+
+                } else {
+                    forms.classList.add('was-validated')
+                }
+            }, false)*/}
         
         const token = captchaRef.current.getValue();
         console.log('token: ', token);
         captchaRef.current.reset();
         
-        await axios.post(`/${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
+        await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
         .then(res => console.log(res.data))
         .catch((error) => {
             console.log(error.message);
@@ -56,7 +70,6 @@ const FormPage = () => {
         }, (error) => {
             console.log(error.text);
         });
-
 
         navigate('/clinic/summary');
     }
@@ -92,10 +105,10 @@ const FormPage = () => {
                 <div className={clsx(styles.selectClinic, "col-lg-7 col-md-12")}>
                     <h1 className="pt-5">Formularz kontaktowy</h1>
                     <p className="pb-5">*Każde pole wymagane</p>
-                    <Form onSubmit={handleSubmit} className="d-flex flex-wrap needs-validation was-validated">
+                    <Form onSubmit={handleSubmit} className="d-flex flex-wrap was-validated">
                         <div className="p-1 col-6">
                             <label className="form-label">Imię</label>
-                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required='*'></input>
+                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required='*' onInput={checkCustomValue()}></input>
                             <div id="forenameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
                         <div className="p-1 col-6">
@@ -128,12 +141,14 @@ const FormPage = () => {
                             </Form.Group>
                         </div>
                         <div className="col-12 mt-5 pt-5 d-flex justify-content-end ">
-                            <ReCAPTCHA
-                                sitekey={process.env.REACT_APP_SITE_KEY_RECAPTCHA}
-                                ref={captchaRef}
-                                badge="bottomleft"
-                            />
-                            <Button color='green' text='Idź dalej' action={handleSubmit}/>
+                            <div className={clsx(styles.selectClinic__recaptcha)}>
+                                <ReCAPTCHA
+                                    sitekey={process.env.REACT_APP_SITE_KEY_RECAPTCHA}
+                                    ref={captchaRef}
+                                    badge="bottomleft"
+                                />
+                            </div>
+                            <Button className='disabled' color='green' text='Idź dalej' action={handleSubmit}/>
                         </div>
                     </Form>
                 </div>

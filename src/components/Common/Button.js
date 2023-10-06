@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const Button = (data) => {
     return(
-            <div className={clsx((data.color === 'green' ? styles.green : styles.gray),'m-2')} 
+            <div className={clsx((data.color === 'green' ? styles.green : styles.gray))} 
                 role="button" type="submit" onClick={data.action}>{data.text}</div>
     )
 }

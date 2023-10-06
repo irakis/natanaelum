@@ -5,7 +5,7 @@ import clsx from 'clsx';
 const Card = (data) => {
     return(
         <div className={clsx(styles.card)}>
-            <div className={clsx(styles.imgParent, 'col-12 w-100')}>
+            <div className={clsx(styles.imgParent)}>
                 <img src={data.img} alt={data.alt}/>
             </div>
             <h2 className='mb-4'>{data.header}</h2>

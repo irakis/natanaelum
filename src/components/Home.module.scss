@@ -5,8 +5,10 @@
     color: $base-font-color;
     font-weight: $header-font-weight;
     font-style: normal;
+    font-size: 20px;
     color: $main-green;
     margin: 15px 0 15px 15px;
+    height: auto;
     @media (max-width: 576px) {
         display: block;
     }
@@ -42,16 +44,19 @@ button {
 
 .butterfly {
     z-index: -1;
-    scale: 1;
+    scale: 0.7;
+    position:absolute;
     @media (max-width: 576px) {
-        scale: 1;
+        scale: 0.7;
         width: 100%;
         height: auto;
+        position: relative;
     }
     @media (max-width: 768px) {
-        scale: 1;
+        scale: 0.7;
         width: 100%;
         height: auto;
+        position: relative;
     }
 }
 

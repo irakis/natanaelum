@@ -25,7 +25,7 @@ const Header = () => {
                             <li className='nav-item'>
                                 <a href="/" >
                                     <div>
-                                        Dom
+                                        Strona główna
                                     </div>
                                     <p className={clsx(styles.dot, 'rounded-circle')}></p>
                                 </a>

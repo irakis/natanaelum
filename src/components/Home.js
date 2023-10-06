@@ -24,7 +24,7 @@ const Home = () => {
                                 lecząc rany emocjonalne i osiągając pełnię życia.
                             </p>
                         </div>
-                        <div className='col mt-5 mb-5 pb-5'>
+                        <div className='col mt-3 m-0 mb-4 pb-4'>
                             <Link to='/clinic'>
                                 <Button text='Czytaj więcej' color='green'/>
                             </Link>

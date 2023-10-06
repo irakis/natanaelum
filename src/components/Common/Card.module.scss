@@ -1,7 +1,7 @@
 @import '../../styles/settings.scss';
 
 .card {
-    width: 367px;
+    //width: 367px;
     border-radius: 25px;
     background: rgba(49, 160, 94, 0.14);
     padding: 40px;
@@ -26,12 +26,17 @@
     }
 
     .imgParent {
-        width: 367px;
-        margin-left: -40px;
+        //width: 100%;
+        //margin-left: -40px;
         padding: 0px;
         object-fit: cover;
         margin-bottom: 30px;
-    }
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            
+    }}
 
     .cardGreen {
         color: #31A05E;
@@ -55,4 +60,4 @@
         font-weight: 600;
         line-height: normal;
     }
-}
+};

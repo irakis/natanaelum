@@ -9,11 +9,11 @@ const About = () => {
     return (
         <div className='container'>
             <div className={clsx(styles.about,'row')}>
-                <div className={clsx(styles.butterflyParent,'col-lg-7 col-sm-12 p-0 position-relative z-n1')}>
-                    <img className={clsx(styles.butterflyParent, styles.butterflyParent__img,'position-absolute')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
+                <div className={clsx(styles.butterflyParent,'col-lg-6 col-sm-12 p-0 z-n1')}>
+                    <img className={clsx(styles.butterflyParent, styles.butterflyParent__img)} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
                 </div>
-                <div className={clsx(styles.myContainer,'col-lg-5 col-sm-12 z-n2')}>
-                    <div className='row d-block h-100'>
+                <div className={clsx(styles.myContainer,'col-lg-6 col-sm-12 z-n2')}>
+                    <div className='row d-block'>
                         <div className='col-12 mt-4 mb-4 d-flex justify-content-end'>
                             Aktualności
                         </div>
@@ -21,17 +21,17 @@ const About = () => {
                             <h2>Stowarzyszenie</h2>
                         </div>
                         <div className={clsx(styles.description,'col-12 mt-4 d-flex')}>
-                            <p>powstało z inicjatywy pracowników Instytutu Psychologii Katolickiego Uniwersytetu Lubelskiego Jana Pawło II. 
-                                Do istnienia powołane sostało na zebraniu załozycielskim w dniu 20.12.2010 roku w Lublinie.
+                            <p>powstało z inicjatywy pracowników Instytutu Psychologii Katolickiego Uniwersytetu Lubelskiego Jana Pawła II. 
+                                Do istnienia powołane zostało na zebraniu założycielskim w dniu 20.12.2010 roku w Lublinie.
                                 Stowarzyszenie zarejestrowane zostało przez sąd Rejonowy Lublin-Wschód w Lublinie w dniu 12 maja 2011 roku.
                             </p>
                         </div>
-                        <div className='col-12 mt-2 mb-5 pb-5 d-flex justify-content-end'>
+                        <div className='col-12 mt-2 mb-1 pb-1 d-flex justify-content-start'>
                             <div className='d-flex' aria-disabled="false">
-                                <Link to='https://www.facebook.com/profile.php?id=100057365451899' target='blank'>
+                                <Link to='https://www.facebook.com/profile.php?id=100057365451899' className='m-2' target='blank'>
                                     <Button color='gray' text='Strona Facebook'/>
                                 </Link>
-                                <Link to='/ourteam'>
+                                <Link to='/ourteam' className='m-2'>
                                     <Button color='green' text='Nasz zespół'/>
                                 </Link>
                             </div>
@@ -57,20 +57,22 @@ const About = () => {
                     </div>
                 </div>
                 <div className='col-lg-4 col-md-6 p-5 d-block col-sm-12'>
-                    <div className='col-12 pb-3'>
+                    <div className='col-12'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/diversity_3.svg`} alt='diversity_3'/>
                     </div>
                     <div>
                         <p>Pomoc dla osób i grup zagrożonych wykluczeniem społecznym i zawodowym oraz wykluczonych społecznie poprzez działania readaptacyjne i resocjalizacyjne oraz niwelujące uprzedzenia społeczne w stosunku do osób zagrożonych wykluczeniem</p>
                     </div>
                 </div>
-                <div className='col-lg-4 col-md-6 p-5 d-block position-relative col-sm-12'>
+                <div className='col-lg-4 col-md-6 p-5 d-block col-sm-12'>
                     <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/add_moderator.svg`} alt='add_moderator'/>
                     </div>
                     <div>
                         <p>Ochrona zdrowia społecznego</p>
-                        <img className={clsx(styles.butterflyParent__img, 'p-0')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2B.png`} alt='Motyl niebieski 2'/>
+                        <div className={clsx(styles.butterflyParent2, 'h-50')}>
+                            <img className={clsx(styles.butterflyParent__img, 'p-0')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2B.png`} alt='Motyl niebieski 2'/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,7 +179,7 @@ const About = () => {
                     <img className={clsx(styles.butterflyParent, styles.butterflyParent__img,'position-absolute z-n1')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 1B.png`} alt='motyl_niebieski_1'/>
                 </div>
                 <div className={clsx('col-lg-5 col-sm-12')}>
-                    <div className='row d-block h-100'>
+                    <div className='row d-block'>
                         <div className='col-12 mt-4 mb-4 d-flex justify-content-end'>
                             IPIP
                         </div>
@@ -186,13 +188,12 @@ const About = () => {
                         </div>
                         <div className={clsx(styles.description, styles.description__ipip, 'col-12 mt-4 d-flex ')}>
                             <p>Psychoprofilaktyki i Psychoterapii IPIP, powołany do życia w ramach działań statutowych Stowarzyszenia NATANAELUM w dniu 1 czerwca 2011 roku, ma za zadanie dostarczanie merytorycznego wsparcia osobom i instytucjom, które działają 
-                                na rzecz grup i jednostek zagrożonych wykluczeniem społecznym.</p> 
-                            <p></p>
-                            <p>W szczególności, Instytut koncentruje się na wspieraniu osób uzależnionych od substancji psychoaktywnych i czynności, poprzez prowadzenie badań naukowych 
+                                na rzecz grup i jednostek zagrożonych wykluczeniem społecznym.
+                                W szczególności, Instytut koncentruje się na wspieraniu osób uzależnionych od substancji psychoaktywnych i czynności, poprzez prowadzenie badań naukowych 
                                 o charakterze epidemiologicznym, społecznym i klinicznym, opracowywanie wyników badań oraz organizowanie szkoleń, warsztatów i innych form edukacji specjalistycznej z zakresu psychologii, psychoprofilaktyki i psychoterapii.
                             </p>
                         </div>
-                        <div className='col-12 mt-3 mb-5 pb-5 d-flex justify-content-end'>
+                        <div className='col-12 mt-3 mb-2 pb-2 d-flex justify-content-start'>
                             <div>
                                 <Button text='Strona instytutu' color='green'/>
                             </div>
