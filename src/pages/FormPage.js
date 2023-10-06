@@ -39,7 +39,7 @@ const FormPage = () => {
         captchaRef.current.reset();
         
         if (token !== '' && reportFormValidation[0] !== false) {
-            await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
+            await axios.post(`/${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
             .then(res => {setServerVerification(res.data)})
             .catch((error) => {
                 console.log(error.message);
