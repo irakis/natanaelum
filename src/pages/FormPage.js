@@ -15,63 +15,54 @@ const FormPage = () => {
     const { id } = useParams();
     const [ formData, setFormData ] = useState({ clinic: id , sureName: '', foreName: '', phone: '', mail: '', date: '', time: ''});
     const captchaRef = useRef(null);
+    const [validated, setValidated] = useState(false);
+    const [serverVerification, setServerVerification] = useState('');
+    const reportFormValidation = [];
 
- 
-    const checkCustomValue = (input) => {
-        //const submitEnable = document.getElementById("submitButton");
-        console.log('what is input:' , input)
-
-        if (input !== '') {
-            console.log('Looks good')
-            //submitEnable.classList.toggle('.disabled')
-        } else {
-            //input.setCustomValidity('..is invalid');
-            console.log('Looks BAD')
-        }
-    }
-
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e, next) => {
         e.preventDefault();
-        console.log('what type is it:', e.type);
 
-        {/*const forms = document.querySelectorAll('.needs-validation');
-        forms.addEventListener('click', event => {
-                console.log('what is validation:', forms.checkValidity());
-                //console.log('report validity:', reportValidity());
-                for (let )
-                if(!forms.checkValidity()) {
-                    
-                    event.preventDefault();
-                    event.stopPropagation();
-                    
-
+        const formInputs = document.querySelectorAll('input');
+        
+        formInputs.forEach((data) => {
+            let checkInput = data.checkValidity();
+                if (checkInput === false) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    reportFormValidation.push(false);
                 } else {
-                    forms.classList.add('was-validated')
+                    setValidated(true);
                 }
-            }, false)*/}
+        });
         
         const token = captchaRef.current.getValue();
-        console.log('token: ', token);
         captchaRef.current.reset();
         
-        await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
-        .then(res => console.log(res.data))
-        .catch((error) => {
-            console.log(error.message);
-        })
+        if (token !== '' && reportFormValidation[0] !== false) {
+            await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
+            .then(res => {setServerVerification(res.data)})
+            .catch((error) => {
+                console.log(error.message);
+            })
+        } else {
+            navigate(`/clinic/select_clinic/${id}`)
+        }
         
         const template_id = `${process.env.REACT_APP_TEMPALTE_ID}`;
         const service_id = `${process.env.REACT_APP_SERVICE_ID}`;
         const user_id = `${process.env.REACT_APP_USER_ID}`;
 
-        emailjs.send(service_id, template_id , formData, user_id)
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-
-        navigate('/clinic/summary');
+        if (serverVerification === 'verification positive' && reportFormValidation[0] !== false) {
+            emailjs.send(service_id, template_id , formData, user_id)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            navigate('/clinic/summary');
+        } else {
+            navigate(`/clinic/select_clinic/${id}`)
+        }
     }
 
     return(
@@ -88,7 +79,9 @@ const FormPage = () => {
                         </div>
                     </div>
                     <div className="row my-auto">
-                        <div className={clsx(styles.selectClinicDot,"col-2 m-auto")}></div>
+                        <div className={clsx(styles.selectClinicDot,(validated === true ? styles.active : ''),"col-2 m-auto")}>
+                            <img className={clsx(styles.selectClinicDot__img, (validated === true ? 'visible' : 'invisible'))} src={`${process.env.PUBLIC_URL}/images/form/Done.svg`} alt='done'/>
+                        </div>
                         <div className={clsx(styles.selectClinic,"col-10")}>
                             <p>Krok 2</p>
                             <h2>Formularz kontaktowy</h2>
@@ -105,38 +98,41 @@ const FormPage = () => {
                 <div className={clsx(styles.selectClinic, "col-lg-7 col-md-12")}>
                     <h1 className="pt-5">Formularz kontaktowy</h1>
                     <p className="pb-5">*Każde pole wymagane</p>
-                    <Form onSubmit={handleSubmit} className="d-flex flex-wrap was-validated">
+
+                    {/*<!-- Form Start -->*/}
+
+                    <Form onSubmit={handleSubmit} noValidate validated={validated} className="d-flex flex-wrap was-validated">
                         <div className="p-1 col-6">
                             <label className="form-label">Imię</label>
-                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required='*' onInput={checkCustomValue()}></input>
+                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required></input>
                             <div id="forenameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Nazwisko</label>
-                            <input type="text" name='sureName' className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required='*'></input>
+                            <input type="text" name='sureName' className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
                             <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Telefon</label>
-                            <input type="number"name='phone' className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp" required='*'></input>
+                            <input type="number"name='phone' className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp" required></input>
                             <div id="phoneHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. (+48) 123 456 789</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Email address</label>
-                            <input type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp" required='*'></input>
+                            <input type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp" required></input>
                             <div id="emailHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. jan.kowalski@poczta.pl</div>
                         </div>
                         <div className="p-1 col-6">
                             <Form.Group controlId='date'>
                                 <Form.Label>Wybierz datę</Form.Label>
-                                <Form.Control name='date' type='date' placeholder='dd/mm/rrrr' onChange={ e => setFormData({...formData, date: e.target.value})} aria-describedby="dateHelper" required='*'></Form.Control>
+                                <Form.Control name='date' type='date' placeholder='dd/mm/rrrr' onChange={ e => setFormData({...formData, date: e.target.value})} aria-describedby="dateHelper" required></Form.Control>
                                 <div id='dateHelper' className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 10.09.2025</div>
                             </Form.Group>
                         </div>
                         <div className="p-1 col-6">
                             <Form.Group controlId='time'>
                                 <Form.Label>Wybierz godzinę</Form.Label>
-                                <Form.Control name='time' type='time' placeholder='hh/mm' onChange={ e => setFormData({...formData, time: e.target.value})} aria-describedby="timeHelper" required='*'></Form.Control>
+                                <Form.Control name='time' type='time' placeholder='hh/mm' onChange={ e => setFormData({...formData, time: e.target.value})} aria-describedby="timeHelper" required></Form.Control>
                                 <div id='timeHelper' className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 12:00</div>
                             </Form.Group>
                         </div>
@@ -148,9 +144,12 @@ const FormPage = () => {
                                     badge="bottomleft"
                                 />
                             </div>
-                            <Button className='disabled' color='green' text='Idź dalej' action={handleSubmit}/>
+                            <Button color='green' text='Idź dalej' action={handleSubmit}/>
                         </div>
                     </Form>
+
+                    {/*<!-- Form End -->*/}
+
                 </div>
             </div>
         </div>

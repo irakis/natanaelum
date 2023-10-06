@@ -67,7 +67,7 @@ router.post('/post', async (req, res) => {
         if (response.data.success) {
             res.send('verification positive');
         } else {
-            res.send('verification negative!');
+            res.send('verification negative');
         }
 
     } catch (error) {
