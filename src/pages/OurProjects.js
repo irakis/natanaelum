@@ -21,18 +21,18 @@ const OurProjects = () => {
                 </div> 
             </div>
             <div className='row m-2 d-flex flex-wrap justify-content-between'>
-                <div className='col-4 mt-1'>
+                <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>
                     <Card className='align-self-start'
                         img={`${process.env.PUBLIC_URL}/images/cards/plakat002 1.png`}
                         alt='plakat002 1'
                         header='Aktywni i kompetentni na lubelskim rynku pracy'
-                        status='AKTYWNY'
+                        status='ZAKOŃCZONY'
                         period='1 marca - 30 czerwca 2023 r.'
                         description='Celem projektu jest aktywizacja zawodowa oraz zwiększenie poziomu zatrudnienia osób biernych zawodowo lub bezrobotnych, zamieszkujących na terenie województwa lubelskiego, posiadających orzeczenie o niepełnosprawności i/lub doświadczających trudności psychicznych, w różnym stopniu nasilenia.'
                         link='project_active_competent'
                     />
                 </div>
-                <div className='col-4 mt-1'>
+                <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>
                     <Card
                         img={`${process.env.PUBLIC_URL}/images/cards/plakat_fundusz_celowy_420x297_w-1 1.png`}
                         alt='plakat_fundusz_celowy_420x297_w-1 1'
@@ -43,7 +43,7 @@ const OurProjects = () => {
                         link='/'
                     />
                 </div>
-                <div className='col-4 mt-1'>
+                <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>
                     <Card
                         img={`${process.env.PUBLIC_URL}/images/cards/plakat_UKR_pr (1)-1 1.png`}
                         alt='plakat_UKR_pr (1)-1 1'
@@ -54,7 +54,7 @@ const OurProjects = () => {
                         link='/'
                     />
                 </div>
-                <div className='col-4 mt-1'>    
+                <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>    
                     <Card
                         img={`${process.env.PUBLIC_URL}/images/cards/belka2.png`}
                         alt='belka2'
@@ -65,7 +65,7 @@ const OurProjects = () => {
                         link='/'
                     />
                 </div>
-                <div className='col-4 mt-1'>  
+                <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>  
                     <Card
                         img={`${process.env.PUBLIC_URL}/images/cards/belka2.png`}
                         alt='belka2'
@@ -76,7 +76,7 @@ const OurProjects = () => {
                         link='/'
                     />
                 </div>
-                <div className='col-4 mt-1'>    
+                <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>    
                     <Card
                         img={`${process.env.PUBLIC_URL}/images/cards/belka2.png`}
                         alt='belka2'

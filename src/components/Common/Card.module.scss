@@ -1,10 +1,13 @@
 @import '../../styles/settings.scss';
 
 .card {
-    //width: 367px;
     border-radius: 25px;
     background: rgba(49, 160, 94, 0.14);
     padding: 40px;
+    height: 100%;
+        @media (max-width: 576px) {
+            height: auto;
+        }
 
     h1 {
         color: #000;

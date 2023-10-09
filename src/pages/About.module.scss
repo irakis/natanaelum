@@ -91,7 +91,6 @@ p {
     display: block;
     overflow: hidden;
     @media (max-width: 578px) {
-        //width: 50%;
         height: auto;
         margin: 0;
         padding: 0;
@@ -100,27 +99,26 @@ p {
 
     &__img{
         scale: 0.6;
-        margin-left: -100px;
+        margin-left: -4rem;
         padding: 0;
+        height: auto;
         @media (max-width: 1198px) {
             width: 100%;
             height: auto;
         }
         @media (max-width: 768px) {
             scale: 0.8;
-            margin-left: 0px;
+            margin-left: -4rem;
         }
         @media (max-width: 576px) {
             scale: 0.8;
-            margin-left: 0px;
+            margin-left: -3rem;
         }
     }
 }
-.butterflyParent2 {
+
+.butterfly2 {
     max-height: 400px;
-    @media (max-width: 768px) {
-        margin-left: 0px;
-    }
 }
 
 .myContainer {

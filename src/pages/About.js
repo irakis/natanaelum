@@ -57,7 +57,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='col-lg-4 col-md-6 p-5 d-block col-sm-12'>
-                    <div className='col-12'>
+                    <div className='col-12 pb-3'>
                         <img src={`${process.env.PUBLIC_URL}/images/about/diversity_3.svg`} alt='diversity_3'/>
                     </div>
                     <div>
@@ -70,14 +70,14 @@ const About = () => {
                     </div>
                     <div>
                         <p>Ochrona zdrowia społecznego</p>
-                        <div className={clsx(styles.butterflyParent2, 'h-50')}>
+                        <div className={styles.butterfly2}>
                             <img className={clsx(styles.butterflyParent__img, 'p-0')} src={`${process.env.PUBLIC_URL}/images/about/Motyl niebieski 2B.png`} alt='Motyl niebieski 2'/>
                         </div>
                     </div>
                 </div>
             </div>
             <div className={clsx('row d-flex')}>
-                <div className='col-10 p-4'>
+                <div className='col-12 p-4'>
                     <p className={clsx(styles.middle, styles.middleHeight)}>Pomoc oferowana przez Stowarzyszenie NATANAELUM obejmuje:
                     </p>
                 </div>
@@ -170,7 +170,7 @@ const About = () => {
                 </div>
             </div>
             <div className='row justify-content-center'>
-                <div className='col-6'>
+                <div className='col-12'>
                     <LogoStamp/>
                 </div>
             </div>
