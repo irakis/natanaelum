@@ -2,4 +2,9 @@
 
 .logoStamp {
     background-color: none;
+    @media (max-width: 576px) {
+        width: 300px;
+        padding-left: 20%;
+        
+    }
 }

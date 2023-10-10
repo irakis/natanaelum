@@ -112,8 +112,14 @@ p {
         }
         @media (max-width: 576px) {
             scale: 0.8;
-            margin-left: -3rem;
+            margin-left: 0;
         }
+    }
+}
+.helpInfo {
+    padding: 48px;
+    @media (max-width: 576px) {
+        padding: 24px 48px 24px 48px;
     }
 }
 
