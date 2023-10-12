@@ -2,6 +2,10 @@
 
 .infoCard {
     margin: 0px;
+    padding: 48px;
+    @media (max-width: 576px) {
+        padding: 8px 48px;
+    }
     p {
         font-size: 17px;
     }
