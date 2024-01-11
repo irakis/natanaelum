@@ -4,10 +4,21 @@
     margin: 0px;
     padding: 48px;
     @media (max-width: 576px) {
-        padding: 8px 48px;
+        padding: 24px 48px 24px 48px;
+        width: 100%;
+    }
+    @media (min-width: 577px) {
+        width: 24%;
+        margin-left: auto;
+        justify-content: space-between;
     }
     p {
-        font-size: 17px;
+        color: $base-font-color;
+        font-family: $base-font-text;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
     }
 
     img {

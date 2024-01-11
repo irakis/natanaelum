@@ -1,19 +1,20 @@
 @import '../../styles/settings.scss';
 
-.subtitle {
+.titleHeader {
+    font-size: 20px;
     p {
-            color: #A0A3A9;
-            font-family: Poppins;
-            font-size: 17px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
+        color: #A0A3A9;
+        font-family: Poppins;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 
     .smallGreen {
         color: #31A05E;
         font-family: Poppins;
-        font-size: 15px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -38,7 +39,12 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        margin-bottom:  35px;
+        margin-bottom:  85px;
         padding-right: 50px;
+    }
+    &__imageBackground {
+        background-image: linear-gradient(to right, rgba(255,255,255,100), rgba(0,0,0,0)), url("https://cdn.pixabay.com/photo/2016/10/18/21/22/beach-1751455_1280.jpg");
+        background-size: cover;
+        border-radius: 15px;
     }
 }

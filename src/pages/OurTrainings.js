@@ -1,20 +1,20 @@
 import styles from './OurTrainings.module.scss';
-import Subtitle from '../components/Common/Subtitle.js';
 import Training from '../components/Common/Training.js';
+import TitleHeader from '../components/Common/TitleHeader.js';
 import clsx from 'clsx';
 
 const OurTrainings = () => {
     return(
         <div className='container'>
-            <div className={clsx('row')}>
-                <div className='col-12'>
-                    <Subtitle
-                        title='Szkolenia'
-                        head='Nasze Szkolenia'
-                        description='Stowarzyszenie Natanaelum oferuje wyjątkowe szkolenia, zapewniające wysoko wyspecjalizowaną edukację w dziedzinie Psychoterapii Uzależnień oraz Instruktorstwa Terapii Uzależnień. Nasze szkolenia są rekomendowane przez renomowane Krajowe Biuro ds. Przeciwdziałania Narkomanii, potwierdzając najwyższą jakość i profesjonalizm.'
-                    />
-                </div>
-            </div>
+            <TitleHeader
+                titleSmall='Szkolenia'
+                titleMain='Nasze Szkolenia'
+                description='Stowarzyszenie Natanaelum oferuje wyjątkowe szkolenia, zapewniające wysoko 
+                    wyspecjalizowaną edukację w dziedzinie Psychoterapii Uzależnień oraz Instruktorstwa Terapii Uzależnień.
+                     Nasze szkolenia są rekomendowane przez renomowane Krajowe Biuro ds. 
+                    Przeciwdziałania Narkomanii, potwierdzając najwyższą jakość i profesjonalizm'
+            
+            />
             <div className={clsx(styles.trainings, 'row d-flex flex-row pt-3 pb-3')}>
                 <div className='col-lg-6 col-md-12 my-auto'>
                     <Training

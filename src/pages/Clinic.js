@@ -1,29 +1,34 @@
 import React from "react";
-import Subtitle from "../components/Common/Subtitle.js";
 import Button from "../components/Common/Button.js";
 import clsx from "clsx";
 import styles from './Clinic.module.scss'
 import InfoCard from "../components/Common/InfoCard.js";
 import { Link } from "react-router-dom";
+import TitleHeader from "../components/Common/TitleHeader.js";
 
 const Clinic = () => {
     return(
         <div className={clsx(styles.clinic,'container')}>
             <div className="m-2">
-                <Subtitle
-                    title='Specjalistyczna poradnia'
-                    head='Poradnia Leczenia Uzależnień Dzieci, Młodzieży i Dorosłych'
-                    description='W naszej Poradni pracujemy nad zmniejszeniem ryzyka rozwoju uzależnień od substancji psychoaktywnych, redukcją szkód i przywracaniu do zdrowia oraz aktywności społecznej i zawodowej osób używających substancji psychoaktywnych i osób uzależnionych. Udzielamy bezpłatnego wsparcia psychologicznego.'
+                <TitleHeader
+                    titleSmall='Specjalistyczna poradnia'
+                    titleMain='Poradnia Leczenia Uzależnień Dzieci, Młodzieży i Dorosłych'
+                    description='W naszej Poradni pracujemy nad zmniejszeniem ryzyka rozwoju uzależnień od 
+                        substancji psychoaktywnych, redukcją szkód i przywracaniu do zdrowia oraz aktywności 
+                        społecznej i zawodowej osób używających substancji psychoaktywnych i osób uzależnionych. 
+                        Udzielamy bezpłatnego wsparcia psychologicznego.'
                 />
                 <div className="row">
-                    <Link to='select_clinic'>
-                        <Button
-                            color='green'
-                            text='Zapisz się!'
-                        />
-                    </Link>
+                        <Link to='select_clinic'>
+                            <Button
+                                color='green'
+                                text='Zapisz się!'
+                            />
+                        </Link>
                 </div>
-                <div className={clsx('row')}>
+            </div>
+            <div className="m-2">
+                <div className={clsx(styles.rowBackground,'row')}>
                     <div className='col-9 d-flex p-4 mx-auto'>
                         <p className={clsx(styles.middle, 'mx-auto')}>Świadczymy darmowe usługi w zakresie:
                         </p>
@@ -31,28 +36,32 @@ const Clinic = () => {
                 </div>
                 <div className="row">
                     <InfoCard
+                        title='Poradnictwo'
                         img={`${process.env.PUBLIC_URL}/images/clinic/Collaboration.png`}
                         alt='Collaboration'
                         description='poradnictwa psychologicznego w temacie uzależnień'
                     />
                     <InfoCard
+                        title='Diagnozy'
                         img={`${process.env.PUBLIC_URL}/images/clinic/Ophthalmology.png`}
                         alt='Ophthalmology'
                         description='diagnozy uzależnienia'
                     />
                     <InfoCard
+                        title='Inspiracja'
                         img={`${process.env.PUBLIC_URL}/images/clinic/Development Skill.png`}
                         alt='Development Skill'
                         description='motywowania do zman destrukcyjnych zachowań'
                     />
                     <InfoCard
+                        title='Profilaktyka'
                         img={`${process.env.PUBLIC_URL}/images/clinic/diversity_3.svg`}
                         alt='diversity_3'
                         description='profilaktyki uzależnień(dla rodziców, nauczycieli, szkół, organizacji)'
                     />               
                 </div>
                 <div className={clsx('row')}>
-                    <div className='col-12 d-block p-4 mx-auto'>
+                    <div className={clsx(styles.rowBackground, 'col-12 d-block p-4 mx-auto')}>
                         <p className={clsx(styles.middle, 'mx-auto')}>TERAPIĘ I PORADY PSYCHOLOGICZNE REALIZOWANE SĄ W FORMIE STACJONARNEJ LUB ZDALNEJ / ON-LINE.
                         </p>
                     </div>

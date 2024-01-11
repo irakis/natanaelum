@@ -42,4 +42,9 @@
         margin-bottom:  85px;
         padding-right: 50px;
     }
+    &__imageBackground {
+        background-image: linear-gradient(to right, rgba(255,255,255,100), rgba(0,0,0,0)), url("https://cdn.pixabay.com/photo/2016/10/18/21/22/beach-1751455_1280.jpg");
+        background-size: cover;
+        border-radius: 15px;
+    }
 }

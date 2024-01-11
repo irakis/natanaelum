@@ -4,25 +4,21 @@ import clsx from 'clsx';
 import LogoStamp from '../components/Common/LogoStamp.js';
 import Button from '../components/Common/Button.js';
 import { Link } from 'react-router-dom';
+import TitleHeader from '../components/Common/TitleHeader.js';
 
 const About = () => {
     return (
         <div className='container'>
             <div className={clsx(styles.about,'row')}>
                 <div className={clsx(styles.myContainer,'col-12')}>
+                    <TitleHeader
+                        titleSmall='Aktualności'
+                        titleMain='Stowarzyszenie'
+                        description='powstało z inicjatywy pracowników Instytutu Psychologii Katolickiego Uniwersytetu Lubelskiego Jana Pawła II. 
+                            Do istnienia powołane zostało na zebraniu założycielskim w dniu 20.12.2010 roku w Lublinie.
+                            Stowarzyszenie zarejestrowane zostało przez sąd Rejonowy Lublin-Wschód w Lublinie w dniu 12 maja 2011 roku.'
+                    />
                     <div className='row d-block'>
-                        <div className='col-12 mt-4 mb-4 d-flex justify-content-end'>
-                            Aktualności
-                        </div>
-                        <div className='col-12 mb-3 mt-3 d-flex justify-content-end'>
-                            <h2>Stowarzyszenie</h2>
-                        </div>
-                        <div className={clsx(styles.description,'col-12 mt-4 d-flex')}>
-                            <p>powstało z inicjatywy pracowników Instytutu Psychologii Katolickiego Uniwersytetu Lubelskiego Jana Pawła II. 
-                                Do istnienia powołane zostało na zebraniu założycielskim w dniu 20.12.2010 roku w Lublinie.
-                                Stowarzyszenie zarejestrowane zostało przez sąd Rejonowy Lublin-Wschód w Lublinie w dniu 12 maja 2011 roku.
-                            </p>
-                        </div>
                         <div className='col-12 mt-2 mb-1 pb-1 d-flex justify-content-start'>
                             <div className='d-flex' aria-disabled="false">
                                 <Link to='https://www.facebook.com/profile.php?id=100057365451899' className='m-2' target='blank'>
@@ -37,7 +33,7 @@ const About = () => {
                 </div>
             </div>
             <div className={clsx('row justify-content-center')}>
-                <div className='col-12 col-md-12 d-flex p-4'>
+                <div className={clsx(styles.rowBackground,'col-12 col-md-12 d-flex p-4')}>
                     <p className={clsx(styles.middle)}>Celem głównym Stowarzyszenia NATANAELUM jest prowadzenie działalności prospołecznej ukierunkowanej 
                         na działania pożytku 
                         publicznego i społecznie użyteczne, takie jak:
@@ -78,7 +74,7 @@ const About = () => {
                 </div>
             </div>
             <div className={clsx('row d-flex')}>
-                <div className='col-12 p-4'>
+                <div className={clsx(styles.rowBackground, 'col-12 p-4')}>
                     <p className={clsx(styles.middle, styles.middleHeight)}>Pomoc oferowana przez Stowarzyszenie NATANAELUM obejmuje:
                     </p>
                 </div>
@@ -188,19 +184,14 @@ const About = () => {
             <div className={clsx('row mt-5 pt-5', styles.about)}>
                 <div className={clsx('col-12')}>
                     <div className='row d-block'>
-                        <div className='col-12 mt-4 mb-4 d-flex justify-content-end'>
-                            IPIP
-                        </div>
-                        <div className='col-12 mb-3 mt-3 d-flex justify-content-end'>
-                            <h2>Instytut</h2>
-                        </div>
-                        <div className={clsx(styles.description, styles.description__ipip, 'col-12 mt-4 d-flex ')}>
-                            <p>Psychoprofilaktyki i Psychoterapii IPIP, powołany do życia w ramach działań statutowych Stowarzyszenia NATANAELUM w dniu 1 czerwca 2011 roku, ma za zadanie dostarczanie merytorycznego wsparcia osobom i instytucjom, które działają 
+                        <TitleHeader
+                            titleSmall='IPIP'
+                            titleMain='Instytut'
+                            description='Psychoprofilaktyki i Psychoterapii IPIP, powołany do życia w ramach działań statutowych Stowarzyszenia NATANAELUM w dniu 1 czerwca 2011 roku, ma za zadanie dostarczanie merytorycznego wsparcia osobom i instytucjom, które działają 
                                 na rzecz grup i jednostek zagrożonych wykluczeniem społecznym.
                                 W szczególności, Instytut koncentruje się na wspieraniu osób uzależnionych od substancji psychoaktywnych i czynności, poprzez prowadzenie badań naukowych 
-                                o charakterze epidemiologicznym, społecznym i klinicznym, opracowywanie wyników badań oraz organizowanie szkoleń, warsztatów i innych form edukacji specjalistycznej z zakresu psychologii, psychoprofilaktyki i psychoterapii.
-                            </p>
-                        </div>
+                                o charakterze epidemiologicznym, społecznym i klinicznym, opracowywanie wyników badań oraz organizowanie szkoleń, warsztatów i innych form edukacji specjalistycznej z zakresu psychologii, psychoprofilaktyki i psychoterapii.'
+                        />
                         <div className='col-12 mt-3 mb-2 pb-2 d-flex justify-content-start'>
                             <div>
                                 <Button text='Strona instytutu' color='green'/>

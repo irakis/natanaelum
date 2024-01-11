@@ -10,69 +10,56 @@
     @media (max-width: 578px) {
         justify-items: center;
     }
-}
-
-h2 {
-    color: #31A05E;
-    text-align: left;
-    font-family: Poppins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px; /* 133.333% */
-    letter-spacing: 0.1px;
-}
-
-p {
-    color: #000;
-    text-align: left;
-    font-family: Poppins;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px; /* 105.263% */
-    letter-spacing: 0.1px;
-}
-
-.butterflyBlue1 {
-    object-fit: cover;
-    scale: 1;
-    position: absolute;
-    top:310px;
-    @media (max-width: 1400px) {
-        scale: 0.6;
-        left: -100px;   
-    }
-    @media (max-width: 1100) {
-        scale: 0.5;
-        left: 0;
-        position: absolute;
-    }
-
-}
- ul {
-    margin: 12px;
-    text-align: right;
-    list-style: none;
-
-    li {
-        color: #000;
+    h2 {
+        color: #31A05E;
+        text-align: left;
         font-family: Poppins;
         font-size: 15px;
         font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+    }
+    
+    p {
+        color: #000;
+        text-align: left;
+        font-family: Poppins;
+        font-size: 19px;
+        font-style: normal;
         font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+    }
+    ol li {
+        color: $color-light;
+        background-color: $base-font-color;
+        height: 3px;
+        width: 40px;
+        margin-right: 4px;
+        &active {
+            background-color: red;//to nie działa
+        }
+        &::marker {
+            content: '';
+        }
+    }
+    .middle {
+        color: #000;
+        text-align: center;
+        justify-items: center;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
         line-height: normal;
-        margin: 0px;
-        padding: 0px;
-        text-align: right;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
- }
-
- .butterflyParent {
-    object-fit: cover;
-
-    @media (max-width: 970px) {
-    position: relative;
-    top: -200px
+    .rowBackground {
+        background-image: linear-gradient(120deg, $color-ocean , rgba(255, 255, 255));
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
     }
- }
+}

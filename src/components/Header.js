@@ -14,12 +14,10 @@ const Header = () => {
                     <a className={clsx('navbar-brand', styles.logo)} href="/">
                         <img src={`${process.env.PUBLIC_URL}/images/logo_3.png`} alt='logo natanaelum'/>
                     </a>
-
                     <button className={`${isListCollapsed === false ? 'collapsed' : ''} navbar-toggler`} type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" 
                         aria-controls="mobile-menu" aria-expanded={isListCollapsed} aria-label="Toggle navigation" onClick={handleClick}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
-
                     <div className={`${isListCollapsed === false ? '' : 'show'} collapse navbar-collapse`} id='mobile-menu'>
                         <ul className='nav-list navbar nav w-100'>
                             <li className='nav-item'>
@@ -42,6 +40,14 @@ const Header = () => {
                                 <a href="/about">
                                     <div>
                                         O nas
+                                    </div>
+                                    <p className={clsx(styles.dot, 'rounded-circle')}></p>
+                                </a>
+                            </li>
+                            <li className='nav-item'>
+                                <a href="/ourteam">
+                                    <div>
+                                        Nasz zespół
                                     </div>
                                     <p className={clsx(styles.dot, 'rounded-circle')}></p>
                                 </a>

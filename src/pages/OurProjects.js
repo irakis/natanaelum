@@ -1,25 +1,17 @@
 import React from 'react';
-import styles from './OurProjects.module.scss';
-import clsx from 'clsx';
 import Card from '../components/Common/Card.js';
+import TitleHeader from '../components/Common/TitleHeader.js';
 
 const OurProjects = () => {
     return (
         <div className='container'>
-            <div className={clsx('row d-flex m-2', styles.ourProjects)}>
-                <div className={clsx(styles.butterflyParent,'col-lg-6 col-md-12 p-0')}>
-                    <div className='col-12 mt-4 mb-4 d-flex justify-content-start'>
-                        <h2 className={styles.smallGreen}> Projekty</h2>
-                    </div>
-                    <div className={clsx(styles.main, 'col-12 mb-3 mt-3 d-flex justify-content-start')}>
-                        <h2>Nasze Projekty</h2>
-                    </div>
-                    <div className={clsx(styles.description,'col-12 mt-4 d-flex')}>
-                        Stowarzyszenie Natanaelum i Fundacja Rozwoju KUL tworzą skuteczną współpracę, realizując innowacyjne projekty w ramach Regionalnego Programu Operacyjnego Województwa Lubelskiego. Razem generujemy wzrost i postęp naszego regionu.
-                        
-                    </div>
-                </div> 
-            </div>
+            <TitleHeader 
+                titleSmall='Projekty'
+                titleMain='Nasze Projekty'
+                description='Stowarzyszenie Natanaelum i Fundacja Rozwoju KUL tworzą skuteczną współpracę, 
+                    realizując innowacyjne projekty w ramach Regionalnego Programu Operacyjnego 
+                    Województwa Lubelskiego. Razem generujemy wzrost i postęp naszego regionu.'
+            />
             <div className='row m-2 d-flex flex-wrap justify-content-between'>
                 <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>
                     <Card className='align-self-start'
