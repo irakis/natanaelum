@@ -5,9 +5,9 @@ import styles from './OurTeam.module.scss';
 const OurTeam = () => {
 
     const prevHandle = () => {
-        const activeIndicator = document.querySelector("li.active")
+        const activeIndicator = document.querySelector("button.active")
         const activeIndicatorId = activeIndicator.getAttribute('data-slide-to');
-        const lastIndicatorId = document.querySelector('li[data-slide-to="2"]');
+        const lastIndicatorId = document.querySelector('button[data-slide-to="2"]');
         const allSlides = document.querySelectorAll('.carousel-item');
         const activeSlide = document.querySelector('.carousel-item.active');
 
@@ -19,7 +19,7 @@ const OurTeam = () => {
         } else {
 
             const nextIndicatorId = Number(activeIndicatorId)-1;
-            const nextIndicator = document.querySelector(`li[data-slide-to="${nextIndicatorId}"]`);
+            const nextIndicator = document.querySelector(`button[data-slide-to="${nextIndicatorId}"]`);
             activeIndicator.classList.remove('active');
             nextIndicator.classList.add('active');
             activeSlide.classList.remove('active');
@@ -28,9 +28,9 @@ const OurTeam = () => {
     }
 
     const nextHandle = () => {
-        const activeIndicator = document.querySelector("li.active")
+        const activeIndicator = document.querySelector("button.active")
         const activeIndicatorId = activeIndicator.getAttribute('data-slide-to');
-        const firstIndicatorId = document.querySelector('li[data-slide-to="0"]');
+        const firstIndicatorId = document.querySelector('button[data-slide-to="0"]');
         const allSlides = document.querySelectorAll('.carousel-item');
         const activeSlide = document.querySelector('.carousel-item.active');
 
@@ -42,7 +42,7 @@ const OurTeam = () => {
         } else {
 
             const nextIndicatorId = Number(activeIndicatorId)+1;
-            const nextIndicator = document.querySelector(`li[data-slide-to="${nextIndicatorId}"]`);
+            const nextIndicator = document.querySelector(`button[data-slide-to="${nextIndicatorId}"]`);
             activeIndicator.classList.remove('active');
             nextIndicator.classList.add('active');
             activeSlide.classList.remove('active');
@@ -86,11 +86,11 @@ const OurTeam = () => {
         <div className='container'>
                 <div className={clsx(styles.ourTeam, 'row mt-2 pt-2')}>
                     <div id="carouselExampleIndicators" className="carousel slide">
-                        <ol className="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1" className="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
+                        <div className="carousel-indicators">
+                            <button type='button' data-bs-target="#carouselExampleIndicators" data-slide-to="0"/>
+                            <button type='button' data-bs-target="#carouselExampleIndicators" data-slide-to="1" className="active"/>
+                            <button type='button' data-bs-target="#carouselExampleIndicators" data-slide-to="2"/>
+                        </div>
                         <div className="carousel-inner">
                             <div className="carousel-item">
                                 <img className="d-block w-100" src={`${process.env.PUBLIC_URL}/images/avatar2.png`} alt="First slide"/>
@@ -135,7 +135,7 @@ const OurTeam = () => {
                             </div>
                         </div>
 
-                        <div className='row d-flex flex-wrap'>
+                        <div className='row mt-4 d-flex flex-wrap'>
                             {members.map(member => {
                                 return(
                                     <div className='col-3' key={member}>

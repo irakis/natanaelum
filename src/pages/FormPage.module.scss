@@ -80,6 +80,22 @@
     &__recaptcha {
         margin-right: 30px;
     }
+
+    .tab {
+        border: #000 solid;
+        border-radius: 5px 5px 0 0;
+        border-bottom: none;
+        color: #A0A3A9;
+        text-align: center;
+        font-size: small;
+        height: 40px;
+        .active {
+            color: #000;
+        }
+    }
+    .tabParent {
+        margin-left: 0px;
+    }
 }
 
 .green {
@@ -89,4 +105,9 @@
 form {
     color: $main-green;
     border-color: $main-green;
+}
+.form {
+    border: #000 solid;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
 }

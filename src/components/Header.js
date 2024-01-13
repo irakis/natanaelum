@@ -78,7 +78,7 @@ const Header = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className={clsx(styles.loginLink, 'text-center col-2')}>
+                    <div className={clsx(styles.loginLink, 'text-center col-2 d-none')}>
                         <a className={clsx(styles.loginLink)} href="/">Zaloguj się</a>
                     </div>
                 </nav>

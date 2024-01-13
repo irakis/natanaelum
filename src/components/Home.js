@@ -29,7 +29,7 @@ const Home = () => {
                                     <Button text='Czytaj więcej' color='green'/>
                                 </Link>
                             </div>
-                            <div className='col mb-4'>
+                            <div className='col mb-4 w-auto'>
                                 <LogoStamp/>
                             </div>
                         </div>

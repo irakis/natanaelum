@@ -31,19 +31,6 @@
         line-height: 20px;
         letter-spacing: 0.1px;
     }
-    ol li {
-        color: $color-light;
-        background-color: $base-font-color;
-        height: 3px;
-        width: 40px;
-        margin-right: 4px;
-        &active {
-            background-color: red;//to nie działa
-        }
-        &::marker {
-            content: '';
-        }
-    }
     .middle {
         color: #000;
         text-align: center;

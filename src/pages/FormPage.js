@@ -99,9 +99,26 @@ const FormPage = () => {
                     <h1 className="pt-5">Formularz kontaktowy</h1>
                     <p className="pb-5">*Każde pole wymagane</p>
 
+                    {/*<!-- Tabs -->*/}
+
+                    <div className={clsx(styles.tabParent, "row")}>
+                        <div className={clsx(styles.tab, "col-2")}>
+                            <a href='#'>Formularz</a>
+                        </div>
+                        <div className={clsx(styles.tab, "col-2")}>
+                            <a>Dane</a>
+                        </div>
+                        <div className={clsx(styles.tab, "col-2")}>
+                            <a>Płatności</a>
+                        </div>
+                        <div className={clsx(styles.tab, "col-2")}>
+                            <a>Podsumowanie</a>
+                        </div>
+                    </div>
+
                     {/*<!-- Form Start -->*/}
 
-                    <Form onSubmit={handleSubmit} noValidate validated={validated} className="d-flex flex-wrap was-validated">
+                    <Form onSubmit={handleSubmit} noValidate validated={validated} className={clsx(styles.form, "d-flex flex-wrap was-validated")}>
                         <div className="p-1 col-6">
                             <label className="form-label">Imię</label>
                             <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required></input>

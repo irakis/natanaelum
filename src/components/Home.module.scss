@@ -26,10 +26,11 @@
     }
 
     p {
-        color: $base-font-color;
+        color: $color-light;
         line-height: $base-font-line-height;
         font-weight: $base-font-weight;
         font-size: $base-font-size;
+        backdrop-filter: blur(5px) saturate(80%);
     }
     &__background {
         background-image: url("https://cdn.pixabay.com/photo/2016/10/18/21/22/beach-1751455_1280.jpg");
@@ -37,6 +38,9 @@
         background-repeat: no-repeat;
         width: 100%;
         height: auto;
+    }
+    .stamp {
+        background-color: $color-light;
     }
 }
 
@@ -48,33 +52,6 @@ button {
     border-radius: 100px;
     border-style: none;
     font-size: 14px;
-}
-
-.butterfly {
-    z-index: -1;
-    scale: 0.7;
-    position:absolute;
-    @media (max-width: 576px) {
-        scale: 0.7;
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    @media (max-width: 768px) {
-        scale: 0.7;
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-}
-
-.butterflyParent {
-    object-fit: cover;
-    @media (max-width: 576px) {
-        overflow: hidden;
-        width: 100%;
-        height: auto;
-    }
 }
 
 
