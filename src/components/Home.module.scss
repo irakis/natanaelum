@@ -29,6 +29,34 @@
         font-weight: $base-font-weight;
         font-size: $base-font-size;
     }
+    &__mission{
+        justify-content: center;
+        background-color: $color-section;
+        padding-top: 62px;
+        padding-bottom: 62px;
+        padding-left: 155px;
+        padding-right: 155px;
+
+        @media (max-width: 576px) {
+            display: block;
+        }
+
+        h2 {
+            color: $header-font-color;
+            font-size: 36px;
+            font-weight: '600';
+            
+        }
+        p {
+            color: $header-font-color;
+            font-size: 17px;
+            font-weight: '400';
+        }
+        &__activities {
+            background-color: $color-light;
+        }
+    }
+    
 }
 
 button {
@@ -44,16 +72,14 @@ button {
 .butterfly {
     object-fit: cover;
     @media (max-width: 576px) {
-        //scale: 0.7;
+        scale: 0.7;
         width: 100%;
         height: auto;
-        //position: relative;
     }
     @media (max-width: 768px) {
-        //scale: 0.7;
+        scale: 0.7;
         width: 100%;
         height: auto;
-        //position: relative;
     }
 }
 

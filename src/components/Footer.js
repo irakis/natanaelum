@@ -44,7 +44,7 @@ const Footer = () => {
                     <FooterMail/>
                 </div>
             </div>
-            <div className='row d-flex p-4'>
+            <div className={clsx(styles.footer__footerRow, 'row d-flex p-4')}>
                 <div className={clsx('col-12 d-flex', styles.copySign)}>
                     &copy; 2023 NATANAELUM. Wszelkie prawa zastrzeżone.
                 </div>

@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <header>
-            <div className='container shadow-sm mb-5 bg-white rounded'>
+            <div className='shadow-sm mb-5 bg-white rounded'>
                 <nav className={clsx('navbar navbar-expand-md navbar-light gb-light position-sticky', styles.header)}>
                     <a className={clsx('navbar-brand', styles.logo)} href="/">
                         <img src={`${process.env.PUBLIC_URL}/images/logo_3.png`} alt='logo natanaelum'/>
