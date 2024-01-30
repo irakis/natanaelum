@@ -1,29 +1,41 @@
 @import '../../styles/settings.scss';
 
 .green {
-    width: 161px;
-    height: 40px;
+    width: 174px;
+    height: 44px;
     background-color: $main-green;
     color: $color-light;
     border-radius: 100px;
     border-style: none;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     padding-top: 10px;
     font-weight: $header-font-weight;
-    margin-left: 0px;
+    margin: 0;
+    justify-items: center;
+    img {
+        width: 24.08;
+        height: 25.5;
+        margin: 0 0 2px 13px;
+        padding: 0;
+    }
+    &__buttonText {
+        padding-left: 0;
+    }
 }
 
 .gray {
-    width: 161px;
-    height: 40px;
+    width: 174px;
+    height: 44px;
     border-radius: 100px;
     border-style: none;
-    font-size: 14px;
+    font-size: 16px;
     background-color: #d1ded1 ;
     color: $main-green;
     border-color: #717971;
     text-align: center;
     padding-top: 10px;
+    margin: 0;
     font-weight: $header-font-weight;
+    justify-items: center;
 }

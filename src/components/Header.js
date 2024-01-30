@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import clsx from 'clsx';
+import Button from './Common/Button';
 
 const Header = () => {
 
@@ -9,7 +10,7 @@ const Header = () => {
 
     return (
         <header>
-            <div className='container'>
+            <div className='container shadow-sm mb-5 bg-white rounded'>
                 <nav className={clsx('navbar navbar-expand-md navbar-light gb-light position-sticky', styles.header)}>
                     <a className={clsx('navbar-brand', styles.logo)} href="/">
                         <img src={`${process.env.PUBLIC_URL}/images/logo_3.png`} alt='logo natanaelum'/>
@@ -73,7 +74,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className={clsx(styles.loginLink, 'text-center col-2')}>
-                        <a className={clsx(styles.loginLink)} href="/">Zaloguj się</a>
+                        <Button text={'Umów wizytę'} color={'green'} imageName={'Group.svg'} altText={'image header'}/>
                     </div>
                 </nav>
             </div>
