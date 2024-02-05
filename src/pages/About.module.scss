@@ -7,10 +7,46 @@
     font-weight: $header-font-weight;
     font-style: normal;
     color: $main-green;
-    margin: 15px 0 15px 15px;
     @media (max-width: 578px) {
         height: auto;
         flex-direction: column-reverse;;
+    }
+    &__mission{
+        justify-content: center;
+        background-color: $color-light;
+        padding-top: 62px;
+        padding-bottom: 62px;
+        padding-left: 155px;
+        padding-right: 155px;
+        img {
+            height: 230px;
+        }
+        @media (max-width: 576px) {
+            display: block;
+            padding: 10px;
+        }
+
+        h2 {
+            color: $header-font-color;
+            font-size: 22px;
+            font-weight: '600';
+            line-height: $header-line-height;
+            @media (max-width: 576px) {
+                font-size: normal;
+                line-height: normal;
+            }   
+        }
+        p {
+            color: $header-font-color;
+            font-size: 17px;
+            font-weight: '400';
+        }
+        &__activities {
+            background-color: $color-light;
+        }
+    }
+    &__section {
+        background-color: $color-section;
     }
 
     h2 {
@@ -33,7 +69,9 @@
 }
 
 .description {
-    text-align: right;
+    p {
+        text-align: right;
+    }
     &__ipip {
         background-color: $color-light;
     }
@@ -59,6 +97,9 @@ p {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    span {
+        color: $main-green;
+     }
 }
 
 .middleHeight {
@@ -82,37 +123,29 @@ p {
 }
 
 .rowButterfly {
-    background-color: $color-light;
     height: auto;
 }
 
-
 .butterflyParent {
-    display: block;
     overflow: hidden;
+    
     @media (max-width: 578px) {
-        height: auto;
+        height: 250px;
         margin: 0;
         padding: 0;
-        scale: 1;
     }
 
     &__img{
-        scale: 0.6;
-        margin-left: -4rem;
-        padding: 0;
+        padding-top: 70px;
+        object-fit: cover;
+        width: 100%;
         height: auto;
         @media (max-width: 1198px) {
             width: 100%;
             height: auto;
         }
         @media (max-width: 768px) {
-            scale: 0.8;
-            margin-left: -4rem;
-        }
-        @media (max-width: 576px) {
-            scale: 0.8;
-            margin-left: 0;
+            display: none;
         }
     }
 }
@@ -128,8 +161,21 @@ p {
 }
 
 .myContainer {
+    position: absolute;
+    right: 147px;
+    height: 663px;
+    padding: 50px 40px 60px 40px;
+    @media (max-width: 768px) {
+        right: 10px;
+        padding: 50;
+    }
     @media (max-width: 578px) {
         width: 100%;
         height: auto;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        right: 15px;
     }
 }

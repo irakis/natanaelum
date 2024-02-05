@@ -12,6 +12,7 @@
     background-color: $color-light;
     @media (max-width: 576px) {
         height: auto;
+        justify-content: center;
     }
     button {
         color: $main-green;
@@ -23,6 +24,10 @@
     margin-bottom: 16px;
     height: 87px;
     width: 102px;
+    @media (max-width: 768px) {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .header ul {
@@ -47,6 +52,10 @@
     color: #31a05e;
     margin-top: 0;
     background-color: none;
+    @media (max-width: 768px) {
+        display: flex;
+        margin: 10px;
+    }
 }
 
 .dot {

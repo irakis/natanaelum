@@ -39,12 +39,17 @@
 
         @media (max-width: 576px) {
             display: block;
+            padding: 10px;
         }
 
         h2 {
             color: $header-font-color;
             font-size: 36px;
             font-weight: '600';
+            @media (max-width: 576px) {
+                font-size: normal;
+                line-height: normal;
+            }
             
         }
         p {

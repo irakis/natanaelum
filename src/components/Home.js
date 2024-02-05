@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <>
-            <div className='container'>
+            <div className='container mt-5'>
                 <div className={clsx('row mb-4 pb-4', styles.home)}>
                     <div className={clsx('col-6 p-0 m-0 col-sm-12 col-md-6')}>
                         <div className='row d-block '>
@@ -39,83 +39,71 @@ const Home = () => {
 
             {/*------SECTION MISSION--START-----*/}
 
-            <div className={clsx(styles.home__mission, styles.home, 'row')}>
-                    <h2 className='text-center'>NASZA MISJA</h2>
-                <div className='d-lg-flex d-sm-block justify-content-around'>
-                    <img src={`${process.env.PUBLIC_URL}/images/home/mission/zdr-psych 1.png`}></img>
-                    <img src={`${process.env.PUBLIC_URL}/images/home/mission/wsparcie-wykl-spol 1.png`}></img>
-                    <img src={`${process.env.PUBLIC_URL}/images/home/mission/pomoc-spo-zaw 1.png`}></img>
+            <div className={clsx(styles.home__mission, 'row')}>
+                <h2 className='text-center'>NASZA MISJA</h2>
+                <div className='col-lg-4 col-sm-12'>
+                    <div className='d-flex justify-content-center'>
+                        <img src={`${process.env.PUBLIC_URL}/images/home/mission/zdr-psych 1.png`} alt='brain1'></img>
+                    </div>
+                    <div>
+                        <p className='text-uppercase text-center pt-1'>Ochrona zdrowia psychicznego</p>
+                    </div>
+                </div>    
+                <div className='col-lg-4 col-sm-12'>
+                    <div className='d-flex justify-content-center'>
+                        <img src={`${process.env.PUBLIC_URL}/images/home/mission/wsparcie-wykl-spol 1.png`} alt='brain2'></img>
+                    </div>
+                    <div>
+                        <p className='text-uppercase text-center pt-1'>Wsparcie dla osób zagrożonych wykluczeniem</p>
+                    </div>
                 </div>
-                <div className='d-lg-flex d-sm-block justify-content-around '>
-                    <div className='d-block'>
-                        <div>
-                            <p className='text-uppercase text-center'>Ochrona zdrowia</p>
-                        </div>
-                        <div>
-                            <p className='text-uppercase text-center'>psychicznego</p>
-                        </div>
+                <div className='col-lg-4 col-sm-12'>
+                    <div className='d-flex justify-content-center'>
+                        <img src={`${process.env.PUBLIC_URL}/images/home/mission/pomoc-spo-zaw 1.png`} alt='brain3'></img>
                     </div>
                     <div>
-                        <div>
-                            <p className='text-uppercase text-center'>Wsparcie dla osób</p>
-                        </div>
-                        <div>
-                            <p className='text-uppercase text-center'>zagrożonych wykluczeniem</p>
-                        </div>
+                        <p className='text-uppercase text-center pt-1'>Pomoc społeczna i zawodowa</p>
                     </div>
-                    <div>
-                        <div>
-                            <p className='text-uppercase text-center'>Pomoc społeczna</p>
-                        </div>
-                        <div>
-                            <p className='text-uppercase text-center'>i zawodowa</p>
-                        </div>
-                    </div>
-                </div>   
+                </div>
             </div>
 
             {/*------SECTION MISSION--END-----*/}
             {/*------SECTION ACTIVITIES--START-----*/}
 
             <div className={clsx(styles.home__mission__activities, styles.home__mission, styles.home, 'row')}>
-                    <h2 className='text-center mb-4'>NASZA MISJA</h2>
-                <div className='d-lg-flex d-sm-block justify-content-around mt-4 mb-4'>
-                    <img src={`${process.env.PUBLIC_URL}/images/home/activities/brain.svg`}></img>
-                    <img src={`${process.env.PUBLIC_URL}/images/home/activities/Vector.svg`}></img>
-                    <img src={`${process.env.PUBLIC_URL}/images/home/activities/Project.svg`}></img>
-                    <img src={`${process.env.PUBLIC_URL}/images/home/activities/tree.svg`}></img>
+                <h2 className='text-center mb-4 pb-4'>Obszary działalności</h2>
+                <div className='col-lg-3 col-sm-12'>
+                    <div className='d-flex justify-content-center'>
+                        <img src={`${process.env.PUBLIC_URL}/images/home/activities/brain.svg`} alt='brain'></img>
+                    </div>
+                    <div>
+                        <p className='text-uppercase text-center pt-1'>Instytut psychoprofilaktyki i psychoterapii</p>
+                    </div>
+                </div>    
+                <div className='col-lg-3 col-sm-12'>
+                    <div className='d-flex justify-content-center'>
+                        <img src={`${process.env.PUBLIC_URL}/images/home/activities/Vector.svg`} alt='vector'></img>
+                    </div>
+                    <div>
+                        <p className='text-uppercase text-center pt-1'>Poradnia psychologicznadla dzieci i dorosłych</p>
+                    </div>
                 </div>
-                <div className='d-lg-flex d-sm-block justify-content-around mt-4'>
-                    <div className='d-block'>
-                        <div>
-                            <p className='text-center'>Instytut psychoprofilaktyki</p>
-                        </div>
-                        <div>
-                            <p className='text-center'>i psychoterapii</p>
-                        </div>
+                <div className='col-lg-3 col-sm-12'>
+                    <div className='d-flex justify-content-center'>
+                        <img src={`${process.env.PUBLIC_URL}/images/home/activities/Project.svg`} alt='project'></img>
                     </div>
                     <div>
-                        <div>
-                            <p className='text-center'>Poradnia psychologiczna</p>
-                        </div>
-                        <div>
-                            <p className='text-center'>dla dzieci i dorosłych</p>
-                        </div>
+                        <p className='text-uppercase text-center pt-1'>Szkolenia // Projekty</p>
+                    </div>
+                </div>
+                <div className='col-lg-3 col-sm-12'>
+                    <div className='d-flex justify-content-center'>
+                        <img src={`${process.env.PUBLIC_URL}/images/home/activities/tree.svg`} alt='tree'></img>
                     </div>
                     <div>
-                        <div>
-                            <p className='text-center'>Szkolenia // Projekty</p>
-                        </div>
+                        <p className='text-uppercase text-center pt-1'>Profilaktyka zdrowia psychicznego</p>
                     </div>
-                    <div>
-                        <div>
-                            <p className='text-center'>Profilaktyka zdrowia</p>
-                        </div>
-                        <div>
-                            <p className='text-center'>psychicznego</p>
-                        </div>
-                    </div>
-                </div>   
+                </div>
             </div>
 
             {/*------SECTION ACTIVITIES--END-----*/}
