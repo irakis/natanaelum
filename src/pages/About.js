@@ -103,71 +103,72 @@ const About = () => {
                         </div>
                         <div className={clsx(styles.rowButterfly,'row')}>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/cognition.svg`} alt='cognition'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/Vector.png`} alt='cognition'/>
                                 </div>
                                 <div>
-                                    <p>Osoby z problemami psychicznymi i osobowościowymi</p>
+                                    <p className='text-center'>Problemy psychiczne, osobowościowe</p>
                                 </div>
                             </div>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/accessible.svg`} alt='accessible'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/fontisto_paralysis-disability.png`} alt='accessible'/>
                                 </div>
                                 <div>
-                                    <p>Osoby z niepełnosprawnością</p>
+                                    <p className='text-center'>Niepełnosprawność</p>
                                 </div>
                             </div>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/all_inclusive.svg`} alt='all_inclusive'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/healthicons_alcohol.png`} alt='all_inclusive'/>
                                 </div>
                                 <div>
-                                    <p>Osoby z uzależnieniami i zagrożone różnymi typami uzależnień (od substancji psychoaktywnych i czynności)</p>
+                                    <p className='text-center'>Uzależnienia i ryzyko uzależnień</p>
                                 </div>
                             </div>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/sports_kabaddi.svg`} alt='sports_kabaddi'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/ic_round-people-alt.png`} alt='sports_kabaddi'/>
                                 </div>
                                 <div>
-                                    <p>Osoby wykorzystywane i niezaradne społecznie i zawodowo</p>
+                                    <p className='text-center'>Społeczne i zawodowe trudności</p>
                                 </div>
                             </div>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/gavel.svg`} alt='gavel'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/octicon_law-16.png`} alt='gavel'/>
                                 </div>
                                 <div>
-                                    <p>Osoby po konflikcie z prawem karnym</p>
+                                    <p className='text-center'>Konflikt z prawem karnym</p>
                                 </div>
                             </div>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 p-5 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/pill.svg`} alt='pill'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/healthicons_hiv-self-test.png`} alt='pill'/>
                                 </div>
                                 <div>
-                                    <p>Osoby żyjące z wirusem HIV i chore na AIDS</p>
+                                    <p className='text-center'>Choroby np.: HIV/AIDS</p>
                                 </div>
                             </div>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/family_restroom.svg`} alt='family_restroom'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/mdi_mother.png`} alt='family_restroom'/>
                                 </div>
                                 <div>
-                                    <p>Kobiety, mężczyzn i dzieci w sytuacji rozwodowej i po rozwodzie</p>
+                                    <p className='text-center'>Rozwód, samotne rodzicielstwo</p>
                                 </div>
                             </div>
                             <div className={clsx(styles.helpInfo, 'col-lg-3 col-md-6 col-sm-12 d-block')}>
-                                <div className='col-12 pb-3'>
-                                    <img src={`${process.env.PUBLIC_URL}/images/about/escalator_warning.svg`} alt='escalator_warning'/>
+                                <div className='col-12 pb-3 text-center'>
+                                    <img src={`${process.env.PUBLIC_URL}/images/about/icons/ic_round-work-off.png`} alt='escalator_warning'/>
                                 </div>
                                 <div>
-                                    <p>Osoby samotnie wychowujące dzieci i dzieci z rodzin dysfunkcyjnych oraz ze środowisk społecznie zaniedbanych</p>
+                                    <p className='text-center'>Bezrobocie, brak pracy</p>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div></div>
+                </div>
 
                 <div className='container'>   
                     <div className={clsx(styles.about,'row mt-5 pt-5')}>
