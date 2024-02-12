@@ -23,7 +23,6 @@ const FormPage = () => {
     const [serverVerification, setServerVerification] = useState('');
     const reportFormValidation = [];
     
-
     const handleSubmit = async (e, next) => {
         e.preventDefault();
 
