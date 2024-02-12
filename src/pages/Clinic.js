@@ -20,6 +20,7 @@ const Clinic = () => {
                         <Button
                             color='green'
                             text='Zapisz się!'
+                            imageName=''
                         />
                     </Link>
                 </div>

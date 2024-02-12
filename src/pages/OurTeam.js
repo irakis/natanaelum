@@ -1,66 +1,103 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './OurTeam.module.scss'
+import styles from './OurTeam.module.scss';
 
 const OurTeam = () => {
+
+    const headTeam = [
+        'dr hab. Joanna Barbara Chwaszcz Prezes',
+        'mgr Agnieszka Wyszomirska Wice prezes',
+        'Stefania Chwaszcz Skarbnik',
+    ]
+
+    const members = [
+        'dr hab. Joanna Barbara Chwaszcz Prezes',
+        'mgr Agnieszka Wyszomirska Wice prezes',
+        'Stefania Chwaszcz Skarbnik',
+        'prof. dr hab. Stanisława Steuden',
+        'dr hab. Iwona Niewiadomska prof. KUL',
+        'dr Rafał Bartczuk',
+        'dr Michał Wiechetek',
+        'dr Karina Steinbarth-Chmielewska',
+        'dr Bernadeta Lelonek-Kuleta',
+        'dr Joanna Chwaszcz',
+        'dr Weronika Augustynowicz',
+        'dr Elżbieta Trubiłowicz',
+        'dr n. med. Aleksandra Radoń',
+        'dr Anna Przenzak',
+        'dr Krzysztof Ciepliński',
+        'dr Robert Modrzyński',
+        'dr Wiesław Błaszczak',
+        'dr n. med. Gustaw Kozak',
+        'dr n. med. Sławomir Jakima',
+        'lek. med. Zofia Wieczerzak',
+        'mgr Urszula Grodzka',
+        'mgr Małgorzata Fatek-Skobel',
+        'mgr Beata Cybulak',
+        'mgr Małgorzata Kowalcze',
+        'mgr Krystyna Pietraszko',
+        'mgr Maria Tatarska',
+        'mgr Elżbieta Rachowska',
+        'mgr Izabela Sawicka',
+        'mgr Danuta Wiewióra',
+        'mgr Lidia Woć',
+        'mgr Iwona Mialik',
+        'mgr Mira Olszewska',
+    ]
+
     return(
         <div className='container'>
-                <div className={clsx(styles.ourTeam,'row mt-5 pt-5 justify-content-evenly position-relative')}>
-                    <div className='col-lg-6 col-sm-12'>
-                        <div className='row d-block'>
-                            <div className='col-12 mt-5 mb-5'>
-                                <h2>PREZES</h2>
-                                <p>Joanna Barbara Chwaszcz</p>
-                            </div>
-                            <div className='col-12 mt-5 mb-5'>
-                                <h2>WICEPREZES</h2>
-                                <p>Agnieszka Wyszomirska</p>
-                            </div>
-                            <div className='col-12 mt-5 mb-5'>
-                                <h2>SKARBNIK</h2>
-                                <p>Stefania Chwaszcz</p>
-                            </div>
+                <div className={clsx(styles.ourTeam, 'row mt-2 pt-2')}>
+                <div className='col-12'>        
+                    <div className={clsx(styles.rowBackground,'row')}>
+                        <div className='col-9 d-flex p-4 mx-auto'>
+                            <p className={clsx(styles.middle, 'mx-auto')}>
+                                ZARZĄD STOWARZYSZENIA
+                            </p>
                         </div>
                     </div>
-                    <div className='col-lg-4 col-sm-12 d-block pr-5'>
-                        <h2 className='m-5 text-end'>SPECJALIŚCI</h2>
-                        <ul>
-                            <li>prof. dr hab. Stanisława Steuden</li>
-                            <li>dr hab. Iwona Niewiadomska prof. KUL</li>
-                            <li>dr Rafał Bartczuk</li>
-                            <li>dr Michał Wiechetek</li>
-                            <li>dr Karina Steinbarth-Chmielewska</li>
-                            <li>dr Bernadeta Lelonek-Kuleta</li>
-                            <li>dr Joanna Chwaszcz</li>
-                            <li>dr Weronika Augustynowicz</li>
-                            <li>dr Elżbieta Trubiłowicz</li>
-                            <li>dr n. med. Aleksandra Radoń</li>
-                            <li>dr Anna Przenzak</li>
-                            <li>dr Krzysztof Ciepliński</li>
-                            <li>dr Robert Modrzyński</li>
-                            <li>dr Wiesław Błaszczak</li>
-                            <li>dr n. med. Gustaw Kozak</li>
-                            <li>dr n. med. Sławomir Jakima</li>
-                            <li>lek. med. Zofia Wieczerzak</li>
-                            <li>mgr Urszula Grodzka</li>
-                            <li>mgr Małgorzata Fatek-Skobel</li>
-                            <li>mgr Beata Cybulak</li>
-                            <li>mgr Małgorzata Kowalcze</li>
-                            <li>mgr Krystyna Pietraszko</li>
-                            <li>mgr Maria Tatarska</li>
-                            <li>mgr Elżbieta Rachowska</li>
-                            <li>mgr Izabela Sawicka</li>
-                            <li>mgr Danuta Wiewióra</li>
-                            <li>mgr Lidia Woć</li>
-                            <li>mgr Iwona Mialik</li>
-                            <li>mgr Mira Olszewska</li>
-                        </ul>
-                    </div>
-                    <div className={clsx(styles.butterflyParent,'col-12')}>
-                    <img className={clsx(styles.butterflyBlue1, ' z-n1')} src={`${process.env.PUBLIC_URL}/images/ourTeam/krzysztof-niewolny-f8JYQPq45uI-unsplash 1B.png`} alt='krzysztof-niewolny-f8JYQPq45uI-unsplash 1'/>
+                    <div className='row mt-4 d-flex justify-content-center '>
+                        {headTeam.map(head => {
+                            return(
+                                <div className='col-lg-3 col-sm-12' key={head}>
+                                    <div className="card mb-3">
+                                        <img className="card-img-top" src={`${process.env.PUBLIC_URL}/images/avatar.png`} alt="Card cap"/>
+                                        <div className="card-body">
+                                            <p className="card-text">{head}</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            )
+                        })}  
                     </div>
                 </div>
-        </div>
+                </div>
+                <div className={clsx(styles.ourTeam, 'row mt-2 pt-2')}>
+                    <div className='col-12'>
+                        <div className={clsx(styles.rowBackground,'row')}>
+                            <div className='col-9 d-flex p-4 mx-auto'>
+                                <p className={clsx(styles.middle, 'mx-auto')}>
+                                    SPECJALIŚCI
+                                </p>
+                            </div>
+                        </div>
+                        <div className='row mt-4 d-flex  flex-wrap'>
+                            {members.map(member => {
+                                return(
+                                    <div className='col-lg-3 col-sm-12' key={member}>
+                                        <div className="card mb-3">
+                                            <img className="card-img-top" src={`${process.env.PUBLIC_URL}/images/avatar.png`} alt="Card cap"/>
+                                            <div className="card-body">
+                                                <p className="card-text">{member}</p>
+                                            </div>
+                                        </div>
+                                </div>
+                                )
+                            })}  
+                        </div>
+                    </div>
+                </div>
+            </div>
     )
 }
 

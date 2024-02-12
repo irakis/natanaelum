@@ -16,39 +16,10 @@ const SelectClinic = () => {
     return(
         <div className="container">
             <div className="row">
-                <div className="col-lg-6 col-md-12 d-grid pt-5 pb-5">
-                    <div className="row my-auto">
-                        <div className="col-12 d-flex">
-                            <div className={clsx(styles.selectClinicDot, styles.selected,"col-2 m-auto")}>
-                            </div>
-                            <div className={clsx(styles.selectClinic,"col-10")}>
-                                <p>Krok 1</p>
-                                <h2>Wybór poradni</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row my-auto">
-                        <div className="col-12 d-flex">
-                            <div className={clsx(styles.selectClinicDot,styles.selectClinicDot__inActive,"col-2 m-auto")}></div>
-                            <div className={clsx(styles.selectClinic,"col-10")}>
-                                <p>Krok 2</p>
-                                <h2>Formularz kontaktowy</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row my-auto">
-                        <div className="col-12 d-flex">
-                            <div className={clsx(styles.selectClinicDot, styles.selectClinicDot__inActive,"col-2 m-auto")}></div>
-                            <div className={clsx(styles.selectClinic,"col-10")}>
-                                <p>Krok 3</p>
-                                <h2>Podsumowanie</h2>
-                            </div>
-                        </div>
-                    </div>                                       
-                </div>
-                <div className={clsx(styles.selectClinic, "col-lg-6 col-md-12")}>
+                <div className={clsx(styles.selectClinic, "col-lg-8 col-md-12 mx-auto")}>
                     <h1 className="pt-5">Wybór poradni</h1>
                     <p className="pb-5">*Należy potwierdź wybór</p>
+                    <CustomButton action={(e)=>handlerEvent(e,'Aktualne szkolenia')} text='Aktualne szkolenia' isActive={clinic}/>
 
                     <CustomButton action={(e)=>handlerEvent(e,'Poradnia Zdrowia Psychicznego')} text='Poradnia Zdrowia Psychicznego' isActive={clinic}/>
 
@@ -56,9 +27,9 @@ const SelectClinic = () => {
                     
                     <CustomButton action={(e)=>handlerEvent(e,'Poradnia Leczenia Uzależnień')} text='Poradnia Leczenia Uzależnień' isActive={clinic}/>
 
-                    <div className="row mt-5 pt-5 d-grid justify-content-end ">
+                    <div className="row m-4 p-4 d-grid justify-content-end ">
                         <Link to={clinic}>
-                            <Button color='green' text='Potwierdź'/>
+                            <Button color='green' text='Potwierdź' imageName=''/>
                         </Link>
                     </div>
                 </div>

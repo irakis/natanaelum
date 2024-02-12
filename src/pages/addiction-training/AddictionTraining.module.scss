@@ -1,0 +1,29 @@
+@import '../../styles/settings.scss';
+
+.addiction {
+        color: $header-font-color;
+        font-family: Poppins;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        a {
+                color: blue;
+                text-decoration: underline;
+         }
+}
+.addiction ol{
+
+        color: #A0A3A9;
+        font-family: Poppins;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+
+}
+
+
+.breakAfter {
+        margin-bottom: 1em;
+}

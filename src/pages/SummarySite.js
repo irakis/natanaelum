@@ -1,4 +1,4 @@
-import styles from './FormPage.module.scss';
+import styles from './form-page/FormPage.module.scss';
 import clsx from 'clsx';
 
 const SummarySite = () => {

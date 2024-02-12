@@ -16,16 +16,26 @@ const OurTrainings = () => {
                 </div>
             </div>
             <div className={clsx(styles.trainings, 'row d-flex flex-row pt-3 pb-3')}>
-                <div className='col-lg-6 col-md-12 my-auto'>
+                <div className='col-lg-6 col-md-12 my-2'>
+                    <Training
+                        url={`${process.env.PUBLIC_URL}/images/training/people-2562102_1280.jpg`}
+                        alt='Ręce2'
+                        title='Krótkoterminowa terapia par i rodzin z
+                            problemem uzależnienia”'
+                        link='addiction_training_family'
+                        status='TRWA'
+                    />
+                </div>
+                <div className='col-lg-6 col-md-12 my-2'>
                     <Training
                         url={`${process.env.PUBLIC_URL}/images/training/Ręce.png`}
                         alt='Ręce'
                         title='Specjalistyczne Szkolenie w Dziedzinie Uzależnienia'
                         link='addiction_training'
-                        status='TRWA'
+                        status='ZAKOŃCZONE'
                     />
                 </div>
-                <div className='col-lg-6 col-md-12 my-auto'>
+                <div className='col-lg-6 col-md-12 my-2'>
                     <Training
                         url={`${process.env.PUBLIC_URL}/images/training/charlesdeluvio-wn7dOzUh3Rs-unsplash 1.png`}
                         alt='charlesdeluvio-wn7dOzUh3Rs-unsplash 1'
@@ -34,13 +44,13 @@ const OurTrainings = () => {
                         status='TRWA'
                     />
                 </div>
-                <div className='col-12 pt-3'>
+                <div className='col-lg-6 col-md-12 my-2'>
                     <Training
                             url={`${process.env.PUBLIC_URL}/images/training/Flaga Ukrainy.png`}
                             alt='flaga_ukrainy'
-                            title='Szkolenie specjalistów w zakresie udzielania skutecznej pomocy psychologicznej i socjalnej Ukraińcom dotkniętych działaniami wojennymi'
+                            title='Szkolenie w zakresie udzielania pomocy psychologicznej i socjalnej Ukraińcom dotkniętych działaniami wojennymi'
                             link='/'
-                            status='TRWA'
+                            status='ZAKOŃCZONE'
                     />
                 </div>
             </div>

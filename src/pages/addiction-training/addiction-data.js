@@ -1,11 +1,6 @@
-import React from "react";
-import SingleProject from "../components/SingleProject.js";
-import clsx from "clsx";
-import styles from './AddictionTraining.module.scss';
 
-const AddictionTraining = () => {
-
-    const string = `
+export const data = {
+    addictionString: `
     <p>Szkolenie rekomendowane przez Dyrektora Krajowego Biura do spraw Przeciwdziałania Narkomanii przygotowujące do egzaminu certyfikowanego przez Ministra Zdrowia. Kierownik szkolenia: Dr hab. Iwona Niewiadomska, prof. KUL</p>
     
     <p><b>Kto może wziąć udział w szkoleniu?</b></p>
@@ -172,20 +167,4 @@ const AddictionTraining = () => {
             <li>Koszty zakwaterowania i wyżywienia podczas realizacji 100 godzin treningów ok. 1200 zł (cena szacowana, ulega zmianie zgodnie ze stawkami rynkowymi za nocleg i wyżywienie)</li>
         </ol>
     `
-
-    return(
-        <div className={clsx(styles.addiction, "container")}>
-            <SingleProject
-            status='NABÓR ZAKOŃCZONY'
-            period='2021 - 2023 r.'
-            title='Specjalistyczne Szkolenie w Dziedzinie Uzależnienia'
-            text={string}
-            image=''
-            contact=''
-            showImage='false'
-            />
-        </div>
-    )
 }
-
-export default AddictionTraining;

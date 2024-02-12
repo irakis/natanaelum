@@ -10,10 +10,11 @@ import OurProjects from './pages/OurProjects.js';
 import OurTrainings from './pages/OurTrainings.js';
 import Clinic from './pages/Clinic.js';
 import ProjectActiveCompetent from './pages/ProjectActiveCompetent.js';
-import AddictionTraining from './pages/AddictionTraining.js';
+import AddictionTraining from './pages/addiction-training/AddictionTraining.js';
 import SelectClinic from './pages/SelectClinic.js';
-import FormPage from './pages/FormPage.js';
+import FormPage from './pages/form-page/FormPage.js';
 import SummarySite from './pages/SummarySite.js';
+import AddictionTrainingFamily from './pages/addiction-training/AddictionTrainingFamily.js'
 
 function App() {
   
@@ -29,6 +30,7 @@ function App() {
         <Route path='/clinic' element={<Clinic/>}/>
         <Route path='/ourprojects/project_active_competent' element={<ProjectActiveCompetent/>}/>
         <Route path='/ourtrainings/addiction_training' element={<AddictionTraining/>}/>
+        <Route path='/ourtrainings/addiction_training_family' element={<AddictionTrainingFamily/>}/>
         <Route path='/clinic/select_clinic' element={<SelectClinic/>}/>
         <Route path='/clinic/select_clinic/:id' element={<FormPage/>}/>
         <Route path='/clinic/summary' element={<SummarySite/>}/>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import clsx from 'clsx';
 import Button from './Common/Button';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -32,7 +33,7 @@ const Header = () => {
                                 </a>
                             </li>
                             <li className='nav-item'>
-                                <a href="/">
+                                <a href="https://ipip.info.pl" target="_blank" rel='noreferrer'>
                                     <div>
                                         IPIP
                                     </div>
@@ -74,7 +75,9 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className={clsx(styles.loginLink, 'text-center col-lg-2 col-sm-12 p-sm-flex')}>
-                        <Button text={'Umów wizytę'} color={'green'} imageName={'Group.svg'} altText={'image header'}/>
+                        <Link to='clinic/select_clinic'>
+                            <Button text={'Umów wizytę'} color={'green'} imageName={'Group.svg'} altText={'image header'}/>
+                        </Link>
                     </div>
                 </nav>
             </div>

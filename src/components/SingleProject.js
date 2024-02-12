@@ -7,7 +7,7 @@ const SingleProject = (data) => {
         <div className={clsx(styles.singleProject,'container')}>
             <div className='row pb-5'>
                 <div className={clsx(styles.header, 'col-12')}>
-                    <h1>{data.status}</h1>
+                    <h1 className='m-4'>{data.status}</h1>
                     <p>{data.period}</p>
                     <h2>{data.title}</h2>
                 </div>
