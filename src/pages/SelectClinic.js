@@ -19,13 +19,13 @@ const SelectClinic = () => {
                 <div className={clsx(styles.selectClinic, "col-lg-8 col-md-12 mx-auto")}>
                     <h1 className="pt-5">Wybór poradni</h1>
                     <p className="pb-5">*Należy potwierdź wybór</p>
-                    <CustomButton action={(e)=>handlerEvent(e,'Aktualne szkolenia')} text='Aktualne szkolenia' isActive={clinic}/>
+                    <CustomButton action={(e)=>handlerEvent(e,'Aktualne szkolenia')} text='Aktualne szkolenia' isActive={clinic} imageName=''/>
 
-                    <CustomButton action={(e)=>handlerEvent(e,'Poradnia Zdrowia Psychicznego')} text='Poradnia Zdrowia Psychicznego' isActive={clinic}/>
+                    <CustomButton action={(e)=>handlerEvent(e,'Poradnia Zdrowia Psychicznego')} text='Poradnia Zdrowia Psychicznego' isActive={clinic} imageName=''/>
 
-                    <CustomButton action={(e)=>handlerEvent(e,'Poradnia Psychologiczna')} text='Poradnia Psychologiczna' isActive={clinic}/>
+                    <CustomButton action={(e)=>handlerEvent(e,'Poradnia Psychologiczna')} text='Poradnia Psychologiczna' isActive={clinic} imageName=''/>
                     
-                    <CustomButton action={(e)=>handlerEvent(e,'Poradnia Leczenia Uzależnień')} text='Poradnia Leczenia Uzależnień' isActive={clinic}/>
+                    <CustomButton action={(e)=>handlerEvent(e,'Poradnia Leczenia Uzależnień')} text='Poradnia Leczenia Uzależnień' isActive={clinic} imageName=''/>
 
                     <div className="row m-4 p-4 d-grid justify-content-end ">
                         <Link to={clinic}>
