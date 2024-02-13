@@ -42,15 +42,17 @@ app.get('/ourprojects/project_active_competent', (req, res) => {
 app.get('/ourtrainings/addiction_training', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../build/index.html'))
 });
+app.get('/ourtrainings/addiction_training_family', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../build/index.html'))
+});
 app.get('/clinic/select_clinic', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../build/index.html'))
 });
 app.get('/clinic/select_clinic/:id', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../build/index.html'))
 });
-app.get('/clinic/summary', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../build/index.html'))
-});
+
+
 app.get('/clinic/summary', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../build/index.html'))
 });

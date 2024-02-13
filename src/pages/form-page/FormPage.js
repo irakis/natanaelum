@@ -17,13 +17,12 @@ const FormPage = () => {
     const [ formData, setFormData ] = useState({ clinic: id , sureName: '', foreName: '', city: '', 
         street: '',zipCode:'',voivodship: '', houseNumber: '', flatNumber:'',phone: '', mail: '', criteria: '', timeGroup: '', textArea: '', checked: 'false'});
     
-    console.log('działa??:', formData);
     const captchaRef = useRef(null);
     const [validated, setValidated] = useState(false);
     const [serverVerification, setServerVerification] = useState('');
     const reportFormValidation = [];
-    
-    const handleSubmit = async (e, next) => {
+    console.log('validated:', validated, 'serverVerification', serverVerification, 'report vlid:', reportFormValidation );
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const formInputs = document.querySelectorAll('input');
@@ -57,7 +56,7 @@ const FormPage = () => {
         const user_id = `${process.env.REACT_APP_USER_ID}`;
 
         if (serverVerification === 'verification positive' && reportFormValidation[0] !== false) {
-            emailjs.send(service_id, template_id , formData, user_id)
+            emailjs.sendForm(service_id, template_id , formData, user_id)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -120,7 +119,7 @@ const FormPage = () => {
                                 <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>Wybierz opcję</div>
                             </div>
                             <div class="col-6 form-check my-auto">
-                                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" onChange={e=> setFormData({...formData, checked: true})}/>
+                                <input className="form-check-input" type="checkbox" value={false} id="defaultCheck1" onChange={e=> setFormData({...formData, checked: true})}/>
                                 <label className=" form-check-label" for="defaultCheck1">
                                 Osoby udzielająca świadczeń zdrowotnych w placówkach leczenia uzależnień 
                                 (nieodpłatne świadczenia dla klientów) 
@@ -172,22 +171,7 @@ const FormPage = () => {
                         </div>
 
                {/*-------------------------------------------------------------*/}    
-                        {/*<div className="p-1 col-6">
-                            <Form.Group controlId='date'>
-                                <Form.Label>Wybierz datę</Form.Label>
-                                <Form.Control name='date' type='date' placeholder='dd/mm/rrrr' onChange={ e => setFormData({...formData, date: e.target.value})} 
-                                    aria-describedby="dateHelper" required></Form.Control>
-                                <div id='dateHelper' className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 10.09.2025</div>
-                            </Form.Group>
-                        </div>
-                        <div className="p-1 col-6">
-                            <Form.Group controlId='time'>
-                                <Form.Label>Wybierz godzinę</Form.Label>
-                                <Form.Control name='time' type='time' placeholder='hh/mm' onChange={ e => setFormData({...formData, time: e.target.value})} aria-describedby="timeHelper" required></Form.Control>
-                                <div id='timeHelper' className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 12:00</div>
-                            </Form.Group>
-                        </div>
-                        */}
+              
                         <div className="col-12 m-4 pt-4 d-flex justify-content-end ">
                             <div className={clsx(styles.selectClinic__recaptcha)}>
                                 <ReCAPTCHA
