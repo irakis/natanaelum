@@ -12,6 +12,7 @@ import { useState, useRef } from "react";
 
 const FormPage = () => {
 
+    
     const navigate = useNavigate();
     const { id } = useParams();
     const [ formData, setFormData ] = useState({ clinic: id , sureName: '', foreName: '', city: '', 
