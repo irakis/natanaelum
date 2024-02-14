@@ -7,11 +7,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
 import {voivodship} from './form-data.js';
 import {criteria, timeGroup } from './form-data.js';
-import { Form } from 'react-bootstrap';
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const FormPage = () => {
-
 
     const navigate = useNavigate();
     const { id } = useParams();
@@ -19,30 +17,16 @@ const FormPage = () => {
         street: '',zipCode:'',voivodship: '', houseNumber: '', flatNumber:'',phone: '', mail: '', criteria: '', timeGroup: '', textArea: '', checked: 'false'});
     
     const captchaRef = useRef(null);
-    const [validated, setValidated] = useState(false);
+    
     const [serverVerification, setServerVerification] = useState('');
-    const reportFormValidation = [];
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const formInputs = document.querySelectorAll('input');
-        
-        formInputs.forEach((data) => {
-            let checkInput = data.checkValidity();
-                if (checkInput === false) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    reportFormValidation.push(false);
-                } else {
-                    setValidated(true);
-                }
-        });
-        
+        e.stopPropagation();
         const token = captchaRef.current.getValue();
         captchaRef.current.reset();
         
-        if (token !== '' && reportFormValidation[0] !== false) {
+        if (token !== '') {
             await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
             .then((res)=>{setServerVerification(res.data)})
             .catch((error) => {
@@ -52,22 +36,22 @@ const FormPage = () => {
             navigate(`/clinic/select_clinic/${id}`);
         }}
 
-        const template_id = `${process.env.REACT_APP_TEMPALTE_ID}`;
-        const service_id = `${process.env.REACT_APP_SERVICE_ID}`;
-        const user_id = `${process.env.REACT_APP_USER_ID}`;
-        console.log('next step:', serverVerification==='verification positive', reportFormValidation);
+        useEffect(()=>{
+            if (serverVerification === 'verification positive' && Object.keys(formData).length === 15) {
+                const template_id = `${process.env.REACT_APP_TEMPALTE_ID}`;
+                const service_id = `${process.env.REACT_APP_SERVICE_ID}`;
+                const user_id = `${process.env.REACT_APP_USER_ID}`;
 
-        if (serverVerification === 'verification positive' && reportFormValidation[0] !== false) {
-            emailjs.send(service_id, template_id , formData, user_id)
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-            navigate('/clinic/summary')
-        } else {
-            navigate(`/clinic/select_clinic/${id}`);
-        }
+                emailjs.send(service_id, template_id , formData, user_id)
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+                navigate('/clinic/summary')
+            } else {
+                navigate(`/clinic/select_clinic/${id}`);
+        }}, [serverVerification, formData, id, navigate])
 
     return(
         <div className="container d-flex flex-column">
@@ -76,12 +60,10 @@ const FormPage = () => {
                     <h1 className="pt-5">Formularz kontaktowy</h1>
                     <p className="pb-5">*Każde pole wymagane</p>
 
-                    {/*<!-- Form Start -->*/}
-
-                    <Form onSubmit={handleSubmit} noValidate validated={validated} className="d-flex flex-wrap was-validated">
+                    <form onSubmit={handleSubmit} noValidate className="d-flex flex-wrap was-validated">
                         <div className="p-1 col-6">
                             <label className="form-label">Imię</label>
-                            <input type="text" name='foreName' className="form-control" onChange={ e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required></input>
+                            <input type="text" name='foreName' className="form-control" onChange={e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required></input>
                             <div id="forenameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Jan</div>
                         </div>
                         <div className="p-1 col-6">
@@ -89,7 +71,6 @@ const FormPage = () => {
                             <input type="text" name='sureName' className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
                             <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
                         </div>
-
                         <div className="row m-0">
                             <div className="p-1 col-2">
                                 <label className="form-label">Kod pocztowy</label>
@@ -127,7 +108,6 @@ const FormPage = () => {
                                 </label>
                                 </div>
                         </div>
-
                         <div className="row d-flex m-0">
                             <div className="p-1 col-10">
                                 <label className="form-label">Preferowana grupa do wyboru </label>
@@ -140,8 +120,7 @@ const FormPage = () => {
                             <div className="p-1 col-10">
                                     <textarea className="form-control" id="textAreaExample1" onChange={e => setFormData({...formData, textArea: e.target.value})} rows="2"></textarea>
                                     <label className="form-label" for="textAreaExample">Uwagi</label>
-                            </div>
-                            
+                            </div>     
                         </div>
                         <div className="row m-0">
                             <div className="p-1 col-6">
@@ -169,9 +148,7 @@ const FormPage = () => {
                             <label className="form-label">Email address</label>
                             <input type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp" required></input>
                             <div id="emailHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. jan.kowalski@poczta.pl</div>
-                        </div>
-
-               {/*-------------------------------------------------------------*/}    
+                        </div> 
               
                         <div className="col-12 m-4 pt-4 d-flex justify-content-end ">
                             <div className={clsx(styles.selectClinic__recaptcha)}>
@@ -183,9 +160,7 @@ const FormPage = () => {
                             </div>
                             <Button color='green' text='Idź dalej' action={handleSubmit} imageName=''/>
                         </div>
-                    </Form>
-
-                    {/*<!-- Form End -->*/}
+                    </form>
 
                 </div>
             </div>
