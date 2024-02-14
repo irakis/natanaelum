@@ -59,7 +59,7 @@ app.get('/clinic/summary', (req, res) => {
 
 /*POST ROUTE*/
 
-router.post('/post', async (req, res) => {
+router.post('/clinic/select_clinic/post', async (req, res) => {
     const { token, formData } = req.body;
     console.log('req.body :', token, formData);
     try {

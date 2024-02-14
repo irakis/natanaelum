@@ -12,7 +12,7 @@ import { useState, useRef } from "react";
 
 const FormPage = () => {
 
-    
+
     const navigate = useNavigate();
     const { id } = useParams();
     const [ formData, setFormData ] = useState({ clinic: id , sureName: '', foreName: '', city: '', 
@@ -22,7 +22,7 @@ const FormPage = () => {
     const [validated, setValidated] = useState(false);
     const [serverVerification, setServerVerification] = useState('');
     const reportFormValidation = [];
-    console.log('validated:', validated, 'serverVerification', serverVerification, 'report vlid:', reportFormValidation );
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -43,31 +43,31 @@ const FormPage = () => {
         captchaRef.current.reset();
         
         if (token !== '' && reportFormValidation[0] !== false) {
-            await axios.post(`/${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
-            .then(res => {setServerVerification(res.data)})
+            await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
+            .then((res)=>{setServerVerification(res.data)})
             .catch((error) => {
                 console.log(error.message);
             })
         } else {
-            navigate(`/clinic/select_clinic/${id}`)
-        }
-        
+            navigate(`/clinic/select_clinic/${id}`);
+        }}
+
         const template_id = `${process.env.REACT_APP_TEMPALTE_ID}`;
         const service_id = `${process.env.REACT_APP_SERVICE_ID}`;
         const user_id = `${process.env.REACT_APP_USER_ID}`;
+        console.log('next step:', serverVerification==='verification positive', reportFormValidation);
 
         if (serverVerification === 'verification positive' && reportFormValidation[0] !== false) {
-            emailjs.sendForm(service_id, template_id , formData, user_id)
+            emailjs.send(service_id, template_id , formData, user_id)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
-            navigate('/clinic/summary');
+            navigate('/clinic/summary')
         } else {
-            navigate(`/clinic/select_clinic/${id}`)
+            navigate(`/clinic/select_clinic/${id}`);
         }
-    }
 
     return(
         <div className="container d-flex flex-column">
@@ -119,7 +119,7 @@ const FormPage = () => {
                                 </select>
                                 <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>Wybierz opcję</div>
                             </div>
-                            <div class="col-6 form-check my-auto">
+                            <div className="col-6 form-check my-auto">
                                 <input className="form-check-input" type="checkbox" value={false} id="defaultCheck1" onChange={e=> setFormData({...formData, checked: true})}/>
                                 <label className=" form-check-label" for="defaultCheck1">
                                 Osoby udzielająca świadczeń zdrowotnych w placówkach leczenia uzależnień 
