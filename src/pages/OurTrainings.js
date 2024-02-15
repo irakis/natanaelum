@@ -6,7 +6,7 @@ import clsx from 'clsx';
 const OurTrainings = () => {
     return(
         <div className='container'>
-            <div className={clsx('row')}>
+            <div className={clsx('row p-3')}>
                 <div className='col-12'>
                     <Subtitle
                         title='Szkolenia'
@@ -33,15 +33,6 @@ const OurTrainings = () => {
                         title='Specjalistyczne Szkolenie w Dziedzinie Uzależnienia'
                         link='addiction_training'
                         status='ZAKOŃCZONE'
-                    />
-                </div>
-                <div className='col-lg-6 col-md-12 my-2'>
-                    <Training
-                        url={`${process.env.PUBLIC_URL}/images/training/charlesdeluvio-wn7dOzUh3Rs-unsplash 1.png`}
-                        alt='charlesdeluvio-wn7dOzUh3Rs-unsplash 1'
-                        title='Staż i Superwizja'
-                        link='/'
-                        status='TRWA'
                     />
                 </div>
                 <div className='col-lg-6 col-md-12 my-2'>

@@ -10,6 +10,12 @@
     @media (max-width: 578px) {
         justify-items: center;
     }
+    img {
+        width: 200px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 h2 {
@@ -23,6 +29,17 @@ h2 {
     letter-spacing: 0.1px;
 }
 
+h1 {
+    color: #31A05E;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 133.333% */
+    
+}
+
 p {
     color: #000;
     text-align: left;
@@ -34,45 +51,4 @@ p {
     letter-spacing: 0.1px;
 }
 
-.butterflyBlue1 {
-    object-fit: cover;
-    scale: 1;
-    position: absolute;
-    top:310px;
-    @media (max-width: 1400px) {
-        scale: 0.6;
-        left: -100px;   
-    }
-    @media (max-width: 1100) {
-        scale: 0.5;
-        left: 0;
-        position: absolute;
-    }
 
-}
- ul {
-    margin: 12px;
-    text-align: right;
-    list-style: none;
-
-    li {
-        color: #000;
-        font-family: Poppins;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        margin: 0px;
-        padding: 0px;
-        text-align: right;
-    }
- }
-
- .butterflyParent {
-    object-fit: cover;
-
-    @media (max-width: 970px) {
-    position: relative;
-    top: -200px
-    }
- }

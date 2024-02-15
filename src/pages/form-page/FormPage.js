@@ -57,7 +57,7 @@ const FormPage = () => {
         <div className="container d-flex flex-column">
             <div className="row" >
                 <div className={clsx(styles.selectClinic, "col-lg-8 col-md-12 mx-auto")}>
-                    <h1 className="pt-5">Formularz kontaktowy</h1>
+                    <h1 className="pt-5">Formularz zgłoszeniowy</h1>
                     <p className="pb-5">*Każde pole wymagane</p>
 
                     <form onSubmit={handleSubmit} noValidate className="d-flex flex-wrap was-validated">
@@ -70,6 +70,23 @@ const FormPage = () => {
                             <label className="form-label">Nazwisko</label>
                             <input type="text" name='sureName' className="form-control" onChange={ e => setFormData({...formData, sureName: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
                             <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Kowalski</div>
+                        </div>
+                        <div className="row m-0">
+                            <div className="p-1 col-6">
+                                <label className="form-label">Ulica</label>
+                                <input type="text" name='street' className="form-control" onChange={ e => setFormData({...formData, street: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
+                                <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Krótka</div>
+                            </div>
+                            <div className="p-1 col-3">
+                                <label className="form-label">Nr domu</label>
+                                <input type="number" name='houseNumber' className="form-control" onChange={ e => setFormData({...formData, houseNumber: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
+                                <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 3</div>
+                            </div>
+                            <div className="p-1 col-3">
+                                <label className="form-label">Nr m.</label>
+                                <input type="number" name='flatNumber' className="form-control" onChange={ e => setFormData({...formData, flatNumber: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp"></input>
+                                <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 11</div>
+                            </div>
                         </div>
                         <div className="row m-0">
                             <div className="p-1 col-2">
@@ -122,23 +139,7 @@ const FormPage = () => {
                                     <label className="form-label" for="textAreaExample">Uwagi</label>
                             </div>     
                         </div>
-                        <div className="row m-0">
-                            <div className="p-1 col-6">
-                                <label className="form-label">Ulica</label>
-                                <input type="text" name='street' className="form-control" onChange={ e => setFormData({...formData, street: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
-                                <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. Krótka</div>
-                            </div>
-                            <div className="p-1 col-3">
-                                <label className="form-label">Nr domu</label>
-                                <input type="number" name='houseNumber' className="form-control" onChange={ e => setFormData({...formData, houseNumber: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
-                                <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 3</div>
-                            </div>
-                            <div className="p-1 col-3">
-                                <label className="form-label">Nr m.</label>
-                                <input type="number" name='flatNumber' className="form-control" onChange={ e => setFormData({...formData, flatNumber: e.target.value})} id="exampleInputEmail1" aria-describedby="sureNameHelp" required></input>
-                                <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 11</div>
-                            </div>
-                        </div>
+
                         <div className="p-1 col-6">
                             <label className="form-label">Telefon</label>
                             <input type="number"name='phone' className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp" required></input>
