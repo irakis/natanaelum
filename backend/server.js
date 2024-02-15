@@ -61,7 +61,6 @@ app.get('/clinic/summary', (req, res) => {
 
 router.post('/clinic/select_clinic/post', async (req, res) => {
     const { token, formData } = req.body;
-    console.log('req.body :', token, formData);
     try {
         const response = await axios.post(
             `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.REACT_APP_SECRET_KEY_RECAPTCHA}&response=${token}`

@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import Button from "../../components/Common/Button.js";
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
-import axios from 'axios';
 import {voivodship} from './form-data.js';
 import {criteria, timeGroup } from './form-data.js';
 import { useState, useRef, useEffect } from "react";
@@ -17,9 +16,10 @@ const FormPage = () => {
         street: '',zipCode:'',voivodship: '', houseNumber: '', flatNumber:'',phone: '', mail: '', criteria: '', timeGroup: '', textArea: '', checked: 'false'});
     
     const captchaRef = useRef(null);
-    
+    const [validated, setValidated] = useState(false);
     const [serverVerification, setServerVerification] = useState('');
-    
+    const reportFormValidation = [];
+        
     const handleSubmit = async (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -27,21 +27,32 @@ const FormPage = () => {
         captchaRef.current.reset();
         
         if (token !== '') {
-            await axios.post(`${process.env.REACT_APP_LOCALHOST_URL_POST}`, { formData, token })
-            .then((res)=>{setServerVerification(res.data)})
-            .catch((error) => {
-                console.log(error.message);
-            })
+        const formInputs = document.querySelectorAll('input');
+           
+        for (let i of formInputs) {
+            let checkInput = i.checkValidity();
+            console.log('checkInput??:',checkInput);
+                if (checkInput === false) {
+                    reportFormValidation.push(false);
+                    break;
+                } else {
+                    console.log(validated);
+                    setValidated(true);
+                }
+        };
+
+        if(reportFormValidation.length === 0){ console.log('report empty!!!'); setServerVerification('verification positive')};
+
         } else {
             navigate(`/clinic/select_clinic/${id}`);
         }}
-
+        console.log(serverVerification)
         useEffect(()=>{
-            if (serverVerification === 'verification positive' && Object.keys(formData).length === 15) {
+            if (serverVerification === 'verification positive' && serverVerification !== false) {
                 const template_id = `${process.env.REACT_APP_TEMPALTE_ID}`;
                 const service_id = `${process.env.REACT_APP_SERVICE_ID}`;
                 const user_id = `${process.env.REACT_APP_USER_ID}`;
-
+                
                 emailjs.send(service_id, template_id , formData, user_id)
                 .then((result) => {
                     console.log(result.text);
@@ -139,18 +150,16 @@ const FormPage = () => {
                                     <label className="form-label" for="textAreaExample">Uwagi</label>
                             </div>     
                         </div>
-
                         <div className="p-1 col-6">
                             <label className="form-label">Telefon</label>
                             <input type="number"name='phone' className="form-control" onChange={ e => setFormData({...formData, phone: e.target.value})} id="exampleInputPhone" aria-describedby="phoneHelp" required></input>
-                            <div id="phoneHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. (+48) 123 456 789</div>
+                            <div id="phoneHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. 123 456 789</div>
                         </div>
                         <div className="p-1 col-6">
                             <label className="form-label">Email address</label>
                             <input type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp" required></input>
                             <div id="emailHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. jan.kowalski@poczta.pl</div>
-                        </div> 
-              
+                        </div>      
                         <div className="col-12 m-4 pt-4 d-flex justify-content-end ">
                             <div className={clsx(styles.selectClinic__recaptcha)}>
                                 <ReCAPTCHA
