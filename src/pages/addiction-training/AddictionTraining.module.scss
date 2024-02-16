@@ -1,5 +1,23 @@
 @import '../../styles/settings.scss';
 
+@keyframes animate { 
+        0% { 
+            opacity: 0; 
+            font-size: 19px;
+            color: blue;
+        } 
+
+        50% { 
+            opacity: 0.7; 
+        } 
+
+        100% { 
+            opacity: 0; 
+            font-size: 24px;
+            color: red;
+        } 
+}
+
 .addiction {
         color: $header-font-color;
         font-family: Poppins;
@@ -10,7 +28,10 @@
         a {
                 color: blue;
                 text-decoration: underline;
-         }
+        }
+        &__blinking {
+                animation: animate 2s linear infinite;
+        }
 }
 .addiction ol{
 

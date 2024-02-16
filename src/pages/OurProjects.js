@@ -37,7 +37,7 @@ const OurProjects = () => {
                         img={`${process.env.PUBLIC_URL}/images/cards/plakat_fundusz_celowy_420x297_w-1 1.png`}
                         alt='plakat_fundusz_celowy_420x297_w-1 1'
                         header='Wsparcie adaptacji społecznej i zawodowej matek uciekających z Ukrainy objętej wojną'
-                        status='AKTYWNY'
+                        status='ZAKOŃCZONY'
                         period='1 sierpnia 2022 r. - 31 grudnia 2023 r.'
                         description='Projekt ma na celu wsparcie adaptacji społecznej i zawodowej matek z Ukrainy oraz ich dzieci poprzez szkolenia, wsparcie psychologiczne, naukę języka polskiego i inne działania integracyjne.'
                         link='/'

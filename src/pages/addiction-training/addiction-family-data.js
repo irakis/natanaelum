@@ -17,7 +17,6 @@ export const data = {
         <p>Koszt: 300 zł. od osoby. </p>
         <p>Pozostała część kosztów szkolenia pokryta jest ze środków Funduszu Rozwiązywania Problemów Hazardowych pozostających w dyspozycji Ministra właściwego do Spraw Zdrowia. </p>
 
-        <p>Zgłoszenie: za pomocą <a href='/clinic/select_clinic/Aktualne%20szkolenia'><b>formularza</b></a> na stronie www.natanaelum.pl</p>
         <p>Opłaty należy kierować, bezpośrednio po wypełnieniu formularza, na rachunek Stowarzyszenia: 03194010763194160800030000</p>
 
         <p>Uwaga: </p>
