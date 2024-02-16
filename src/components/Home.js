@@ -85,7 +85,7 @@ const Home = () => {
                         <img src={`${process.env.PUBLIC_URL}/images/home/activities/Vector.svg`} alt='vector'></img>
                     </div>
                     <div>
-                        <p className='text-uppercase text-center pt-1'>Poradnia psychologicznadla dzieci i dorosłych</p>
+                        <p className='text-uppercase text-center pt-1'>Poradnie specjalistyczne</p>
                     </div>
                 </div>
                 <div className='col-lg-3 col-sm-12'>
@@ -93,7 +93,7 @@ const Home = () => {
                         <img src={`${process.env.PUBLIC_URL}/images/home/activities/Project.svg`} alt='project'></img>
                     </div>
                     <div>
-                        <p className='text-uppercase text-center pt-1'>Szkolenia // Projekty</p>
+                        <p className='text-uppercase text-center pt-1'>Szkolenia i projekty</p>
                     </div>
                 </div>
                 <div className='col-lg-3 col-sm-12'>
@@ -101,7 +101,7 @@ const Home = () => {
                         <img src={`${process.env.PUBLIC_URL}/images/home/activities/tree.svg`} alt='tree'></img>
                     </div>
                     <div>
-                        <p className='text-uppercase text-center pt-1'>Profilaktyka zdrowia psychicznego</p>
+                        <p className='text-uppercase text-center pt-1'>Profilaktyka</p>
                     </div>
                 </div>
             </div>

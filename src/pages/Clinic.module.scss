@@ -13,10 +13,14 @@
         line-height: normal;
     }
 
-    .description {
+    &__bordered {
+        border-radius: 15px;
+        border: 3px solid $base-font-color;
+        background-color: $main-green;
         p {
-            font-size: 17px;
-            text-align: center;
+            font-size: 19px;
+            color: $color-light
+
         }
     }
 }

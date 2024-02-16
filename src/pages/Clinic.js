@@ -11,12 +11,18 @@ const Clinic = () => {
         <div className={clsx(styles.clinic,'container')}>
             <div className="m-2">
                 <Subtitle
-                    title='Specjalistyczna poradnia'
-                    head='Poradnia Leczenia Uzależnień Dzieci, Młodzieży i Dorosłych'
-                    description='W naszej Poradni pracujemy nad zmniejszeniem ryzyka rozwoju uzależnień od substancji psychoaktywnych, redukcją szkód i przywracaniu do zdrowia oraz aktywności społecznej i zawodowej osób używających substancji psychoaktywnych i osób uzależnionych. Udzielamy bezpłatnego wsparcia psychologicznego.'
+                    title=''
+                    head='Poradnie'
+                    description='Zapraszamy Państwa do zapoznania się z ofertą naszych poradni. Świadczymy wsparcie psychologiczne, psychoterapeutyczne, psychoterapię uzależnień. Pracujemy także z osobami bliskimi osób uzależnionych. Realizujemy działania profilaktyczne w zakresie zdrowia psychicznego, profilaktyki uzależnień, wzmocnienia kompetencji osobistych i społecznych. Oferujemy doradztwo wyboru szkoły/profilu klasy/kierunku studiów tak, aby jak najlepiej dopasować ścieżkę kariery zawodowej do cech osobowości i potrzeb rynku pracy. '
                 />
-                <div className="row">
-                    <Link to='select_clinic'>
+                <Subtitle
+                    description='W każdej poradni świadczymy wsparcie indywidualne dla dzieci, młodzieży i osób dorosłych, pracujemy z parami i rodzicami. W ramach dodatkowych programów realizujemy warsztaty doskonalące kompetencje osobiste i psychospołeczne.'
+                />
+                <div className="row d-flex justify-content-between">
+                    <div className={clsx(styles.clinic__bordered, "col-4 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Leczenia Uzależnień</p></div>
+                    <div className={clsx(styles.clinic__bordered, "col-3 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Psychologiczna</p></div>
+                    <div className={clsx(styles.clinic__bordered, "col-4 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Zdrowia Psychicznego</p></div>
+                    <Link to='select_clinic' className="mt-4 pt-4">
                         <Button
                             color='green'
                             text='Zapisz się!'
@@ -57,7 +63,7 @@ const Clinic = () => {
                         <p className={clsx(styles.middle, 'mx-auto')}>TERAPIĘ I PORADY PSYCHOLOGICZNE REALIZOWANE SĄ W FORMIE STACJONARNEJ LUB ZDALNEJ / ON-LINE.
                         </p>
                     </div>
-                    <div className={clsx(styles.description, 'col-12 d-block p-4 mx-auto')}>
+                    <div className={clsx('col-12 d-block p-4 mx-auto')}>
                         <p>Terapię pacjentów w Poradni prowadzą terapeuci w trakcie procesu certyfikacji "Specjalisty Psychoterapii Uzależnień", którzy są 
                             pod nadzorem merytorycznym Specjalisty Psychoterapii Uzależnień i swojego Superwizora.
                         </p>

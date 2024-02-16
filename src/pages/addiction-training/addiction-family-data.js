@@ -26,7 +26,7 @@ export const data = {
 
         <p>Osoba zostaje zakwalifikowana na szkolenie protokołem komisji rekrutacyjnej. 
         Po przesłaniu formularza zgłoszeniowego i wpłaceniu opłaty szkoleniowej, aplikacja zostaje przekazana do komisji rekrutacyjnej. Osoba aplikująca, w formularzu rekrutacyjnym, może zaznaczyć preferowaną grupę. Jeśli w grupie tej nie będzie już wolnych miejsc, osobie aplikującej zaproponowana zostanie inna grupa, w razie braku możliwości uczestniczenia w szkoleniu w innym terminie, 
-        nastąpi zwrot dokonanej wpłaty.<p></p><p> W przypadku pytań lub wątpliwości skontaktuj się z Michał Chwaszcz : tel.+48 731 700 212, e-mail. serkretariat@natanaelum.pl</p> </p>`,
+        nastąpi zwrot dokonanej wpłaty.<p></p><p> W przypadku pytań lub wątpliwości skontaktuj się z Michał Chwaszcz : tel.+48 732 700 212, e-mail. serkretariat@natanaelum.pl</p> </p>`,
 
     status: 'NABÓR TRWA',
     period: '2023 - 2024r.',

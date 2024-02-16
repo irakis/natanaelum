@@ -11,22 +11,22 @@ const OurTeam = () => {
     ]
 
     const members = [
-        'prof. dr hab. Stanisława Steuden',
-        'dr hab. Iwona Niewiadomska prof. KUL',
-        'dr Michał Wiechetek',
-        'dr Bernadeta Lelonek-Kuleta',
-        'dr Anna Przenzak',
-        'dr n. med. Gustaw Kozak',
-        'Małgorzata Kowalcze',
-        'Krystyna Pietraszko',
-        'Maria Tatarska',
-        'Elżbieta Rachowska',
-        'Danuta Wiewióra',
-        'Iwona Mialik',
-        'Amanda Wróbel',
-        'Paulina Droździel',
-        'Wojciech Chajec',
-        'Elżbieta Rydz',
+        {name:'prof. dr hab. Stanisława Steuden', avatar: ''},
+        {name:'dr hab. Iwona Niewiadomska prof. KUL',avatar:''},
+        {name:'dr Michał Wiechetek',avatar:''},
+        {name:'dr Bernadeta Lelonek-Kuleta',avatar:''},
+        {name:'dr Anna Przenzak',avatar:''},
+        {name:'dr n. med. Gustaw Kozak',avatar:''},
+        {name:'Małgorzata Kowalcze',avatar:'kowalcze2.avif'},
+        {name:'Krystyna Pietraszko',avatar:''},
+        {name:'Maria Tatarska',avatar:''},
+        {name:'Elżbieta Rachowska',avatar:''},
+        {name:'Danuta Wiewióra',avatar:''},
+        {name:'Iwona Mialik',avatar:''},
+        {name:'Amanda Wróbel',avatar:''},
+        {name:'Paulina Droździel',avatar:''},
+        {name:'Wojciech Chajec',avatar:''},
+        {name:'Elżbieta Rydz',avatar:''},
     ]
 
     return(
@@ -44,7 +44,7 @@ const OurTeam = () => {
                         {headTeam.map(head => {
                             return(
                                 <div className='col-lg-4 col-sm-12' key={head}>
-                                    <div className="card mb-3"> 
+                                    <div className={clsx(styles.ourTeam__headFrame,"card mb-3")}> 
                                         <div className="card-body">
                                             <h1 className="card-text">{head}</h1>
                                         </div>
@@ -67,11 +67,11 @@ const OurTeam = () => {
                         <div className='row mt-4 d-flex  flex-wrap'>
                             {members.map(member => {
                                 return(
-                                    <div className='col-lg-3 col-sm-12' key={member}>
+                                    <div className='col-lg-3 col-sm-12' key={member.name}>
                                         <div className="card mb-3">
-                                            <img className="card-img-top mx-auto" src={`${process.env.PUBLIC_URL}/images/avatar.png`} alt="Card cap"/>
+                                            <img className="card-img-top mx-auto" src={member.avatar===''? `${process.env.PUBLIC_URL}/images/avatar.png` : `${process.env.PUBLIC_URL}/images/ourTeam/${member.avatar}`} alt="Card cap"/>
                                             <div className="card-body">
-                                                <p className="card-text">{member}</p>
+                                                <p className="card-text text-center">{member.name}</p>
                                             </div>
                                         </div>
                                 </div>

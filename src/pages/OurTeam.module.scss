@@ -12,9 +12,16 @@
     }
     img {
         width: 200px;
-        height: auto;
+        height: 250px;
         justify-content: center;
         align-items: center;
+        object-fit: cover;
+        overflow: hidden;
+        margin-top: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    &__headFrame {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
