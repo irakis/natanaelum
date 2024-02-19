@@ -16,6 +16,9 @@
         line-height: normal;
         justify-content: left;
         max-width: 60%;
+        @media (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     h1 {

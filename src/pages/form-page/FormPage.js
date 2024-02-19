@@ -31,7 +31,6 @@ const FormPage = () => {
            
         for (let i of formInputs) {
             let checkInput = i.checkValidity();
-            console.log('checkInput??:',checkInput);
                 if (checkInput === false) {
                     reportFormValidation.push(false);
                     break;

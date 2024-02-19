@@ -15,12 +15,18 @@ const OurProjects = () => {
                         <h2>Nasze Projekty</h2>
                     </div>
                     <div className={clsx(styles.description,'col-12 mt-4 d-flex')}>
-                        Stowarzyszenie Natanaelum i Fundacja Rozwoju KUL tworzą skuteczną współpracę, realizując innowacyjne projekty w ramach Regionalnego Programu Operacyjnego Województwa Lubelskiego. Razem generujemy wzrost i postęp naszego regionu.
-                        
+                        Stowarzyszenie Natanaelum realizuje liczne projekty celem, których jest poprawa funkcjonowania osobistego, społecznego i zawodowego osób korzystających ze wsparcia
                     </div>
                 </div> 
             </div>
             <div className='row m-2 d-flex flex-wrap justify-content-between'>
+
+                <div className={clsx(styles.ourProjects__imgPostParent,'col-lg-4 col-md-6 col-sm-12 mt-1')}>
+                    <img className={clsx(styles.ourProjects__imgPost,'align-self-start')}
+                        src={`${process.env.PUBLIC_URL}/images/projects/AMS2.png`} alt='ams2'
+                    />
+                </div>
+
                 <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>
                     <Card className='align-self-start'
                         img={`${process.env.PUBLIC_URL}/images/cards/plakat002 1.png`}

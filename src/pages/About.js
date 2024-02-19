@@ -21,9 +21,10 @@ const About = () => {
                                     <h2>NATANAELUM</h2>
                                 </div>
                                 <div className={clsx(styles.description,'col-12 mt-4 d-flex')}>
-                                    <p className='text-end'>W naszym Stowarzyszeniu wspólnie kształtujemy środowisko, w którym znalezienie wsparcia w chwilach potrzeby jest dostępne dla każdego. 
-                                        Nasze stowarzyszenie powstało z zaangażowania pracowników Instytutu Psychologii Katolickiego Uniwersytetu Lubelskiego Jana Pawła II, 
-                                        z myślą o tym, by oferować wsparcie w najbardziej potrzebnych momentach i obszarach dla naszego społeczeństwa.
+                                    <p className='text-end'>
+                                        Stowarzyszenie powstało z zaangażowania pracowników Instytutu
+                                        Psychologii Katolickiego Uniwersytetu Lubelskiego Jana Pawła II, z
+                                        myślą o tym, by oferować skuteczne wsparcie oparte na nauce.
                                     </p>
                                 </div>
                                 <div className='col-12 mt-2 mb-1 pb-1 d-flex justify-content-end'>
@@ -56,9 +57,10 @@ const About = () => {
                             <p className='text-uppercase text-center pt-1'>Ochrona zdrowia psychicznego</p>
                         </div>
                         <div>
-                            <p className='text-center p-3'>Nasze działania skierowane są na dostarczanie indywidualnej pomocy, 
-                                wspieranie procesu zdrowienia psychicznego oraz eliminowanie barier społecznych w obszarze 
-                                opieki psychologicznej.
+                            <p className='text-center p-3'>Nasze działania skierowane są na rzetelną diagnozę zdrowia
+                                psychicznego oraz zaplanowanie indywidualnego planu pracy z
+                                doświadczanymi trudnościami w oparciu o najnowsze i sprawdzone
+                                metody naukowe.
                             </p>
                         </div>
                     </div>    
@@ -70,9 +72,10 @@ const About = () => {
                             <p className='text-uppercase text-center pt-1'>Wsparcie dla osób zagrożonych wykluczeniem</p>
                         </div>
                         <div>
-                            <p className='text-center p-3'>Realizujemy pomoc poprzez działania readaptacyjne, 
-                                resocjalizacyjne oraz eliminowanie uprzedzeń 
-                                społecznych w stosunku do osób zagrożonych wykluczeniem.
+                            <p className='text-center p-3'>Realizujemy działania o charakterze reintegracji społecznej,
+                                edukacyjnej, zdrowotnej i zawodowej. Prowadzimy działania na rzecz
+                                eliminowania uprzedzeń społecznych w stosunku do osób
+                                zagrożonych wykluczeniem.
                             </p>
                         </div>
                     </div>
@@ -84,8 +87,9 @@ const About = () => {
                             <p className='text-uppercase text-center pt-1'>Pomoc społeczna i zawodowa</p>
                         </div>
                         <div>
-                            <p className='text-center p-3'>Dostarczamy kompleksowe wsparcie pracownikom i wolontariuszom instytucji,
-                                 łącząc działania w obszarze pomocy społecznej, a także rozwijania zasobów ludzkich zawodowo.
+                            <p className='text-center p-3'>Dostarczamy kompleksowe wsparcie pracownikom i wolontariuszom
+                                instytucji pomocy i integracji społecznej, organizacji pozarządowych,
+                                podmiotów leczniczych.
                             </p>
                         </div>
                     </div>

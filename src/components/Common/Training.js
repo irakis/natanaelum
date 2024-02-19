@@ -6,7 +6,7 @@ const Training = (data) => {
     return(
             <div className={clsx(styles.training, 'col-12 position-relative')} >
                 <img src={data.url} alt={data.alt} className='mx-auto my-auto'/>
-                <div className={clsx(styles.title,'col-12 d-flex justify-content-between')}>
+                <div className={clsx(styles.title,'col-12 d-flex d-md-block justify-content-between')}>
                     <h2>{data.title}</h2>
                     <h1>{data.status}</h1>
                 </div>

@@ -29,7 +29,7 @@ export const data = {
         nastąpi zwrot dokonanej wpłaty.<p></p><p> W przypadku pytań lub wątpliwości skontaktuj się z Michał Chwaszcz : tel.+48 732 700 212, e-mail. serkretariat@natanaelum.pl</p> </p>`,
 
     status: 'NABÓR TRWA',
-    period: '2023 - 2024r.',
+    period: '',
     title: 'Krótkoterminowa terapia par i rodzin z problemem uzależnienia',
     image:'',
     contact:'',

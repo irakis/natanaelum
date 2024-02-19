@@ -2,4 +2,14 @@
 
 .logoStamp {
     background-color: none;
+    img {
+        object-fit: cover;
+        height: 150px;
+        @media (max-width: 578px) {
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
 }

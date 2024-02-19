@@ -4,11 +4,13 @@ import clsx from "clsx";
 import styles from './AddictionTraining.module.scss';
 import SingleProject from "../../components/SingleProject";
 import { Link } from "react-router-dom";
+import LogoStamp from "../../components/Common/LogoStamp";
 
 const AddictionTrainingFamily = () => {
 
     return(
         <div className={clsx(styles.addiction, "container")}>
+            <LogoStamp/>
             <SingleProject
                 status={data.status}
                 period={data.period}

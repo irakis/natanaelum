@@ -14,7 +14,7 @@ const FooterOffice = () => {
                         BIURO
                     </div>               
                     <div className='col-12'>
-                        <p>+48(12) 333 333 333</p>
+                        <p>+48 732 700 212</p>
                     </div>
                 </div>
             </div>

@@ -5,28 +5,27 @@ import styles from './OurTeam.module.scss';
 const OurTeam = () => {
 
     const headTeam = [
-        'dr hab. Joanna Barbara Chwaszcz - Prezes',
+        'Joanna Barbara Chwaszcz - Prezes',
         'Agnieszka Wyszomirska - Wice Prezes',
         'Stefania Chwaszcz - Skarbnik',
     ]
 
     const members = [
+        {name:'dr hab. Joanna Barbara Chwaszcz', avatar: ''},
         {name:'prof. dr hab. Stanisława Steuden', avatar: ''},
-        {name:'dr hab. Iwona Niewiadomska prof. KUL',avatar:''},
+        {name:'dr hab. Iwona Niewiadomska prof. KUL',avatar:'niewiadomska.avif'},
         {name:'dr Michał Wiechetek',avatar:''},
         {name:'dr Bernadeta Lelonek-Kuleta',avatar:''},
         {name:'dr Anna Przenzak',avatar:''},
         {name:'dr n. med. Gustaw Kozak',avatar:''},
         {name:'Małgorzata Kowalcze',avatar:'kowalcze2.avif'},
         {name:'Krystyna Pietraszko',avatar:''},
-        {name:'Maria Tatarska',avatar:''},
-        {name:'Elżbieta Rachowska',avatar:''},
-        {name:'Danuta Wiewióra',avatar:''},
         {name:'Iwona Mialik',avatar:''},
         {name:'Amanda Wróbel',avatar:''},
         {name:'Paulina Droździel',avatar:''},
         {name:'Wojciech Chajec',avatar:''},
         {name:'Elżbieta Rydz',avatar:''},
+        {name:'Iwona Kylymniuk',avatar:'kylymniuk.avif'},
     ]
 
     return(

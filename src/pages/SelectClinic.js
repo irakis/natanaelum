@@ -28,7 +28,7 @@ const SelectClinic = () => {
                     <CustomButton action={(e)=>handlerEvent(e,'Poradnia Leczenia Uzależnień')} text='Poradnia Leczenia Uzależnień' isActive={clinic} imageName=''/>
 
                     <div className="row m-4 p-4 d-grid justify-content-end ">
-                        <Link to={clinic}>
+                        <Link to={clinic==='Aktualne szkolenia' ? clinic : 'formUniversal'}>
                             <Button color='green' text='Potwierdź' imageName=''/>
                         </Link>
                     </div>

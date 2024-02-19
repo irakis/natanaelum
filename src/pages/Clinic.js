@@ -18,10 +18,10 @@ const Clinic = () => {
                 <Subtitle
                     description='W każdej poradni świadczymy wsparcie indywidualne dla dzieci, młodzieży i osób dorosłych, pracujemy z parami i rodzicami. W ramach dodatkowych programów realizujemy warsztaty doskonalące kompetencje osobiste i psychospołeczne.'
                 />
-                <div className="row d-flex justify-content-between">
-                    <div className={clsx(styles.clinic__bordered, "col-4 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Leczenia Uzależnień</p></div>
-                    <div className={clsx(styles.clinic__bordered, "col-3 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Psychologiczna</p></div>
-                    <div className={clsx(styles.clinic__bordered, "col-4 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Zdrowia Psychicznego</p></div>
+                <div className="row d-lg-flex d-md-block d-sm-block justify-content-between">
+                    <div className={clsx(styles.clinic__bordered, "col-lg-4 col-sm-12 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Leczenia Uzależnień</p></div>
+                    <div className={clsx(styles.clinic__bordered, "col-lg-3 col-sm-12 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Psychologiczna</p></div>
+                    <div className={clsx(styles.clinic__bordered, "col-lg-4 col-sm-12 text-center m-1 p-4")}><p className="text-center m-0">Poradnia Zdrowia Psychicznego</p></div>
                     <Link to='select_clinic' className="mt-4 pt-4">
                         <Button
                             color='green'

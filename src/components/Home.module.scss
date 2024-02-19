@@ -49,6 +49,7 @@
             @media (max-width: 576px) {
                 font-size: normal;
                 line-height: normal;
+                margin-left: 15px;
             }
             
         }
@@ -56,6 +57,9 @@
             color: $header-font-color;
             font-size: 17px;
             font-weight: '400';
+            @media (max-width: 576px) {
+                padding: 15px;
+            }
         }
         &__activities {
             background-color: $color-light;

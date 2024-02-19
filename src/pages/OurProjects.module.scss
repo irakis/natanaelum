@@ -20,6 +20,19 @@
         line-height: normal;
     }
 
+    &__imgPost {
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 39px;
+    }
+
+    &__imgPostParent {
+        border-radius: 25px;
+        background-color: $color-background-card;
+        padding: 0;
+    }
+
     .main {
 
         h2 {

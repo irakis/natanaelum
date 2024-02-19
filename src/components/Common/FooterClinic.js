@@ -14,7 +14,7 @@ const FooterClinic = () => {
                         PORADNIA
                     </div>               
                     <div className='col-12'>
-                        <p>+48(12) 444 333 377</p>
+                        <p>+48 531 687 761</p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import styles from './SingleProject.module.scss';
 import clsx from 'clsx';
 import Parser from 'react-html-parser';
-import { Link } from 'react-router-dom';
 
 const SingleProject = (data) => {
     return(
