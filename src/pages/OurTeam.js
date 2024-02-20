@@ -11,12 +11,12 @@ const OurTeam = () => {
     ]
 
     const members = [
-        {name:'dr hab. Joanna Barbara Chwaszcz', avatar: ''},
+        {name:'dr hab. Joanna Barbara Chwaszcz', avatar: 'chwaszcz.avif'},
         {name:'prof. dr hab. Stanisława Steuden', avatar: ''},
         {name:'dr hab. Iwona Niewiadomska prof. KUL',avatar:'niewiadomska.avif'},
         {name:'dr Michał Wiechetek',avatar:''},
         {name:'dr Bernadeta Lelonek-Kuleta',avatar:''},
-        {name:'dr Anna Przenzak',avatar:''},
+        {name:'dr Anna Przenzak',avatar:'przeznak.avif'},
         {name:'dr n. med. Gustaw Kozak',avatar:''},
         {name:'Małgorzata Kowalcze',avatar:'kowalcze2.avif'},
         {name:'Krystyna Pietraszko',avatar:''},

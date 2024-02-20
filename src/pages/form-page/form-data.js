@@ -26,8 +26,6 @@ export const criteria =[
 ];
 
 export const timeGroup = [
-    'Grupa I 19-21 kwietnia 2024', 
-    'Grupa II 10-12 maja 2024',
     'Grupa III 16-18 maja 2024',
     'Grupa IV 21-23 czerwca 2023',
 ]

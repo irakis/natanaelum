@@ -23,7 +23,7 @@ const OurTrainings = () => {
                         title='Krótkoterminowa terapia par i rodzin z
                             problemem uzależnienia”'
                         link='addiction_training_family'
-                        status='TRWA'
+                        status='NABÓR ZAKOŃCZONY'
                     />
                 </div>
                 <div className='col-lg-6 col-md-12 my-2'>

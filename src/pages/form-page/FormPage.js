@@ -67,10 +67,9 @@ const FormPage = () => {
         <div className="container d-flex flex-column">
             <div className="row" >
                 <div className={clsx(styles.selectClinic, "col-lg-8 col-md-12 mx-auto")}>
-                    <h1 className="pt-5">Formularz zgłoszeniowy</h1>
+                    <h1 className="pt-5">Nabór zakończony</h1>
                     <p className="pb-5">*Każde pole wymagane</p>
-
-                    <form onSubmit={handleSubmit} noValidate className="d-flex flex-wrap was-validated">
+                    <form onSubmit={handleSubmit}  noValidate className="d-flex flex-wrap was-validated">
                         <div className="p-1 col-6">
                             <label className="form-label">Imię</label>
                             <input type="text" name='foreName' className="form-control" onChange={e => setFormData({...formData, foreName: e.target.value})} id="exampleInputEmail1" aria-describedby="forenameHelp" required></input>
@@ -145,8 +144,8 @@ const FormPage = () => {
                                 <div id="sureNameHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>Wybierz grupę</div>
                             </div>
                             <div className="p-1 col-10">
-                                    <textarea className="form-control" id="textAreaExample1" onChange={e => setFormData({...formData, textArea: e.target.value})} rows="2"></textarea>
-                                    <label className="form-label" for="textAreaExample">Uwagi</label>
+                                <textarea className="form-control" id="textAreaExample1" onChange={e => setFormData({...formData, textArea: e.target.value})} rows="2"></textarea>
+                                <label className="form-label" for="textAreaExample">Uwagi</label>
                             </div>     
                         </div>
                         <div className="p-1 col-6">
@@ -159,7 +158,7 @@ const FormPage = () => {
                             <input type="email" name='mail' className="form-control" onChange={ e => setFormData({...formData, mail: e.target.value})} id="exampleInputEmail1" aria-describedby="emailHelp" required></input>
                             <div id="emailHelp" className={clsx(styles.selectClinic, styles.selectClinic__green, "form-text")}>np. jan.kowalski@poczta.pl</div>
                         </div>      
-                        <div className="col-12 m-4 pt-4 d-flex justify-content-end ">
+                        <div className="d-none col-12 m-4 pt-4 d-flex justify-content-end ">
                             <div className={clsx(styles.selectClinic__recaptcha)}>
                                 <ReCAPTCHA
                                     sitekey={process.env.REACT_APP_SITE_KEY_RECAPTCHA}
