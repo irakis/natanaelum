@@ -16,6 +16,7 @@ import FormPage from './pages/form-page/FormPage.js';
 import FormUniversal from './pages/form-uniwersal/FormUniversal.js';
 import SummarySite from './pages/SummarySite.js';
 import AddictionTrainingFamily from './pages/addiction-training/AddictionTrainingFamily.js'
+import AmsProject from './pages/Projects/AmsProject.js';
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
         <Route path='/ourtrainings' element={<OurTrainings/>}/>
         <Route path='/clinic' element={<Clinic/>}/>
         <Route path='/ourprojects/project_active_competent' element={<ProjectActiveCompetent/>}/>
+        <Route path='/ourprojects/ams2' element={<AmsProject/>}/>
         <Route path='/ourtrainings/addiction_training' element={<AddictionTraining/>}/>
         <Route path='/ourtrainings/addiction_training_family' element={<AddictionTrainingFamily/>}/>
         <Route path='/clinic/select_clinic' element={<SelectClinic/>}/>

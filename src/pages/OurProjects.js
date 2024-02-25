@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './OurProjects.module.scss';
 import clsx from 'clsx';
 import Card from '../components/Common/Card.js';
+import {data} from './Projects/projects-data.js';
 
 const OurProjects = () => {
+    console.log(data);
     return (
         <div className='container'>
             <div className={clsx('row d-flex m-2', styles.ourProjects)}>
@@ -20,13 +22,17 @@ const OurProjects = () => {
                 </div> 
             </div>
             <div className='row m-2 d-flex flex-wrap justify-content-between'>
-
-                <div className={clsx(styles.ourProjects__imgPostParent,'col-lg-4 col-md-6 col-sm-12 mt-1')}>
-                    <img className={clsx(styles.ourProjects__imgPost,'align-self-start')}
-                        src={`${process.env.PUBLIC_URL}/images/projects/AMS2.png`} alt='ams2'
+                <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>
+                    <Card className='align-self-start'
+                        img={`${process.env.PUBLIC_URL}/images/projects/AMS2_logo.png`}
+                        alt={data.ams.alt}
+                        header={data.ams.title}
+                        status={data.ams.status}
+                        period={data.ams.period}
+                        description={data.ams.textShort}
+                        link='ams2'
                     />
                 </div>
-
                 <div className='col-lg-4 col-md-6 col-sm-12 mt-1'>
                     <Card className='align-self-start'
                         img={`${process.env.PUBLIC_URL}/images/cards/plakat002 1.png`}

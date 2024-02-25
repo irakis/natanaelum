@@ -11,7 +11,7 @@ const OurTeam = () => {
     ]
 
     const members = [
-        {name:'dr hab. Joanna Barbara Chwaszcz', avatar: 'chwaszcz.avif'},
+        {name:'dr hab. Joanna Chwaszcz', avatar: 'chwaszcz.avif'},
         {name:'prof. dr hab. Stanisława Steuden', avatar: ''},
         {name:'dr hab. Iwona Niewiadomska prof. KUL',avatar:'niewiadomska.avif'},
         {name:'dr Michał Wiechetek',avatar:''},
